@@ -1,5 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {responsiveHorizontal, responsiveVertical,vw, vh} from './Responsive';
+import {responsiveHorizontal, responsiveVertical, vw, vh} from './Responsive';
 import Colors from './Colors';
 import FontsStyle, {responsiveFonts} from './Fonts';
 
@@ -79,6 +79,15 @@ const MyStyle = StyleSheet.create({
   backD9D9D9: {backgroundColor: '#D9D9D9'},
   paddingVertical10: {paddingVertical: responsiveVertical(10)},
   marginRight18: {marginRight: responsiveHorizontal(18)},
+
+  color000000: {color: Colors.color000000},
+  colorEE9846: {color: Colors.colorEE9846},
+  colorWhite: {color: Colors.colorFFFFFF},
+  colorffebeb: {color: Colors.colorffebeb},
+  colorD18741: {color: Colors.colorD18741},
+  color101FA2: {color: Colors.color101FA2},
+  backgroundColorEE9846: {backgroundColor: Colors.colorEE9846},
+
   fontSize20: {fontSize: FontsStyle.fontSize20},
   fontSize26: {fontSize: FontsStyle.fontSize26},
   fontSize15: {fontSize: FontsStyle.fontSize15},
@@ -89,20 +98,15 @@ const MyStyle = StyleSheet.create({
   fontSize12: {fontSize: FontsStyle.fontSize12},
   fontSize25: {fontSize: FontsStyle.fontSize25},
   fontSize35: {fontSize: FontsStyle.fontSize35},
-  fontSize9: {fontSize:FontsStyle.fontSize9},
+  fontSize9: {fontSize: FontsStyle.fontSize9},
 
-  fontWeight400: {fontWeight: '400'},
-  fontWeight500: {fontWeight: '500'},
-  fontWeight700: {fontWeight: '700'},
-  fontWeight300: {fontWeight: '300'},
+  fontWeight400: {fontWeight: FontsStyle.fontWeight400},
+  fontWeight500: {fontWeight: FontsStyle.fontWeight500},
+  fontWeight700: {fontWeight: FontsStyle.fontWeight700},
+  fontWeight300: {fontWeight: FontsStyle.fontWeight300},
+
   alignSelfFlexEnd: {alignSelf: 'flex-end'},
   alignSelfCenter: {alignSelf: 'center'},
-  color000000: {color: '#000000'},
-  colorEE9846: {color: '#EE9846'},
-  colorWhite: {color: '#ffffff'},
-  colorffebeb: {color: '#FFEBEB'},
-  colorD18741: {color: '#D18741'},
-  color101FA2: {color: 'rgba(16, 31, 162, 1)'},
   lineHeight: {lineHeight: responsiveVertical(19.95)},
   fontWeightBold: {fontWeight: 'bold'},
   flex1: {flex: 1},
@@ -111,6 +115,7 @@ const MyStyle = StyleSheet.create({
   borderWidth1: {borderWidth: 1},
   borderRadius10: {borderRadius: 10},
   justifyContentSpaceBetween: {justifyContent: 'space-between'},
+
   paddingVertical17: {paddingVertical: responsiveVertical(17)},
   paddingVertical7: {paddingVertical: responsiveVertical(7)},
   paddingVertical2: {paddingVertical: responsiveVertical(2)},
@@ -119,6 +124,7 @@ const MyStyle = StyleSheet.create({
   paddingHorizontal16: {paddingHorizontal: responsiveHorizontal(16)},
   paddingHorizontal10: {paddingHorizontal: responsiveHorizontal(10)},
   paddingHorizontal6: {paddingHorizontal: responsiveHorizontal(6)},
+
   marginBottom8: {marginBottom: responsiveVertical(8)},
   marginBottom26: {marginBottom: responsiveVertical(26)},
   marginTop30: {marginTop: responsiveVertical(30)},
@@ -168,8 +174,7 @@ const MyStyle = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 45,
   },
-  dividerStyle: {borderWidth: 0.5, height: '100%', borderColor: Colors.EEA967}
+  dividerStyle: {borderWidth: 0.5, height: '100%', borderColor: Colors.EEA967},
 });
 
 export default MyStyle;
-

@@ -150,38 +150,18 @@ const Home = ({navigation}) => {
 
       <View
         style={[
-          //   MyStyle.positionAbsolute,
           MyStyle.flexrow,
-          MyStyle.width100,
           MyStyle.borderRadius10,
           MyStyle.alignItemCenter,
-          MyStyle.justifyContentSpaceBetween,
-          {flex: 0.1, backgroundColor: '#E69343'},
+          MyStyle.justifyContentCenter,
+          MyStyle.marginHorizontal20,
+          MyStyle.backgroundColorEE9846,
+          {flex: 0.1},
         ]}>
-        <TouchableOpacity style={{marginLeft: responsiveHorizontal(67)}}>
-          <Image
-            source={require('../assets/icons/menu.png')}
-            style={[
-              {
-                width: responsiveHorizontal(31),
-                height: responsiveVertical(31),
-              },
-            ]}
-          />
-          <Text
-            style={[MyStyle.fontSize15, MyStyle.fontWeight500, MyStyle.colorWhite]}>
-            Home
-          </Text>
-        </TouchableOpacity>
-        <Divider
-          horizontalInset={true}
-          style={[
-            {borderWidth: 0.5, height: '80%', borderColor: '#ffffff'},
-            MyStyle.marginHorizontal20,
-          ]}
-        />
+       
+       
         <TouchableOpacity
-          style={[MyStyle.flexrow, {marginRight: responsiveHorizontal(25)}]}>
+          style={[MyStyle.flexrow]}>
           <Image
             source={require('../assets/icons/analyzing.png')}
             style={[

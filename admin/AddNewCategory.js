@@ -1,12 +1,11 @@
 import {View, Text, TouchableOpacity, TextInput, Image} from 'react-native';
 import React from 'react';
 import MenuManagement from '../components/MenuManagement';
-import MyStyle from '../style';
-import Colors from '../style';
-import Style, {
+
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  responsiveFonts,MyStyle
 } from '../style';
 import SwitchComponent from '../components/Switch';
 

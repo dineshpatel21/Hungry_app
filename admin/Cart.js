@@ -379,7 +379,7 @@ const Cart = () => {
           </View>
         </View>
         {!isKeyboardVisible && (
-          <View style={[MyStyle.width100, MyStyle.justifyContentCenter]}>
+          <View style={[MyStyle.width100, MyStyle.justifyContentCenter,MyStyle.marginBottom8]}>
             <TouchableOpacity
               style={[
                 MyStyle.welcomebtn,
@@ -394,7 +394,7 @@ const Cart = () => {
                   MyStyle.welcomebtntext,
                   MyStyle.colorWhite,
                   MyStyle.fontWeight400,
-                  MyStyle.fontSize30,
+                  MyStyle.fontSize24,
                 ]}>
                 Done
               </Text>

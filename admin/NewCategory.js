@@ -7,11 +7,8 @@ import {
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
+import {Searchbar} from 'react-native-paper';
 
 import MenuManagement from '../components/MenuManagement';
 import SwitchComponent from '../components/Switch';
@@ -146,8 +143,14 @@ const _headerComponent = () => {
 };
 
 const NewCategory = ({navigation}) => {
-  
-  const [data, setData] = useState([{opened: false}, {opened: false},{opened: false}]);
+  const [data, setData] = useState([
+    {opened: false},
+    {opened: false},
+    {opened: false},
+    {opened: false},
+    {opened: false},
+    {opened: false},
+  ]);
 
   const onClickDot = (item, index, data, setData) => {
     let newData = data.map((it, idx) => {
@@ -161,135 +164,176 @@ const NewCategory = ({navigation}) => {
     setData(newData);
   };
   return (
-    <View style={[MyStyle.flex1]}>
-      <View style={[MyStyle.backgroundColorFFFFFF, {flex: 0.2}]}>
-        <View
-          style={[
-            MyStyle.marginHorizontal20,
-            MyStyle.marginTop13,
-            MyStyle.flexrow,
-            MyStyle.justifyContentSpaceBetween,
-          ]}>
-          <MenuManagement />
-          <SwitchComponent />
+    <View style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
+      <View style={{flex: 0.9}}>
+        <View style={[MyStyle.backgroundColorFFFFFF]}>
+          <View
+            style={[
+              MyStyle.marginHorizontal20,
+              MyStyle.marginTop13,
+              MyStyle.flexrow,
+              MyStyle.justifyContentSpaceBetween,
+            ]}>
+            <MenuManagement />
+            <SwitchComponent />
+          </View>
+          <View
+            style={[
+              MyStyle.marginBottom15,
+              MyStyle.marginTop8,
+              MyStyle.borderWidth1,
+              //   MyStyle.backgroundColorD9D9D9,
+              MyStyle.height2,
+            ]}
+          />
+          <Searchbar
+            placeholder="Search The Category"
+            style={[
+              {
+                borderColor: 'rgba(0, 0, 0, 0.22)',
+              },
+              MyStyle.marginBottom10,
+              MyStyle.alignItemCenter,
+              MyStyle.marginTop13,
+              MyStyle.marginHorizontal20,
+            ]}
+            icon={({color, size}) => (
+              <Image
+                source={require('../assets/icons/search.png')}
+                style={{
+                  width: responsiveHorizontal(20),
+                  height: responsiveHorizontal(20),
+                  marginRight: responsiveHorizontal(3),
+                }}
+              />
+            )}
+            // onChangeText={}
+            // value={}
+          />
         </View>
 
-        <View
-          style={[
-            // MyStyle.marginBottom15,
-            MyStyle.marginTop8,
-            MyStyle.backgroundColorD9D9D9,
-            MyStyle.height2,
-          ]}
-        />
-        <CategorySearch />
-      </View>
-
-      <View style={{flex: 0.7}}>
-        <FlatList
-          data={data}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({item, index}) => {
-            return (
-              <View
-                style={[
-                  MyStyle.alignItemCenter,
-                  MyStyle.flexrow,
-                  MyStyle.justifyContentSpaceBetween,
-                  MyStyle.marginBottom29,
-                  MyStyle.borderRadius10,
-                  MyStyle.borderWidth1,
-                  {
-                    paddingVertical: responsiveVertical(7),
-                    paddingHorizontal: responsiveHorizontal(16),
-                    marginHorizontal: responsiveHorizontal(10),
-                  },
-                ]}>
-                <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
-                  <Image
-                    source={require('../assets/icons/categoryImage.png')}
-                    style={[
-                      {
-                        width: responsiveHorizontal(60),
-                        height: responsiveHorizontal(61),
-                      },
-                      MyStyle.marginRight18,
-                    ]}
-                  />
-                  <Text
-                    style={[MyStyle.fontWeight700, MyStyle.fontSize20]}></Text>
-                </View>
-                <TouchableOpacity
-                  onPress={() => {
-                    onClickDot(item, index, data, setData);
-                  }}>
-                  <Image
-                    source={require('../assets/icons/dots.png')}
-                    style={[
-                      {
-                        width: responsiveHorizontal(28),
-                        height: responsiveHorizontal(28),
-                      },
-                    ]}
-                  />
-                </TouchableOpacity>
-                {item.opened && (
-                  <View
-                    style={[
-                      MyStyle.positionAbsolute,
-                      MyStyle.backgroundColorFFFFFF,
-                      MyStyle.padding8,
-                      MyStyle.borderRadius10,
-                      {
-                        right: responsiveHorizontal(35),
-                        bottom: responsiveVertical(-25),
-                        zIndex: 101,
-                      },
-                    ]}>
-                    <TouchableOpacity
-                      style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
-                      onPress={() => {
-                        onClickDot(item, index, data, setData);
-                      }}>
-                      <Image
-                        source={require('../assets/icons/unavailable.png')}
-                        style={{
-                          width: responsiveHorizontal(20),
-                          height: responsiveVertical(20),
-                          marginRight: responsiveHorizontal(4),
-                        }}
-                      />
-                      <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
-                        Category unavailable
-                      </Text>
-                    </TouchableOpacity>
-
-                    <Divider style={{marginVertical: responsiveVertical(5)}} />
-                    <TouchableOpacity
-                      style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
-                      onPress={() => {
-                        onClickDot(item, index, data, setData);
-                      }}>
-                      <Image
-                        source={require('../assets/icons/trash.png')}
-                        style={{
-                          width: responsiveHorizontal(20),
-                          height: responsiveVertical(20),
-                          marginRight: responsiveHorizontal(4),
-                        }}
-                      />
-                      <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
-                        Delete category
-                      </Text>
-                    </TouchableOpacity>
+        <ScrollView>
+          {data.length != 0 ? (
+            data.map((item, index) => {
+              return (
+                <View
+                  style={[
+                    MyStyle.alignItemCenter,
+                    MyStyle.flexrow,
+                    MyStyle.justifyContentSpaceBetween,
+                    MyStyle.marginBottom10,
+                    MyStyle.borderRadius10,
+                    MyStyle.borderWidth1,
+                    {
+                      paddingVertical: responsiveVertical(7),
+                      paddingHorizontal: responsiveHorizontal(16),
+                      marginHorizontal: responsiveHorizontal(10),
+                    },
+                  ]}>
+                  <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
+                    <Image
+                      source={require('../assets/icons/categoryImage.png')}
+                      style={[
+                        {
+                          width: responsiveHorizontal(60),
+                          height: responsiveHorizontal(61),
+                        },
+                        MyStyle.marginRight18,
+                      ]}
+                    />
+                    <Text
+                      style={[
+                        MyStyle.fontWeight700,
+                        MyStyle.fontSize20,
+                      ]}>Category Name</Text>
                   </View>
-                )}
-              </View>
-            );
-          }}
-        />
-      </View>
+                  <TouchableOpacity
+                    onPress={() => {
+                      onClickDot(item, index, data, setData);
+                    }}>
+                    <Image
+                      source={require('../assets/icons/dots.png')}
+                      style={[
+                        {
+                          width: responsiveHorizontal(28),
+                          height: responsiveHorizontal(28),
+                        },
+                      ]}
+                    />
+                  </TouchableOpacity>
+                  {item.opened && (
+                    <View
+                      style={[
+                        MyStyle.positionAbsolute,
+                        MyStyle.backgroundColorFFFFFF,
+                        MyStyle.padding8,
+                        MyStyle.borderRadius10,
+                        {
+                          right: responsiveHorizontal(35),
+                          bottom: responsiveVertical(-25),
+                          zIndex: 101,
+                          elevation: 10,
+                        },
+                      ]}>
+                      <TouchableOpacity
+                        style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
+                        onPress={() => {
+                          onClickDot(item, index, data, setData);
+                        }}>
+                        <Image
+                          source={require('../assets/icons/unavailable.png')}
+                          style={{
+                            width: responsiveHorizontal(20),
+                            height: responsiveVertical(20),
+                            marginRight: responsiveHorizontal(4),
+                          }}
+                        />
+                        <Text
+                          style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
+                          Category unavailable
+                        </Text>
+                      </TouchableOpacity>
 
+                      <Divider
+                        style={{marginVertical: responsiveVertical(5)}}
+                      />
+                      <TouchableOpacity
+                        style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
+                        onPress={() => {
+                          onClickDot(item, index, data, setData);
+                        }}>
+                        <Image
+                          source={require('../assets/icons/trash.png')}
+                          style={{
+                            width: responsiveHorizontal(20),
+                            height: responsiveVertical(20),
+                            marginRight: responsiveHorizontal(4),
+                          }}
+                        />
+                        <Text
+                          style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
+                          Delete category
+                        </Text>
+                      </TouchableOpacity>
+                    </View>
+                  )}
+                </View>
+              );
+            })
+          ) : (
+            <View
+              style={[MyStyle.alignItemCenter, MyStyle.justifyContentCenter]}>
+              <Image
+                source={require('../assets/icons/search2.png')}
+                style={{
+                  width: responsiveHorizontal(216),
+                  height: responsiveVertical(232),
+                }}
+              />
+            </View>
+          )}
+        </ScrollView>
+      </View>
       <View
         style={[
           MyStyle.backgroundColorFFFFFF,

@@ -1,6 +1,7 @@
 
 const Colors = {
   color000000: '#000000',
+  colorFFFFFF: '#FFFFFF',
   colorEE9846: '#EE9846',
   colorWhite: '#FFEBEB',
   colorffebeb: '#D18741',
