@@ -192,10 +192,10 @@ const AddNewDish = () => {
           {isDropDownOpen && (
             <View
               style={[
-                Style.borderWidth1,
-                Style.positionAbsolute,
-                Style.backgroundColorFFFFFF,
-                Style.marginHorizontal20,
+                MyStyle.borderWidth1,
+                MyStyle.positionAbsolute,
+                MyStyle.backgroundColorFFFFFF,
+                MyStyle.marginHorizontal20,
                 {
                   width: responsiveHorizontal(245),
                   height: responsiveVertical(120),
@@ -207,7 +207,7 @@ const AddNewDish = () => {
               ]}>
               <ScrollView
                 nestedScrollEnabled
-                style={[Style.paddingVertical7, Style.paddingHorizontal14]}>
+                style={[MyStyle.paddingVertical7, MyStyle.paddingHorizontal14]}>
                 {categoryOptions.map((item, index) => {
                   return (
                     <TouchableOpacity
@@ -218,9 +218,9 @@ const AddNewDish = () => {
                       }}>
                       <Text
                         style={[
-                          Style.fontSize17,
-                          Style.color000000,
-                          Style.marginBottom8,
+                          MyStyle.fontSize17,
+                          MyStyle.color000000,
+                          MyStyle.marginBottom8,
                         ]}>
                         {item.category}
                       </Text>
