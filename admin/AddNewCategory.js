@@ -27,7 +27,7 @@ const AddNewCategory = () => {
         style={[
           MyStyle.marginBottom15,
           MyStyle.marginTop8,
-          //   Colors.backgroundColorD9D9D9,
+          //   MyStyle.backgroundColorD9D9D9,
           MyStyle.height2,
         ]}
       />
@@ -35,7 +35,7 @@ const AddNewCategory = () => {
         <Text
           style={[
             MyStyle.welcomebtntext,
-           Colors.color000000,
+           MyStyle.color000000,
             MyStyle.fontWeight700,
             MyStyle.fontSize20,
           ]}>
@@ -58,7 +58,7 @@ const AddNewCategory = () => {
             textDecorationLine="Underline"
             style={[
               MyStyle.welcomebtntext,
-             Colors.color000000,
+             MyStyle.color000000,
               MyStyle.fontWeight400,
               MyStyle.fontSize15,
             ]}
@@ -68,7 +68,7 @@ const AddNewCategory = () => {
           <Text
             style={[
               MyStyle.welcomebtntext,
-             Colors.color000000,
+             MyStyle.color000000,
               MyStyle.fontWeight400,
               MyStyle.fontSize15,
             ]}>
@@ -118,7 +118,7 @@ const AddNewCategory = () => {
           <Text
             style={[
               MyStyle.welcomebtntext,
-             Colors.colorWhite,
+             MyStyle.colorWhite,
               MyStyle.fontWeight400,
               MyStyle.fontSize30,
             ]}>

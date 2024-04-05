@@ -11,12 +11,11 @@ import Carousel from '../../components/Carousel';
 import Header from '../../components/Header';
 import {Searchbar} from 'react-native-paper';
 import Categories from '../../components/Categories';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
   responsiveFonts,
-  vw,
-  vh,
+  MyStyle,vw,vh
 } from '../../style';
 const Home = ({navigation}) => {
   const items = [
@@ -38,8 +37,8 @@ const Home = ({navigation}) => {
     },
   ];
   return (
-    <ScrollView style={[Style.flex1, Style.backgroundColorFFFFFF]}>
-        <View style={[Style.marginHorizontal20]}>
+    <ScrollView style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
+        <View style={[MyStyle.marginHorizontal20]}>
           <Header />
         </View>
 
@@ -49,10 +48,10 @@ const Home = ({navigation}) => {
             {
               borderColor: 'rgba(0, 0, 0, 0.22)',
             },
-            Style.marginBottom10,
-            Style.alignItemCenter,
-            Style.marginTop13,
-            Style.marginHorizontal20,
+            MyStyle.marginBottom10,
+            MyStyle.alignItemCenter,
+            MyStyle.marginTop13,
+            MyStyle.marginHorizontal20,
           ]}
           icon={({color, size}) => (
             <Image
@@ -74,18 +73,18 @@ const Home = ({navigation}) => {
 
         <View
           style={[
-            Style.flexrow,
-            Style.alignItemCenter,
-            Style.marginHorizontal20,
-            Style.justifyContentSpaceBetween,
-            Style.marginTop18,
+            MyStyle.flexrow,
+            MyStyle.alignItemCenter,
+            MyStyle.marginHorizontal20,
+            MyStyle.justifyContentSpaceBetween,
+            MyStyle.marginTop18,
           ]}>
           <View>
             <Text
               style={[
                 {color: 'rgba(0, 0, 0, 0.52)'},
-                Style.fontWeight700,
-                Style.fontSize17,
+                MyStyle.fontWeight700,
+                MyStyle.fontSize17,
               ]}>
               Search by Market
             </Text>
@@ -106,27 +105,27 @@ const Home = ({navigation}) => {
                 navigation.navigate('FoodPlace');
               }}
               style={[
-                Style.paddingVertical7,
-                Style.marginBottom10,
-                Style.backgroundColorFFFFFF,
+                MyStyle.paddingVertical7,
+                MyStyle.marginBottom10,
+                MyStyle.backgroundColorFFFFFF,
               ]}>
               <View
                 style={[
-                  Style.flexrow,
+                  MyStyle.flexrow,
 
-                  Style.alignItemCenter,
-                  Style.marginTop17,
-                  Style.justifyContentSpaceBetween,
-                  Style.marginBottom15,
-                  Style.marginHorizontal20,
+                  MyStyle.alignItemCenter,
+                  MyStyle.marginTop17,
+                  MyStyle.justifyContentSpaceBetween,
+                  MyStyle.marginBottom15,
+                  MyStyle.marginHorizontal20,
                 ]}>
                 <View
                   style={[
-                    Style.flexrow,
-                    Style.alignItemCenter,
-                    Style.borderRadius10,
-                    Style.paddingHorizontal10,
-                    Style.paddingVertical7,
+                    MyStyle.flexrow,
+                    MyStyle.alignItemCenter,
+                    MyStyle.borderRadius10,
+                    MyStyle.paddingHorizontal10,
+                    MyStyle.paddingVertical7,
                     {
                       backgroundColor: 'rgba(238, 152, 70, 0.3)',
                     },
@@ -137,8 +136,8 @@ const Home = ({navigation}) => {
                         color: 'rgba(0, 0, 0, 0.52)',
                         marginRight: 2,
                       },
-                      Style.fontSize17,
-                      Style.fontWeight700,
+                      MyStyle.fontSize17,
+                      MyStyle.fontWeight700,
                     ]}>
                     {item.loc}
                   </Text>
@@ -158,7 +157,7 @@ const Home = ({navigation}) => {
                         fontSize: responsiveFonts(12),
                         color: 'rgba(238, 152, 70, 1)',
                       },
-                      Style.fontWeight700,
+                      MyStyle.fontWeight700,
                     ]}>
                     See All
                   </Text>
@@ -186,35 +185,35 @@ const Home = ({navigation}) => {
                     top: responsiveVertical(80),
                     tintColor:'white'
                   },
-                  Style.positionAbsolute,
+                  MyStyle.positionAbsolute,
                 ]}
               />
               <View
                 style={[
-                  Style.flexrow,
-                  Style.alignItemCenter,
-                  Style.justifyContentSpaceBetween,
-                  Style.marginHorizontal20,
-                  Style.marginTop18,
+                  MyStyle.flexrow,
+                  MyStyle.alignItemCenter,
+                  MyStyle.justifyContentSpaceBetween,
+                  MyStyle.marginHorizontal20,
+                  MyStyle.marginTop18,
                 ]}>
                 <View>
                   <Text
                     style={[
-                      Style.fontWeight700,
-                      Style.fontSize17,
-                      Style.color000000,
+                      MyStyle.fontWeight700,
+                      MyStyle.fontSize17,
+                      MyStyle.color000000,
                     ]}>
                     {item.name}
                   </Text>
                 </View>
                 {/* <View
                   style={[
-                    Style.flexrow,
-                    Style.alignItemCenter,
-                    Style.marginRight18,
-                    Style.borderRadius6,
-                    Style.paddingHorizontal6,
-                    Style.paddingVertical2,
+                    MyStyle.flexrow,
+                    MyStyle.alignItemCenter,
+                    MyStyle.marginRight18,
+                    MyStyle.borderRadius6,
+                    MyStyle.paddingHorizontal6,
+                    MyStyle.paddingVertical2,
                     {
                       backgroundColor: 'rgba(60, 139, 68, 1)',
                     },
@@ -226,7 +225,7 @@ const Home = ({navigation}) => {
                         color: 'white',
                         marginRight: 3,
                       },
-                      Style.fontWeight700,
+                      MyStyle.fontWeight700,
                     ]}>
                     {item.ratting}
                   </Text>
@@ -241,10 +240,10 @@ const Home = ({navigation}) => {
               </View>
               <View
                 style={[
-                  Style.flexrow,
-                  Style.alignItemCenter,
-                  Style.borderWidth,
-                  Style.marginHorizontal20,
+                  MyStyle.flexrow,
+                  MyStyle.alignItemCenter,
+                  MyStyle.borderWidth,
+                  MyStyle.marginHorizontal20,
                   {marginTop: 9},
                 ]}>
                 <Image
@@ -257,9 +256,9 @@ const Home = ({navigation}) => {
                 />
                 <Text
                   style={[
-                    Style.fontWeight400,
-                    Style.fontSize10,
-                    Style.color000000,
+                    MyStyle.fontWeight400,
+                    MyStyle.fontSize10,
+                    MyStyle.color000000,
                   ]}>
                   {item.time}
                 </Text>

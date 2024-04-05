@@ -9,13 +9,11 @@ import {
   FlatList,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
-import MyStyle, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
-import Colors from '../style';
-import Fonts from '../style';
 import MenuManagement from '../components/MenuManagement';
 import SwitchComponent from '../components/Switch';
 import {CategorySearch} from './NewCategory';
@@ -101,9 +99,9 @@ const MyDishes = ({navigation}) => {
               <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
                 <Text
                   style={[
-                    Fonts.fontSize20,
-                    Fonts.fontWeight700,
-                   Colors.color000000,
+                    MyStyle.fontSize20,
+                    MyStyle.fontWeight700,
+                   MyStyle.color000000,
                     MyStyle.marginRight9,
                   ]}>
                   Dishes Name
@@ -135,7 +133,7 @@ const MyDishes = ({navigation}) => {
                 style={[
                   MyStyle.fontSize15,
                   MyStyle.fontWeight400,
-                 Colors.colorEE9846,
+                 MyStyle.colorEE9846,
                 ]}>
                 Rs 150
               </Text>
@@ -214,7 +212,7 @@ const MyDishes = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[
-              Colors.backgroundColor42833D,
+              MyStyle.backgroundColor42833D,
               MyStyle.paddingVertical7,
               MyStyle.paddingHorizontal6,
               MyStyle.borderWidth1,
@@ -245,7 +243,7 @@ const MyDishes = ({navigation}) => {
             MyStyle.marginBottom15,
             MyStyle.marginTop8,
             MyStyle.borderWidth1,
-            //   Colors.backgroundColorD9D9D9,
+            //   MyStyle.backgroundColorD9D9D9,
             MyStyle.height2,
           ]}
         />
@@ -282,7 +280,7 @@ const MyDishes = ({navigation}) => {
             <Text
               style={[
                 MyStyle.welcomebtntext,
-               Colors.colorWhite,
+               MyStyle.colorWhite,
                 MyStyle.fontWeight400,
                 MyStyle.fontSize25,
               ]}>

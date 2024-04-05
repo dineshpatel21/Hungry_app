@@ -7,13 +7,11 @@ import {
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
-import MyStyle, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
-import Colors from '../style';
-import Fonts from '../style';
 
 import MenuManagement from '../components/MenuManagement';
 import SwitchComponent from '../components/Switch';
@@ -106,7 +104,7 @@ const CategoryList = ({categoryName, data, setData, item, index}) => {
                 marginRight: responsiveHorizontal(4),
               }}
             />
-            <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+            <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
               Category unavailable
             </Text>
           </View>
@@ -121,7 +119,7 @@ const CategoryList = ({categoryName, data, setData, item, index}) => {
                 marginRight: responsiveHorizontal(4),
               }}
             />
-            <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+            <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
               Delete category
             </Text>
           </View>
@@ -180,7 +178,7 @@ const NewCategory = ({navigation}) => {
           style={[
             // MyStyle.marginBottom15,
             MyStyle.marginTop8,
-            Colors.backgroundColorD9D9D9,
+            MyStyle.backgroundColorD9D9D9,
             MyStyle.height2,
           ]}
         />
@@ -261,7 +259,7 @@ const NewCategory = ({navigation}) => {
                           marginRight: responsiveHorizontal(4),
                         }}
                       />
-                      <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+                      <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
                         Category unavailable
                       </Text>
                     </TouchableOpacity>
@@ -280,7 +278,7 @@ const NewCategory = ({navigation}) => {
                           marginRight: responsiveHorizontal(4),
                         }}
                       />
-                      <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+                      <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
                         Delete category
                       </Text>
                     </TouchableOpacity>
@@ -313,7 +311,7 @@ const NewCategory = ({navigation}) => {
           <Text
             style={[
               MyStyle.welcomebtntext,
-              Colors.colorWhite,
+              MyStyle.colorWhite,
               MyStyle.fontWeight400,
               MyStyle.fontSize25,
             ]}>

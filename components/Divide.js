@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
 
 import {Divider} from 'react-native-paper';

@@ -1,15 +1,19 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
-import Style, {responsiveVertical, responsiveHorizontal} from '../style';
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
+} from '../style';
 
  const SumbitButton = ({navigation, btnText, nextScreen}) => {
   return (
     <TouchableOpacity
-      style={[Style.welcomebtn, {width: '100%'}]}
+      style={[MyStyle.welcomebtn, {width: '100%'}]}
       onPress={() => {
         nextScreen != '' ? navigation.navigate(nextScreen) : null;
       }}>
-      <Text style={Style.welcomebtntext}>{btnText}</Text>
+      <Text style={MyStyle.welcomebtntext}>{btnText}</Text>
     </TouchableOpacity>
   );
 };

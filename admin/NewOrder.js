@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, Image, ScrollView} from 'react-native';
-import MyStyle, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
-import Colors from '../style';
-import Fonts from '../style';
+
 
 import {Divider} from 'react-native-paper';
 
@@ -22,8 +21,8 @@ const NewOrder = () => {
         ]}>
         <Text
           style={[
-            Fonts.fontSize28,
-            Fonts.fontWeight500,
+            MyStyle.fontSize28,
+            MyStyle.fontWeight500,
             MyStyle.marginHorizontal20,
             {color: '#FFFFFF'},
           ]}>
@@ -47,10 +46,10 @@ const NewOrder = () => {
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight700, {color: '#0093FE'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight700, {color: '#0093FE'}]}>
             10th order by Vishal Chauhan
           </Text>
-          <Text style={[Fonts.fontSize15, Fonts.fontWeight700]}>1:00 PM</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>1:00 PM</Text>
         </View>
         <Divider style={{marginVertical: 15, borderWidth: 1}} />
 
@@ -156,10 +155,10 @@ const NewOrder = () => {
             MyStyle.justifyContentSpaceBetween,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
           </Text>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>Rs200</Text>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>Rs200</Text>
         </View>
 
         <View
@@ -178,15 +177,15 @@ const NewOrder = () => {
             MyStyle.marginBottom10,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FF0000'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FF0000'}]}>
             Paid
           </Text>
         </View>
 
         <Text
           style={[
-            Fonts.fontSize14,
-            Fonts.fontWeight500,
+            MyStyle.fontSize14,
+            MyStyle.fontWeight500,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           Set food preparation time
@@ -206,7 +205,7 @@ const NewOrder = () => {
             <Text
               style={[
                 {marginLeft: responsiveHorizontal(50)},
-                Fonts.fontSize17,
+                MyStyle.fontSize17,
               ]}>
               -
             </Text>
@@ -230,7 +229,7 @@ const NewOrder = () => {
             <Text
               style={[
                 {marginRight: responsiveHorizontal(50)},
-                Fonts.fontSize17,
+                MyStyle.fontSize17,
               ]}>
               +
             </Text>
@@ -256,8 +255,8 @@ const NewOrder = () => {
             ]}>
             <Text
               style={[
-                Fonts.fontSize20,
-                Fonts.fontWeight500,
+                MyStyle.fontSize20,
+                MyStyle.fontWeight500,
                 {color: '#FF0000'},
               ]}>
               Reject
@@ -273,7 +272,7 @@ const NewOrder = () => {
               {backgroundColor: '#E69343'},
             ]}>
             <Text
-              style={[Fonts.fontSize20, Fonts.fontWeight500, Fonts.colorWhite]}>
+              style={[MyStyle.fontSize20, MyStyle.fontWeight500, MyStyle.colorWhite]}>
               Accept
             </Text>
           </TouchableOpacity>
@@ -296,10 +295,10 @@ const NewOrder = () => {
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight700, {color: '#0093FE'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight700, {color: '#0093FE'}]}>
             10th order by Vishal Chauhan
           </Text>
-          <Text style={[Fonts.fontSize15, Fonts.fontWeight700]}>1:00 PM</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>1:00 PM</Text>
         </View>
         <Divider style={{marginVertical: 15, borderWidth: 1}} />
 
@@ -405,10 +404,10 @@ const NewOrder = () => {
             MyStyle.justifyContentSpaceBetween,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
           </Text>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>Rs200</Text>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>Rs200</Text>
         </View>
 
         <View
@@ -427,7 +426,7 @@ const NewOrder = () => {
             MyStyle.marginBottom10,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FF0000'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FF0000'}]}>
             Paid
           </Text>
         </View>
@@ -447,7 +446,7 @@ const NewOrder = () => {
             MyStyle.marginTop4,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FFFFFF'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FFFFFF'}]}>
             Preparing
           </Text>
         </View>
@@ -474,8 +473,8 @@ const NewOrder = () => {
 
           <Text
             style={[
-              Fonts.fontSize14,
-              Fonts.fontWeight500,
+              MyStyle.fontSize14,
+              MyStyle.fontWeight500,
               {marginHorizontal: responsiveHorizontal(14)},
             ]}>
             Assigning nearby riders shortly.
@@ -499,7 +498,7 @@ const NewOrder = () => {
               {backgroundColor: '#E69343'},
             ]}>
             <Text
-              style={[Fonts.fontSize20, Fonts.fontWeight500, Fonts.colorWhite]}>
+              style={[MyStyle.fontSize20, MyStyle.fontWeight500, MyStyle.colorWhite]}>
               Order Ready (15:30)
             </Text>
           </TouchableOpacity>
@@ -522,10 +521,10 @@ const NewOrder = () => {
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight700, {color: '#0093FE'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight700, {color: '#0093FE'}]}>
             10th order by Vishal Chauhan
           </Text>
-          <Text style={[Fonts.fontSize15, Fonts.fontWeight700]}>1:00 PM</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>1:00 PM</Text>
         </View>
         <Divider style={{marginVertical: 15, borderWidth: 1}} />
 
@@ -631,10 +630,10 @@ const NewOrder = () => {
             MyStyle.justifyContentSpaceBetween,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
           </Text>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>Rs200</Text>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>Rs200</Text>
         </View>
 
         <View
@@ -653,7 +652,7 @@ const NewOrder = () => {
             MyStyle.marginBottom10,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FF0000'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FF0000'}]}>
             Paid
           </Text>
         </View>
@@ -673,7 +672,7 @@ const NewOrder = () => {
             MyStyle.marginTop4,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FFFFFF'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FFFFFF'}]}>
             Preparing
           </Text>
         </View>
@@ -703,8 +702,8 @@ const NewOrder = () => {
             </View>
             <Text
               style={[
-                Fonts.fontSize14,
-                Fonts.fontWeight500,
+                MyStyle.fontSize14,
+                MyStyle.fontWeight500,
                 {marginHorizontal: responsiveHorizontal(14)},
               ]}>
               Suraj is on the way
@@ -749,7 +748,7 @@ const NewOrder = () => {
               {backgroundColor: '#E69343'},
             ]}>
             <Text
-              style={[Fonts.fontSize20, Fonts.fontWeight500, Fonts.colorWhite]}>
+              style={[MyStyle.fontSize20, MyStyle.fontWeight500, MyStyle.colorWhite]}>
               Order Ready (15:30)
             </Text>
           </TouchableOpacity>
@@ -772,10 +771,10 @@ const NewOrder = () => {
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight700, {color: '#0093FE'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight700, {color: '#0093FE'}]}>
             10th order by Vishal Chauhan
           </Text>
-          <Text style={[Fonts.fontSize15, Fonts.fontWeight700]}>1:00 PM</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>1:00 PM</Text>
         </View>
         <Divider style={{marginVertical: 15, borderWidth: 1}} />
 
@@ -881,10 +880,10 @@ const NewOrder = () => {
             MyStyle.justifyContentSpaceBetween,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
           </Text>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>Rs200</Text>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>Rs200</Text>
         </View>
 
         <View
@@ -903,7 +902,7 @@ const NewOrder = () => {
             MyStyle.marginBottom10,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FF0000'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FF0000'}]}>
             Paid
           </Text>
         </View>
@@ -923,7 +922,7 @@ const NewOrder = () => {
             //MyStyle.marginTop4,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FFFFFF'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FFFFFF'}]}>
             Preparing
           </Text>
         </View>
@@ -950,8 +949,8 @@ const NewOrder = () => {
 
           <Text
             style={[
-              Fonts.fontSize14,
-              Fonts.fontWeight500,
+              MyStyle.fontSize14,
+              MyStyle.fontWeight500,
               {marginHorizontal: responsiveHorizontal(14)},
             ]}>
             Assigning nearby riders shortly.
@@ -983,7 +982,7 @@ const NewOrder = () => {
               {backgroundColor: '#E69343'},
             ]}>
             <Text
-              style={[Fonts.fontSize20, Fonts.fontWeight500, Fonts.colorWhite]}>
+              style={[MyStyle.fontSize20, MyStyle.fontWeight500, MyStyle.colorWhite]}>
               Order Ready (15:30)
             </Text>
           </TouchableOpacity>
@@ -1006,10 +1005,10 @@ const NewOrder = () => {
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight700, {color: '#0093FE'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight700, {color: '#0093FE'}]}>
             10th order by Vishal Chauhan
           </Text>
-          <Text style={[Fonts.fontSize15, Fonts.fontWeight700]}>1:00 PM</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>1:00 PM</Text>
         </View>
         <Divider style={{marginVertical: 15, borderWidth: 1}} />
 
@@ -1115,10 +1114,10 @@ const NewOrder = () => {
             MyStyle.justifyContentSpaceBetween,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
           </Text>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>Rs200</Text>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>Rs200</Text>
         </View>
 
         <View
@@ -1137,7 +1136,7 @@ const NewOrder = () => {
             MyStyle.marginBottom10,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FF0000'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FF0000'}]}>
             Paid
           </Text>
         </View>
@@ -1157,7 +1156,7 @@ const NewOrder = () => {
             //MyStyle.marginTop4,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FFFFFF'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FFFFFF'}]}>
             READY
           </Text>
         </View>
@@ -1187,8 +1186,8 @@ const NewOrder = () => {
             </View>
             <Text
               style={[
-                Fonts.fontSize14,
-                Fonts.fontWeight500,
+                MyStyle.fontSize14,
+                MyStyle.fontWeight500,
                 {marginHorizontal: responsiveHorizontal(14)},
               ]}>
               Suraj is on the way
@@ -1233,7 +1232,7 @@ const NewOrder = () => {
               {backgroundColor: '#E69343'},
             ]}>
             <Text
-              style={[Fonts.fontSize20, Fonts.fontWeight500, Fonts.colorWhite]}>
+              style={[MyStyle.fontSize20, MyStyle.fontWeight500, MyStyle.colorWhite]}>
               Order Ready (15:30)
             </Text>
           </TouchableOpacity>
@@ -1256,10 +1255,10 @@ const NewOrder = () => {
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight700, {color: '#0093FE'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight700, {color: '#0093FE'}]}>
             10th order by Vishal Chauhan
           </Text>
-          <Text style={[Fonts.fontSize15, Fonts.fontWeight700]}>1:00 PM</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>1:00 PM</Text>
         </View>
         <Divider style={{marginVertical: 15, borderWidth: 1}} />
 
@@ -1365,10 +1364,10 @@ const NewOrder = () => {
             MyStyle.justifyContentSpaceBetween,
             {marginHorizontal: responsiveHorizontal(14)},
           ]}>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
           </Text>
-          <Text style={[Fonts.fontSize12, Fonts.fontWeight400]}>Rs200</Text>
+          <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>Rs200</Text>
         </View>
 
         <View
@@ -1387,7 +1386,7 @@ const NewOrder = () => {
             MyStyle.marginBottom10,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FF0000'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FF0000'}]}>
             Paid
           </Text>
         </View>
@@ -1407,7 +1406,7 @@ const NewOrder = () => {
             //MyStyle.marginTop4,
           ]}>
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight400, {color: '#FFFFFF'}]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400, {color: '#FFFFFF'}]}>
             PICKED UP
           </Text>
         </View>
@@ -1422,10 +1421,10 @@ const NewOrder = () => {
             MyStyle.paddingHorizontal6,
           ]}>
           <View>
-            <Text style={[Fonts.fontSize13, Fonts.fontWeight700]}>
+            <Text style={[MyStyle.fontSize13, MyStyle.fontWeight700]}>
               Order was prepared in time
             </Text>
-            <Text style={[Fonts.fontSize13, Fonts.fontWeight400]}>
+            <Text style={[MyStyle.fontSize13, MyStyle.fontWeight400]}>
               Timely delivery to the customer
             </Text>
           </View>
@@ -1449,8 +1448,8 @@ const NewOrder = () => {
             </View>
             <Text
               style={[
-                Fonts.fontSize14,
-                Fonts.fontWeight500,
+                MyStyle.fontSize14,
+                MyStyle.fontWeight500,
                 {marginHorizontal: responsiveHorizontal(14)},
               ]}>
               Suraj picked up the food
@@ -1495,7 +1494,7 @@ const NewOrder = () => {
               {backgroundColor: '#E69343'},
             ]}>
             <Text
-              style={[Fonts.fontSize20, Fonts.fontWeight500, Fonts.colorWhite]}>
+              style={[MyStyle.fontSize20, MyStyle.fontWeight500, MyStyle.colorWhite]}>
               Order Ready (15:30)
             </Text>
           </TouchableOpacity>

@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
 
 const ProfileContent = ({navigation, heading, icon, nextScreen, width, height}) => {

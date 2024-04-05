@@ -64,7 +64,7 @@ const AddNewDish = () => {
         style={[
           MyStyle.marginBottom15,
           MyStyle.marginTop8,
-          //   Colors.backgroundColorD9D9D9,
+          //   MyStyle.backgroundColorD9D9D9,
           MyStyle.height2,
         ]}
       />
@@ -72,7 +72,7 @@ const AddNewDish = () => {
         <Text
           style={[
             MyStyle.welcomebtntext,
-           Colors.color000000,
+           MyStyle.color000000,
             MyStyle.fontWeight700,
             MyStyle.fontSize20,
           ]}>
@@ -95,7 +95,7 @@ const AddNewDish = () => {
             textDecorationLine="Underline"
             style={[
               MyStyle.welcomebtntext,
-             Colors.color000000,
+             MyStyle.color000000,
               MyStyle.fontWeight400,
               MyStyle.fontSize15,
             ]}
@@ -108,7 +108,7 @@ const AddNewDish = () => {
             textDecorationLine="Underline"
             style={[
               MyStyle.welcomebtntext,
-             Colors.color000000,
+             MyStyle.color000000,
               MyStyle.fontWeight400,
               MyStyle.fontSize15,
             ]}
@@ -121,9 +121,9 @@ const AddNewDish = () => {
             textDecorationLine="Underline"
             style={[
               MyStyle.welcomebtntext,
-              Colors.color000000,
-              Colors.fontWeight400,
-              Colors.fontSize15,
+              MyStyle.color000000,
+              MyStyle.fontWeight400,
+              MyStyle.fontSize15,
             ]}
           />
         </View>
@@ -136,8 +136,8 @@ const AddNewDish = () => {
           ]}>
           <Text
             style={[
-              Colors.fontWeight400,
-              Colors.fontSize15,
+              MyStyle.fontWeight400,
+              MyStyle.fontSize15,
               MyStyle.marginRight18,
             ]}>
             Select *
@@ -168,7 +168,7 @@ const AddNewDish = () => {
             MyStyle.paddingVertical7,
             MyStyle.alignItemCenter,
           ]}>
-          <Text style={[MyStyle.fontSize17, Colors.fontWeight500]}>
+          <Text style={[MyStyle.fontSize17, MyStyle.fontWeight500]}>
             {category}
           </Text>
           <TouchableOpacity
@@ -232,7 +232,7 @@ const AddNewDish = () => {
         )}
 
         <View style={[MyStyle.marginHorizontal20, MyStyle.marginTop13]}>
-          <Text style={[Colors.fontWeight400, Colors.fontSize15]}>
+          <Text style={[MyStyle.fontWeight400, MyStyle.fontSize15]}>
             Upload dish image*
           </Text>
         </View>
@@ -285,7 +285,7 @@ const AddNewDish = () => {
             <Text
               style={[
                 MyStyle.welcomebtntext,
-               Colors.colorWhite,
+               MyStyle.colorWhite,
                 MyStyle.fontWeight400,
                 MyStyle.fontSize30,
               ]}>

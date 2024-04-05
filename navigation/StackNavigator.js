@@ -1,5 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+
+
 import Welcome from '../pages/Welcome';
 import InitialPage from '../pages/InitialPage';
 import Signup from '../pages/auth/Signup';
@@ -23,6 +25,9 @@ import NewOrder from '../admin/NewOrder';
 import adCart from '../admin/Cart';
 import PersonalDetails from '../admin/PersonalDetails';
 import BottomTab from './BottomTab';
+import AdminBottomTab from './AdminBottomTab';
+
+
 import {Image, Text, View} from 'react-native';
 import Style, {responsiveHorizontal, responsiveVertical} from '../style';
 import React, {useState} from 'react';
@@ -34,6 +39,11 @@ const StackNavigator = () => {
   return isAdmin ? (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+          name="adminBotton"
+          component={AdminBottomTab}
+          options={{headerShown: false}}
+        />
       <Stack.Screen
           name="adCart"
           component={adCart}
@@ -74,6 +84,7 @@ const StackNavigator = () => {
           component={AddNewCategory}
           options={{headerShown: false}}
         />
+        
       </Stack.Navigator>
     </NavigationContainer>
   ) : (

@@ -1,11 +1,10 @@
 import React from 'react';
 import {View, Text, FlatList, TouchableOpacity, Image} from 'react-native';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
   responsiveFonts,
-  vw,
-  vh,
+  MyStyle,vw,vh
 } from '../../style';
 const Liked = ({navigation}) => {
   const items = [
@@ -27,7 +26,7 @@ const Liked = ({navigation}) => {
     },
   ];
   return (
-    <View style={[Style.flex1]}>
+    <View style={[MyStyle.flex1]}>
       <FlatList
         // horizontal
         showsHorizontalScrollIndicator={false}
@@ -42,27 +41,27 @@ const Liked = ({navigation}) => {
               navigation.navigate('FoodPlace');
             }}
             style={[
-              Style.paddingVertical7,
-              Style.marginBottom10,
-              Style.backgroundColorFFFFFF,
+              MyStyle.paddingVertical7,
+              MyStyle.marginBottom10,
+              MyStyle.backgroundColorFFFFFF,
             ]}>
             <View
               style={[
-                Style.flexrow,
+                MyStyle.flexrow,
 
-                Style.alignItemCenter,
-                Style.marginTop17,
-                Style.justifyContentSpaceBetween,
-                Style.marginBottom15,
-                Style.marginHorizontal20,
+                MyStyle.alignItemCenter,
+                MyStyle.marginTop17,
+                MyStyle.justifyContentSpaceBetween,
+                MyStyle.marginBottom15,
+                MyStyle.marginHorizontal20,
               ]}>
               <View
                 style={[
-                  Style.flexrow,
-                  Style.alignItemCenter,
-                  Style.borderRadius10,
-                  Style.paddingHorizontal10,
-                  Style.paddingVertical7,
+                  MyStyle.flexrow,
+                  MyStyle.alignItemCenter,
+                  MyStyle.borderRadius10,
+                  MyStyle.paddingHorizontal10,
+                  MyStyle.paddingVertical7,
                   {
                     backgroundColor: 'rgba(238, 152, 70, 0.3)',
                   },
@@ -73,8 +72,8 @@ const Liked = ({navigation}) => {
                       color: 'rgba(0, 0, 0, 0.52)',
                       marginRight: 2,
                     },
-                    Style.fontSize17,
-                    Style.fontWeight700,
+                    MyStyle.fontSize17,
+                    MyStyle.fontWeight700,
                   ]}>
                   {item.loc}
                 </Text>
@@ -94,7 +93,7 @@ const Liked = ({navigation}) => {
                       fontSize: responsiveFonts(12),
                       color: 'rgba(238, 152, 70, 1)',
                     },
-                    Style.fontWeight700,
+                    MyStyle.fontWeight700,
                   ]}>
                   See All
                 </Text>
@@ -122,35 +121,35 @@ const Liked = ({navigation}) => {
                   top: responsiveVertical(80),
                   tintColor: 'red',
                 },
-                Style.positionAbsolute,
+                MyStyle.positionAbsolute,
               ]}
             />
             <View
               style={[
-                Style.flexrow,
-                Style.alignItemCenter,
-                Style.justifyContentSpaceBetween,
-                Style.marginHorizontal20,
-                Style.marginTop18,
+                MyStyle.flexrow,
+                MyStyle.alignItemCenter,
+                MyStyle.justifyContentSpaceBetween,
+                MyStyle.marginHorizontal20,
+                MyStyle.marginTop18,
               ]}>
               <View>
                 <Text
                   style={[
-                    Style.fontWeight700,
-                    Style.fontSize17,
-                    Style.color000000,
+                    MyStyle.fontWeight700,
+                    MyStyle.fontSize17,
+                    MyStyle.color000000,
                   ]}>
                   {item.name}
                 </Text>
               </View>
               {/* <View
                   style={[
-                    Style.flexrow,
-                    Style.alignItemCenter,
-                    Style.marginRight18,
-                    Style.borderRadius6,
-                    Style.paddingHorizontal6,
-                    Style.paddingVertical2,
+                    MyStyle.flexrow,
+                    MyStyle.alignItemCenter,
+                    MyStyle.marginRight18,
+                    MyStyle.borderRadius6,
+                    MyStyle.paddingHorizontal6,
+                    MyStyle.paddingVertical2,
                     {
                       backgroundColor: 'rgba(60, 139, 68, 1)',
                     },
@@ -162,7 +161,7 @@ const Liked = ({navigation}) => {
                         color: 'white',
                         marginRight: 3,
                       },
-                      Style.fontWeight700,
+                      MyStyle.fontWeight700,
                     ]}>
                     {item.ratting}
                   </Text>
@@ -177,10 +176,10 @@ const Liked = ({navigation}) => {
             </View>
             <View
               style={[
-                Style.flexrow,
-                Style.alignItemCenter,
-                Style.borderWidth,
-                Style.marginHorizontal20,
+                MyStyle.flexrow,
+                MyStyle.alignItemCenter,
+                MyStyle.borderWidth,
+                MyStyle.marginHorizontal20,
                 {marginTop: 9},
               ]}>
               <Image
@@ -193,9 +192,9 @@ const Liked = ({navigation}) => {
               />
               <Text
                 style={[
-                  Style.fontWeight400,
-                  Style.fontSize10,
-                  Style.color000000,
+                  MyStyle.fontWeight400,
+                  MyStyle.fontSize10,
+                  MyStyle.color000000,
                 ]}>
                 {item.time}
               </Text>

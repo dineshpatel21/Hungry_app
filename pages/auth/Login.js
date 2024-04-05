@@ -9,13 +9,17 @@ import {
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import Style, {responsiveVertical, responsiveHorizontal} from '../../style';
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
+} from '../../style';
 import SumbitButton from '../../components/SumbitButton';
 const Login = ({navigation}) => {
   return (
-    <View style={[Style.flex1]}>
+    <View style={[MyStyle.flex1]}>
       <LinearGradient
-        style={[Style.flex1]}
+        style={[MyStyle.flex1]}
         // colors={['rgba(255, 255, 255, 0)', 'rgba(234, 156, 81, 1)']}
         colors={[
           'rgba(255, 255, 255, 0)',
@@ -23,7 +27,7 @@ const Login = ({navigation}) => {
           'rgba(238, 175, 115, 0.59)',
           'rgba(234, 156, 81, 0.73)',
         ]}>
-        <ScrollView style={[Style.flex1, Style.paddingHorizontal20]}>
+        <ScrollView style={[MyStyle.flex1, MyStyle.paddingHorizontal20]}>
           <View
             style={{
               marginTop: responsiveVertical(74),
@@ -31,10 +35,10 @@ const Login = ({navigation}) => {
             }}>
             <Text
               style={[
-                Style.fontSize28,
-                Style.color000000,
-                Style.colorD18741,
-                Style.fontWeight700,
+                MyStyle.fontSize28,
+                MyStyle.color000000,
+                MyStyle.colorD18741,
+                MyStyle.fontWeight700,
               ]}>
               LOGIN TO YOUR ACCOUNT
             </Text>
@@ -51,10 +55,10 @@ const Login = ({navigation}) => {
             ]}>
             <Text
               style={[
-                Style.fontSize15,
-                Style.fontWeight700,
+                MyStyle.fontSize15,
+                MyStyle.fontWeight700,
 
-                Style.lineHeight,
+                MyStyle.lineHeight,
                 {
                   color: 'rgba(0, 0, 0, 0.44)',
                   marginTop: responsiveVertical(5),
@@ -66,8 +70,8 @@ const Login = ({navigation}) => {
           <View style={[{marginBottom: responsiveVertical(12)}]}>
             <Text
               style={[
-                Style.fontSize17,
-                Style.fontWeight400,
+                MyStyle.fontSize17,
+                MyStyle.fontWeight400,
                 {color: 'rgba(0, 0, 0, 1)'},
               ]}>
               Enter Your Phone Number
@@ -76,16 +80,16 @@ const Login = ({navigation}) => {
 
           <TextInput
             style={[
-              Style.width100,
-              Style.borderRadius10,
-              Style.borderWidth1,
-              Style.paddingVertical7,
-              Style.paddingHorizontal10,
+              MyStyle.width100,
+              MyStyle.borderRadius10,
+              MyStyle.borderWidth1,
+              MyStyle.paddingVertical7,
+              MyStyle.paddingHorizontal10,
             ]}
           />
 
           <View
-            style={[Style.flexrow, Style.alignItemCenter, Style.marginTop13]}>
+            style={[MyStyle.flexrow, MyStyle.alignItemCenter, MyStyle.marginTop13]}>
             <TouchableOpacity>
               <Image
                 source={require('../../assets/icons/CHECK.png')}
@@ -99,10 +103,10 @@ const Login = ({navigation}) => {
             <View style={{width: responsiveHorizontal(239)}}>
               <Text
                 style={[
-                  Style.fontStyleItalic,
-                  Style.color000000,
-                  Style.fontWeight300,
-                  Style.fontSize13,
+                  MyStyle.fontStyleItalic,
+                  MyStyle.color000000,
+                  MyStyle.fontWeight300,
+                  MyStyle.fontSize13,
                 ]}>
                 I have read and agreed to terms and conditions of Hungry.
               </Text>
@@ -117,10 +121,10 @@ const Login = ({navigation}) => {
             ]}>
             <Text
               style={[
-                Style.color101FA2,
-                Style.fontSize12,
-                Style.fontWeight500,
-                Style.alignSelfFlexEnd,
+                MyStyle.color101FA2,
+                MyStyle.fontSize12,
+                MyStyle.fontWeight500,
+                MyStyle.alignSelfFlexEnd,
               ]}>
               READ MORE
             </Text>
@@ -131,15 +135,15 @@ const Login = ({navigation}) => {
             btnText="SEND OTP"
             nextScreen="OtpVerification"
           />
-           <View style={[Style.flexrow, Style.justifyContentCenter,Style.marginTop8]}>
+           <View style={[MyStyle.flexrow, MyStyle.justifyContentCenter,MyStyle.marginTop8]}>
             <Text
               style={[
                 {
                   color: 'rgba(0, 0, 0, 0.44)',
                   marginRight: responsiveHorizontal(5),
                 },
-                Style.fontSize15,
-                Style.fontWeight700,
+                MyStyle.fontSize15,
+                MyStyle.fontWeight700,
               ]}>
              If you have not any account ?
             </Text>
@@ -147,8 +151,8 @@ const Login = ({navigation}) => {
               <Text
                 style={[
                   {color: 'rgba(172, 23, 18, 1)'},
-                  Style.fontSize15,
-                  Style.fontWeight700,
+                  MyStyle.fontSize15,
+                  MyStyle.fontWeight700,
                 ]}>
                 Signup
               </Text>

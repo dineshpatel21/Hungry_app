@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
 const MenuItem = ({navigation}) => {
   const [DATA, SETDATA] = useState([
@@ -25,10 +25,10 @@ const MenuItem = ({navigation}) => {
               navigation.navigate('ItemDetail');
             }}
             style={[
-              Style.flexrow,
-              Style.alignItemCenter,
-              Style.positionRelative,
-              Style.backgroundColorFFFFFF,
+              MyStyle.flexrow,
+              MyStyle.alignItemCenter,
+              MyStyle.positionRelative,
+              MyStyle.backgroundColorFFFFFF,
               {paddingVertical: responsiveVertical(25)},
             ]}>
             <Image
@@ -44,7 +44,7 @@ const MenuItem = ({navigation}) => {
                   top: 25,
                   right: 10,
                 },
-                Style.positionAbsolute,
+                MyStyle.positionAbsolute,
               ]}
             />
             <View
@@ -66,12 +66,12 @@ const MenuItem = ({navigation}) => {
               />
               <TouchableOpacity
                 style={[
-                  Style.borderWidth1,
-                  Style.alignItemCenter,
-                  Style.positionAbsolute,
-                  Style.justifyContentCenter,
-                  Style.alignSelfCenter,
-                  Style.backgroundColorEE9846,
+                  MyStyle.borderWidth1,
+                  MyStyle.alignItemCenter,
+                  MyStyle.positionAbsolute,
+                  MyStyle.justifyContentCenter,
+                  MyStyle.alignSelfCenter,
+                  MyStyle.backgroundColorEE9846,
                   {
                     width: responsiveHorizontal(58),
                     height: responsiveVertical(27),
@@ -82,9 +82,9 @@ const MenuItem = ({navigation}) => {
                 ]}>
                 <Text
                   style={[
-                    Style.fontSize12,
-                    Style.fontWeight700,
-                    Style.colorWhite,
+                    MyStyle.fontSize12,
+                    MyStyle.fontWeight700,
+                    MyStyle.colorWhite,
                   ]}>
                   Add
                 </Text>
@@ -97,7 +97,7 @@ const MenuItem = ({navigation}) => {
                       top: 4,
                       right: 4,
                     },
-                    Style.positionAbsolute,
+                    MyStyle.positionAbsolute,
                   ]}
                 />
               </TouchableOpacity>
@@ -106,13 +106,13 @@ const MenuItem = ({navigation}) => {
             <View>
               <Text
                 style={[
-                  Style.fontSize15,
-                  Style.fontWeight700,
-                  Style.color000000,
+                  MyStyle.fontSize15,
+                  MyStyle.fontWeight700,
+                  MyStyle.color000000,
                 ]}>
                 Name
               </Text>
-              {/* <View style={[Style.flexrow]}>
+              {/* <View style={[MyStyle.flexrow]}>
                 <Image
                   source={require('../assets/icons/stars.png')}
                   style={{
@@ -123,18 +123,18 @@ const MenuItem = ({navigation}) => {
                 />
                 <Text
                   style={[
-                    Style.fontSize15,
-                    Style.fontWeight400,
-                    Style.color000000,
+                    MyStyle.fontSize15,
+                    MyStyle.fontWeight400,
+                    MyStyle.color000000,
                   ]}>
                   5 rating
                 </Text>
               </View> */}
               <Text
                 style={[
-                  Style.fontSize15,
-                  Style.fontWeight400,
-                  Style.colorEE9846,
+                  MyStyle.fontSize15,
+                  MyStyle.fontWeight400,
+                  MyStyle.colorEE9846,
                 ]}>
                 Rs 150
               </Text>

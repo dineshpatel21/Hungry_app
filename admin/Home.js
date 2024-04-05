@@ -8,14 +8,7 @@ import {
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import MenuManagement from '../components/MenuManagement';
-import MyStyle from '../style';
-import Colors from '../style';
-import Fonts from '../style';
-import Style, {
-  responsiveVertical,
-  responsiveHorizontal,
-  responsiveFonts,
-} from '../style';
+import {MyStyle,responsiveHorizontal,responsiveVertical,vw,vh} from '../style';
 import {Divider} from 'react-native-paper';
 import Category from '../components/Category';
 import SwitchComponent from '../components/Switch';
@@ -45,10 +38,10 @@ const Home = ({navigation}) => {
             ]}
           />
           <View>
-            <Text style={[Fonts.fontSize20, Fonts.fontWeight700]}>
+            <Text style={[MyStyle.fontSize20, MyStyle.fontWeight700]}>
               Shop name
             </Text>
-            <Text style={[Fonts.fontSize15, Fonts.fontWeight400]}>Address</Text>
+            <Text style={[MyStyle.fontSize15, MyStyle.fontWeight400]}>Address</Text>
           </View>
         </View>
         <SwitchComponent />
@@ -67,7 +60,7 @@ const Home = ({navigation}) => {
             MyStyle.justifyContentCenter,
             {backgroundColor: '#D9D9D9'},
           ]}>
-          <Text style={[Fonts.fontSize20, Fonts.fontWeight700]}>
+          <Text style={[MyStyle.fontSize20, MyStyle.fontWeight700]}>
             shop photo or logo
           </Text>
         </View>
@@ -94,8 +87,8 @@ const Home = ({navigation}) => {
         <Text
           style={[
             MyStyle.alignSelfCenter,
-            Fonts.fontSize15,
-            Fonts.fontWeight700,
+            MyStyle.fontSize15,
+            MyStyle.fontWeight700,
             {color: '#1F1F1F'},
           ]}>
           You are {isOnline ? 'online' : 'offline'}.
@@ -103,8 +96,8 @@ const Home = ({navigation}) => {
         <Text
           style={[
             MyStyle.alignSelfCenter,
-            Fonts.fontSize13,
-            Fonts.fontWeight500,
+            MyStyle.fontSize13,
+            MyStyle.fontWeight500,
           ]}>
           Waiting for new orders.
         </Text>
@@ -127,7 +120,7 @@ const Home = ({navigation}) => {
           },
         ]}>
         <Text
-          style={[Fonts.fontSize17, Colors.colorWhite, MyStyle.marginRight9]}>
+          style={[MyStyle.fontSize17, MyStyle.colorWhite, MyStyle.marginRight9]}>
           1 New order alert
         </Text>
         <TouchableOpacity
@@ -140,7 +133,7 @@ const Home = ({navigation}) => {
             MyStyle.marginRight18,
           ]}>
           <Text
-            style={[Fonts.fontSize17, Fonts.fontWeight400, Colors.colorWhite]}>
+            style={[MyStyle.fontSize17, MyStyle.fontWeight400, MyStyle.colorWhite]}>
             View
           </Text>
         </TouchableOpacity>
@@ -176,7 +169,7 @@ const Home = ({navigation}) => {
             ]}
           />
           <Text
-            style={[Fonts.fontSize15, Fonts.fontWeight500, Colors.colorWhite]}>
+            style={[MyStyle.fontSize15, MyStyle.fontWeight500, MyStyle.colorWhite]}>
             Home
           </Text>
         </TouchableOpacity>
@@ -184,7 +177,7 @@ const Home = ({navigation}) => {
           horizontalInset={true}
           style={[
             {borderWidth: 0.5, height: '80%', borderColor: '#ffffff'},
-            Style.marginHorizontal20,
+            MyStyle.marginHorizontal20,
           ]}
         />
         <TouchableOpacity
@@ -203,13 +196,13 @@ const Home = ({navigation}) => {
           <View style={[MyStyle.justifyContentCenter]}>
             <Text
               style={[
-                Fonts.fontSize15,
-                Fonts.fontWeight500,
-                Colors.colorWhite,
+                MyStyle.fontSize15,
+                MyStyle.fontWeight500,
+                MyStyle.colorWhite,
               ]}>
               Insight
             </Text>
-            <Text style={[{color: '#3C8B44'}, Fonts.fontSize17]}>
+            <Text style={[{color: '#3C8B44'}, MyStyle.fontSize17]}>
               +1200 Orders
             </Text>
           </View>

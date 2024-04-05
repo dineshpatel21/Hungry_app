@@ -6,12 +6,14 @@ import {
   TouchableOpacity,
   FlatList,
   TextInput,
-  ScrollView, Keyboard,
+  ScrollView,
+  Keyboard,
 } from 'react-native';
 import Carousel from '../components/Carousel';
-import Style, {
-  responsiveHorizontal,
+import {
   responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
   vw,
   vh,
 } from '../style';
@@ -41,21 +43,21 @@ const MyCart = () => {
   }, [isKeyboardVisible]);
   return (
     <>
-      <ScrollView style={[Style.flex1, Style.backgroundColorFFFFFF]}>
+      <ScrollView style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
         {/* <View
         style={[
-          Style.flexrow,
-          Style.justifyContentCenternter,
-          Style.marginHorizontal20,
-          Style.justifyContentSpaceBetween,
-          Style.borderRadius10,
-          Style.marginTop18,
-          Style.marginBottom15,
-          Style.borderColorA61A1,
+          MyStyle.flexrow,
+          MyStyle.justifyContentCenternter,
+          MyStyle.marginHorizontal20,
+          MyStyle.justifyContentSpaceBetween,
+          MyStyle.borderRadius10,
+          MyStyle.marginTop18,
+          MyStyle.marginBottom15,
+          MyStyle.borderColorA61A1,
           {padding: 6},
         ]}>
-        <View style={[Style.flexrow, Style.alignItemCenter]}>
-          <Text style={[Style.fontSize15, Style.fontWeight400]}>
+        <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight400]}>
             Delivery Location
           </Text>
         </View>
@@ -64,19 +66,19 @@ const MyCart = () => {
             //navigation.navigate('MyCart');
           }}
           style={[
-            Style.flexrow,
-            Style.paddingVertical2,
-            Style.paddingHorizontal6,
-            Style.justifyContentCenter,
-            Style.alignItemCenterCenter,
-            Style.alignSelfCenter,
-            Style.borderWidth1,
-            Style.borderRadius10,
-            Style.alignItemCenter,
+            MyStyle.flexrow,
+            MyStyle.paddingVertical2,
+            MyStyle.paddingHorizontal6,
+            MyStyle.justifyContentCenter,
+            MyStyle.alignItemCenterCenter,
+            MyStyle.alignSelfCenter,
+            MyStyle.borderWidth1,
+            MyStyle.borderRadius10,
+            MyStyle.alignItemCenter,
             {borderColor: '#EE9846'},
           ]}>
           <Text
-            style={[Style.fontSize9, Style.fontWeight400, {color: '#EE9846'}]}>
+            style={[MyStyle.fontSize9, MyStyle.fontWeight400, {color: '#EE9846'}]}>
             Chanage location
           </Text>
         </TouchableOpacity>
@@ -86,14 +88,14 @@ const MyCart = () => {
           return (
             <View
               style={[
-                Style.flexrow,
-                Style.alignItemCenter,
-                Style.positionRelative,
-                Style.backgroundColorFFFFFF,
-                Style.borderWidth1,
-                Style.marginHorizontal20,
-                Style.marginBottom15,
-                Style.borderRadius10,
+                MyStyle.flexrow,
+                MyStyle.alignItemCenter,
+                MyStyle.positionRelative,
+                MyStyle.backgroundColorFFFFFF,
+                MyStyle.borderWidth1,
+                MyStyle.marginHorizontal20,
+                MyStyle.marginBottom15,
+                MyStyle.borderRadius10,
                 {
                   paddingVertical: responsiveVertical(25),
                   borderColor: '#EE9846',
@@ -108,7 +110,7 @@ const MyCart = () => {
                     bottom: responsiveVertical(13),
                     right: 10,
                   },
-                  Style.positionAbsolute,
+                  MyStyle.positionAbsolute,
                 ]}>
                 <Image
                   source={require('../assets/icons/trash.png')}
@@ -122,8 +124,8 @@ const MyCart = () => {
               </TouchableOpacity>
               <View
                 style={[
-                  Style.backgroundColorEE9846,
-                  Style.positionAbsolute,
+                  MyStyle.backgroundColorEE9846,
+                  MyStyle.positionAbsolute,
                   {left: responsiveHorizontal(17)},
                 ]}>
                 <Image
@@ -138,11 +140,11 @@ const MyCart = () => {
               </View>
               <View
                 style={[
-                  Style.marginLeft18,
-                  Style.borderWidth1,
-                  Style.marginRight20,
-                  Style.borderRadius10,
-                  Style.borderColorA61A1,
+                  MyStyle.marginLeft18,
+                  MyStyle.borderWidth1,
+                  MyStyle.marginRight20,
+                  MyStyle.borderRadius10,
+                  MyStyle.borderColorA61A1,
                   {
                     marginLeft: 18,
                     width: responsiveHorizontal(122),
@@ -159,12 +161,12 @@ const MyCart = () => {
                 />
                 <TouchableOpacity
                   style={[
-                    Style.borderWidth1,
-                    Style.alignItemCenter,
-                    Style.positionAbsolute,
-                    Style.justifyContentCenter,
-                    Style.alignSelfCenter,
-                    Style.backgroundColorEE9846,
+                    MyStyle.borderWidth1,
+                    MyStyle.alignItemCenter,
+                    MyStyle.positionAbsolute,
+                    MyStyle.justifyContentCenter,
+                    MyStyle.alignSelfCenter,
+                    MyStyle.backgroundColorEE9846,
                     {
                       width: responsiveHorizontal(58),
                       height: responsiveVertical(27),
@@ -175,9 +177,9 @@ const MyCart = () => {
                   ]}>
                   <Text
                     style={[
-                      Style.fontSize12,
-                      Style.fontWeight700,
-                      Style.colorWhite,
+                      MyStyle.fontSize12,
+                      MyStyle.fontWeight700,
+                      MyStyle.colorWhite,
                     ]}>
                     Add
                   </Text>
@@ -190,20 +192,20 @@ const MyCart = () => {
                         top: 4,
                         right: 4,
                       },
-                      Style.positionAbsolute,
+                      MyStyle.positionAbsolute,
                     ]}
                   />
                 </TouchableOpacity>
               </View>
 
               <View>
-                <View style={[Style.flexrow, Style.alignItemCenter]}>
+                <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
                   <Text
                     style={[
-                      Style.fontSize15,
-                      Style.fontWeight700,
-                      Style.color000000,
-                      Style.marginRight9,
+                      MyStyle.fontSize15,
+                      MyStyle.fontWeight700,
+                      MyStyle.color000000,
+                      MyStyle.marginRight9,
                     ]}>
                     Name
                   </Text>
@@ -232,9 +234,9 @@ const MyCart = () => {
 
                 <Text
                   style={[
-                    Style.fontSize15,
-                    Style.fontWeight400,
-                    Style.colorEE9846,
+                    MyStyle.fontSize15,
+                    MyStyle.fontWeight400,
+                    MyStyle.colorEE9846,
                   ]}>
                   Rs 150
                 </Text>
@@ -242,9 +244,9 @@ const MyCart = () => {
 
               <View
                 style={[
-                  Style.flexrow,
-                  Style.alignSelfCenter,
-                  Style.positionAbsolute,
+                  MyStyle.flexrow,
+                  MyStyle.alignSelfCenter,
+                  MyStyle.positionAbsolute,
 
                   {bottom: 15, left: vw / 2 - 10},
                 ]}>
@@ -256,10 +258,10 @@ const MyCart = () => {
                   }}
                   style={[
                     {padding: 3},
-                    Style.borderWidth1,
-                    Style.borderColorA61A1,
-                    Style.marginRight20,
-                    Style.borderRadius50,
+                    MyStyle.borderWidth1,
+                    MyStyle.borderColorA61A1,
+                    MyStyle.marginRight20,
+                    MyStyle.borderRadius50,
                   ]}>
                   <Image
                     source={require('../assets/icons/-.png')}
@@ -271,9 +273,9 @@ const MyCart = () => {
                 </TouchableOpacity>
                 <Text
                   style={[
-                    Style.fontSize17,
-                    Style.fontWeight700,
-                    Style.marginRight20,
+                    MyStyle.fontSize17,
+                    MyStyle.fontWeight700,
+                    MyStyle.marginRight20,
                   ]}>
                   4
                 </Text>
@@ -282,11 +284,11 @@ const MyCart = () => {
                     // setItem(item + 1);
                   }}
                   style={[
-                    Style.borderWidth1,
-                    Style.borderRadius10,
-                    Style.borderColorA61A1,
-                    Style.marginRight20,
-                    Style.borderRadius50,
+                    MyStyle.borderWidth1,
+                    MyStyle.borderRadius10,
+                    MyStyle.borderColorA61A1,
+                    MyStyle.marginRight20,
+                    MyStyle.borderRadius50,
                     {padding: 3},
                   ]}>
                   <Image
@@ -304,12 +306,12 @@ const MyCart = () => {
 
         <View
           style={[
-            Style.flexrow,
-            Style.alignItemCenter,
-            Style.marginHorizontal20,
-            Style.alignSelfCenter,
-            Style.marginTop8,
-            Style.marginBottom10,
+            MyStyle.flexrow,
+            MyStyle.alignItemCenter,
+            MyStyle.marginHorizontal20,
+            MyStyle.alignSelfCenter,
+            MyStyle.marginTop8,
+            MyStyle.marginBottom10,
           ]}>
           <Image
             source={require('../assets/icons/stopwatch.png')}
@@ -321,25 +323,27 @@ const MyCart = () => {
               },
             ]}
           />
-          <Text style={[Style.fontSize15, Style.fontWeight300]}>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight300]}>
             Delivery in{' '}
           </Text>
-          <Text style={[Style.fontSize15, Style.fontWeight700]}>30-35 Min</Text>
+          <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>
+            30-35 Min
+          </Text>
         </View>
 
         <View
           style={[
-            Style.flexrow,
-            Style.justifyContentCenternter,
-            Style.borderWidth1,
-            Style.marginHorizontal20,
-            Style.justifyContentSpaceBetween,
-            Style.borderRadius10,
-            Style.marginTop18,
-            Style.marginBottom10,
+            MyStyle.flexrow,
+            MyStyle.justifyContentCenternter,
+            MyStyle.borderWidth1,
+            MyStyle.marginHorizontal20,
+            MyStyle.justifyContentSpaceBetween,
+            MyStyle.borderRadius10,
+            MyStyle.marginTop18,
+            MyStyle.marginBottom10,
             {padding: 6, borderColor: '#D9D9D9'},
           ]}>
-          <View style={[Style.flexrow, Style.alignItemCenter]}>
+          <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
             <Image
               source={require('../assets/icons/discount.png')}
               style={[
@@ -357,21 +361,21 @@ const MyCart = () => {
               //navigation.navigate('MyCart');
             }}
             style={[
-              Style.flexrow,
-              Style.paddingVertical2,
-              Style.paddingHorizontal6,
-              Style.justifyContentCenter,
-              Style.alignItemCenterCenter,
-              Style.alignSelfCenter,
-              Style.backgroundColorEE9846,
-              Style.borderRadius10,
-              Style.alignItemCenter,
+              MyStyle.flexrow,
+              MyStyle.paddingVertical2,
+              MyStyle.paddingHorizontal6,
+              MyStyle.justifyContentCenter,
+              MyStyle.alignItemCenterCenter,
+              MyStyle.alignSelfCenter,
+              MyStyle.backgroundColorEE9846,
+              MyStyle.borderRadius10,
+              MyStyle.alignItemCenter,
               {backgroundColor: 'rgba(255, 215, 215, 1)'},
             ]}>
             <Text
               style={[
-                Style.fontSize15,
-                Style.fontWeight700,
+                MyStyle.fontSize15,
+                MyStyle.fontWeight700,
                 {color: '#0A0808'},
               ]}>
               Apply
@@ -382,81 +386,81 @@ const MyCart = () => {
         <View
           style={[
             {width: responsiveHorizontal(325)},
-            Style.borderWidth1,
-            Style.alignSelfCenter,
-            Style.paddingVertical10,
-            Style.borderRadius10,
-            Style.padding8,
+            MyStyle.borderWidth1,
+            MyStyle.alignSelfCenter,
+            MyStyle.paddingVertical10,
+            MyStyle.borderRadius10,
+            MyStyle.padding8,
           ]}>
           <View
             style={[
-              Style.flexrow,
-              Style.justifyContentSpaceBetween,
-              Style.marginBottom8,
+              MyStyle.flexrow,
+              MyStyle.justifyContentSpaceBetween,
+              MyStyle.marginBottom8,
             ]}>
-            <View style={[Style.marginLeft18]}>
+            <View style={[MyStyle.marginLeft18]}>
               <Text
                 style={[
-                  Style.fontSize20,
-                  Style.fontWeight700,
-                  Style.color000000,
+                  MyStyle.fontSize20,
+                  MyStyle.fontWeight700,
+                  MyStyle.color000000,
                 ]}>
                 Payment summary
               </Text>
             </View>
           </View>
-          <Divider style={[Style.borderWidth1, Style.marginVertical9]} />
+          <Divider style={[MyStyle.borderWidth1, MyStyle.marginVertical9]} />
 
           <View
             style={[
-              Style.flexrow,
-              Style.justifyContentSpaceBetween,
-              Style.marginHorizontal20,
+              MyStyle.flexrow,
+              MyStyle.justifyContentSpaceBetween,
+              MyStyle.marginHorizontal20,
             ]}>
-            <Text style={[Style.fontSize15, Style.fontWeight500]}>
+            <Text style={[MyStyle.fontSize15, MyStyle.fontWeight500]}>
               Total Item (8)
             </Text>
             <Text
               style={[
-                Style.fontSize10,
-                Style.fontWeight700,
-                Style.color000000,
+                MyStyle.fontSize10,
+                MyStyle.fontWeight700,
+                MyStyle.color000000,
               ]}>
               Rs 1500
             </Text>
           </View>
           <View
             style={[
-              Style.flexrow,
-              Style.justifyContentSpaceBetween,
-              Style.marginHorizontal20,
+              MyStyle.flexrow,
+              MyStyle.justifyContentSpaceBetween,
+              MyStyle.marginHorizontal20,
             ]}>
-            <Text style={[Style.fontSize15, Style.fontWeight500]}>
+            <Text style={[MyStyle.fontSize15, MyStyle.fontWeight500]}>
               Delivery Fee
             </Text>
             <Text
               style={[
-                Style.fontSize10,
-                Style.fontWeight700,
-                Style.color000000,
+                MyStyle.fontSize10,
+                MyStyle.fontWeight700,
+                MyStyle.color000000,
               ]}>
               Rs 150
             </Text>
           </View>
           <View
             style={[
-              Style.flexrow,
-              Style.justifyContentSpaceBetween,
-              Style.marginHorizontal20,
+              MyStyle.flexrow,
+              MyStyle.justifyContentSpaceBetween,
+              MyStyle.marginHorizontal20,
             ]}>
-            <Text style={[Style.fontSize15, Style.fontWeight500]}>
+            <Text style={[MyStyle.fontSize15, MyStyle.fontWeight500]}>
               Discount
             </Text>
             <Text
               style={[
-                Style.fontSize10,
-                Style.fontWeight700,
-                Style.color000000,
+                MyStyle.fontSize10,
+                MyStyle.fontWeight700,
+                MyStyle.color000000,
               ]}>
               Rs 1300
             </Text>
@@ -470,40 +474,47 @@ const MyCart = () => {
                 marginVertical: responsiveVertical(9),
                 //marginHorizontal: responsiveHorizontal(14),
               },
-              Style.borderWidth1,
+              MyStyle.borderWidth1,
             ]}
           />
           <View
             style={[
-              Style.flexrow,
-              Style.justifyContentSpaceBetween,
-              Style.paddingHorizontal20,
+              MyStyle.flexrow,
+              MyStyle.justifyContentSpaceBetween,
+              MyStyle.paddingHorizontal20,
             ]}>
             <Text>DATE</Text>
             <Text>Total Bill</Text>
           </View>
         </View>
-        {!isKeyboardVisible&&<TouchableOpacity
-        onPress={() => {}}
-        style={[
-          Style.flexrow,
-          Style.paddingVertical10,
-          Style.paddingHorizontal6,
-          Style.justifyContentCenter,
-        
-          Style.alignSelfCenter,
-          Style.backgroundColorEE9846,
-          Style.borderRadius10,
-          Style.alignItemCenter,
-         Style.marginTop18,Style.marginBottom10,
-          {width: responsiveHorizontal(127), },
-        ]}>
-        <Text style={[Style.fontSize18, Style.fontWeight500, Style.colorWhite]}>
-          PLACE ORDER
-        </Text>
-      </TouchableOpacity>}
+        {!isKeyboardVisible && (
+          <TouchableOpacity
+            onPress={() => {}}
+            style={[
+              MyStyle.flexrow,
+              MyStyle.paddingVertical10,
+              MyStyle.paddingHorizontal6,
+              MyStyle.justifyContentCenter,
+
+              MyStyle.alignSelfCenter,
+              MyStyle.backgroundColorEE9846,
+              MyStyle.borderRadius10,
+              MyStyle.alignItemCenter,
+              MyStyle.marginTop18,
+              MyStyle.marginBottom10,
+              {width: responsiveHorizontal(127)},
+            ]}>
+            <Text
+              style={[
+                MyStyle.fontSize18,
+                MyStyle.fontWeight500,
+                MyStyle.colorWhite,
+              ]}>
+              PLACE ORDER
+            </Text>
+          </TouchableOpacity>
+        )}
       </ScrollView>
-      
     </>
   );
 };

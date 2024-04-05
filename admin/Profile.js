@@ -1,12 +1,8 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../../style';
-import ProfileContent from '../../components/ProfileContent';
-import Divide from '../../components/Divide';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
+import ProfileContent from '../components/ProfileContent';
+import Divide from '../components/Divide';
 import {Divider} from 'react-native-paper';
 
 const Profile = ({navigation}) => {
@@ -20,7 +16,6 @@ const Profile = ({navigation}) => {
             MyStyle.justifyContentSpaceBetween,
             MyStyle.marginTop13,
             MyStyle.marginBottom10,
-
             {width: responsiveHorizontal(250)},
           ]}>
           <View
@@ -39,7 +34,7 @@ const Profile = ({navigation}) => {
               MyStyle.positionRelative,
             ]}>
             <Image
-              source={require('../../assets/icons/user.png')}
+              source={require('../assets/icons/user.png')}
               style={{
                 width: responsiveHorizontal(58),
                 height: responsiveHorizontal(58),
@@ -49,10 +44,7 @@ const Profile = ({navigation}) => {
           </View>
           <Divider
             horizontalInset={true}
-            style={[
-              {borderWidth: 0.5, height: '100%', borderColor: '#EEA967'},
-              MyStyle.marginHorizontal20,
-            ]}
+            style={[MyStyle.dividerStyle, MyStyle.marginHorizontal20]}
           />
           <View>
             <Text
@@ -68,7 +60,7 @@ const Profile = ({navigation}) => {
                 MyStyle.fontSize12,
                 MyStyle.fontWeight400,
                 MyStyle.colorEE9846,
-                MyStyle.marginTop4
+                MyStyle.marginTop4,
               ]}>
               address
             </Text>
@@ -76,35 +68,35 @@ const Profile = ({navigation}) => {
         </View>
 
         <ProfileContent
-          heading="Edit Profile"
-          icon={require('../../assets/icons/edit.png')}
+          heading="Personal Details"
+          icon={require('../assets/icons/edit.png')}
           navigation={navigation}
-          nextScreen="EditProfile"
+          nextScreen="PersonalDetails"
         />
 
         <Divide wid={271} color="#EE9846" />
 
         <ProfileContent
-          heading="Your Orders"
-          icon={require('../../assets/icons/bag.png')}
+          heading="Dishes"
+          icon={require('../assets/icons/bag.png')}
           navigation={navigation}
-          nextScreen="OrderHistory"
+          nextScreen="MyDishes"
         />
 
         <Divide wid={271} color="#EE9846" />
 
         <ProfileContent
-          heading="About Us"
-          icon={require('../../assets/icons/contact.png')}
+          heading="Dishes Category"
+          icon={require('../assets/icons/contact.png')}
           navigation={navigation}
-          nextScreen=""
+          nextScreen="NewCategory"
         />
 
         <Divide wid={271} color="#EE9846" />
 
         <ProfileContent
           heading="Contact Us"
-          icon={require('../../assets/icons/call.png')}
+          icon={require('../assets/icons/call.png')}
           navigation={navigation}
           nextScreen=""
         />
@@ -113,7 +105,7 @@ const Profile = ({navigation}) => {
 
         <ProfileContent
           heading="Report An Issue"
-          icon={require('../../assets/icons/danger.png')}
+          icon={require('../assets/icons/danger.png')}
           navigation={navigation}
           nextScreen=""
         />
@@ -122,7 +114,7 @@ const Profile = ({navigation}) => {
 
         <ProfileContent
           heading="Log Out"
-          icon={require('../../assets/icons/logout.png')}
+          icon={require('../assets/icons/logout.png')}
           navigation={navigation}
           nextScreen=""
         />

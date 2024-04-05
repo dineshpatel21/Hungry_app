@@ -11,12 +11,10 @@ import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import {Searchbar} from 'react-native-paper';
 import Categories from '../components/Categories';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
-  vw,
-  vh,
+  MyStyle,
 } from '../style';
 import {Divider} from 'react-native-paper';
 const OrderHistory = () => {
@@ -28,11 +26,11 @@ const OrderHistory = () => {
           {
             borderColor: 'rgba(0, 0, 0, 0.22)',
           },
-          Style.marginBottom10,
-          Style.alignItemCenter,
-          Style.marginTop18,
-          Style.marginHorizontal20,
-          Style.marginBottom26
+          MyStyle.marginBottom10,
+          MyStyle.alignItemCenter,
+          MyStyle.marginTop18,
+          MyStyle.marginHorizontal20,
+          MyStyle.marginBottom26
         ]}
         icon={({color, size}) => (
           <Image
@@ -51,35 +49,35 @@ const OrderHistory = () => {
       <View
         style={[
           {width: responsiveHorizontal(325)},
-          Style.borderWidth1,
-          Style.alignSelfCenter,
-          Style.paddingVertical10,
-          Style.borderRadius10,
-          //Style.padding8,
+          MyStyle.borderWidth1,
+          MyStyle.alignSelfCenter,
+          MyStyle.paddingVertical10,
+          MyStyle.borderRadius10,
+          //MyStyle.padding8,
         ]}>
         <View
           style={[
-            Style.flexrow,
-            Style.justifyContentSpaceBetween,
-            Style.marginBottom8,
+            MyStyle.flexrow,
+            MyStyle.justifyContentSpaceBetween,
+            MyStyle.marginBottom8,
           ]}>
           <View
-            style={[Style.flexrow, Style.marginLeft24, Style.alignItemCenter]}>
+            style={[MyStyle.flexrow, MyStyle.marginLeft24, MyStyle.alignItemCenter]}>
             <View>
               <Image
                 style={[
                   {width: 54, height: 54},
-                  Style.marginRight18,
-                  Style.borderRadius10,
+                  MyStyle.marginRight18,
+                  MyStyle.borderRadius10,
                 ]}
                 source={require('../assets/icons/sweets.png')}
               />
             </View>
             <View>
-              <Text style={[Style.fontSize15, Style.fontWeight700]}>
+              <Text style={[MyStyle.fontSize15, MyStyle.fontWeight700]}>
                 Stall Name
               </Text>
-              <Text style={[Style.fontSize10, Style.fontWeight400]}>
+              <Text style={[MyStyle.fontSize10, MyStyle.fontWeight400]}>
                 Address
               </Text>
             </View>
@@ -91,22 +89,22 @@ const OrderHistory = () => {
                 height: responsiveVertical(16),
                 backgroundColor: 'rgba(217, 217, 217, 0.64)',
               },
-              Style.marginRight24,
-              Style.alignItemCenter,
+              MyStyle.marginRight24,
+              MyStyle.alignItemCenter,
             ]}>
-            <Text style={[Style.fontSize10, Style.fontWeight400]}>
+            <Text style={[MyStyle.fontSize10, MyStyle.fontWeight400]}>
               Delivered
             </Text>
           </View>
         </View>
-        <Divider style={[Style.borderWidth1, Style.marginVertical9]} />
+        <Divider style={[MyStyle.borderWidth1, MyStyle.marginVertical9]} />
 
         <View
           style={[
-            Style.flexrow,
-            Style.alignItemCenter,
-            Style.marginBottom8,
-            Style.marginLeft18,
+            MyStyle.flexrow,
+            MyStyle.alignItemCenter,
+            MyStyle.marginBottom8,
+            MyStyle.marginLeft18,
           ]}>
           <TouchableOpacity
             style={[
@@ -114,7 +112,7 @@ const OrderHistory = () => {
                 width: responsiveHorizontal(20),
                 height: responsiveVertical(20),
               },
-              Style.marginRight18,
+              MyStyle.marginRight18,
             ]}>
             <Image
               source={require('../assets/icons/green.png')}
@@ -128,24 +126,24 @@ const OrderHistory = () => {
           </TouchableOpacity>
           <Text
             style={[
-              Style.fontSize15,
-              Style.fontWeight700,
-              Style.color000000,
-              Style.marginRight9,
+              MyStyle.fontSize15,
+              MyStyle.fontWeight700,
+              MyStyle.color000000,
+              MyStyle.marginRight9,
             ]}>
             <Text style={[{color: 'rgba(255, 0, 0, 1)'}]}>Quantity</Text> X Dish
           </Text>
         </View>
 
         <View
-          style={[Style.flexrow, Style.alignItemCenter, Style.marginLeft18]}>
+          style={[MyStyle.flexrow, MyStyle.alignItemCenter, MyStyle.marginLeft18]}>
           <TouchableOpacity
             style={[
               {
                 width: responsiveHorizontal(20),
                 height: responsiveVertical(20),
               },
-              Style.marginRight18,
+              MyStyle.marginRight18,
             ]}>
             <Image
               source={require('../assets/icons/green.png')}
@@ -159,10 +157,10 @@ const OrderHistory = () => {
           </TouchableOpacity>
           <Text
             style={[
-              Style.fontSize15,
-              Style.fontWeight700,
-              Style.color000000,
-              Style.marginRight9,
+              MyStyle.fontSize15,
+              MyStyle.fontWeight700,
+              MyStyle.color000000,
+              MyStyle.marginRight9,
             ]}>
             <Text style={[{color: 'rgba(255, 0, 0, 1)'}]}>Quantity</Text> X Dish
           </Text>
@@ -176,14 +174,14 @@ const OrderHistory = () => {
               marginVertical: responsiveVertical(9),
               marginHorizontal: responsiveHorizontal(14),
             },
-            Style.borderWidth1,
+            MyStyle.borderWidth1,
           ]}
         />
         <View
           style={[
-            Style.flexrow,
-            Style.justifyContentSpaceBetween,
-            Style.paddingHorizontal20,
+            MyStyle.flexrow,
+            MyStyle.justifyContentSpaceBetween,
+            MyStyle.paddingHorizontal20,
           ]}>
           <Text>DATE</Text>
           <Text>Total Bill</Text>

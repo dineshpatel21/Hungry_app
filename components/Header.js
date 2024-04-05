@@ -1,10 +1,15 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import Style, {responsiveVertical, responsiveHorizontal,responsiveFonts} from '../style';
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  responsiveFonts,
+  MyStyle,
+} from '../style';
 const Header = () => {
   return (
-    <View style={[Style.flexrow,Style.alignItemCenter, {justifyContent: 'space-between',marginTop:20}]}>
-      <View style={[Style.flexrow,Style.alignItemCenter]}>
+    <View style={[MyStyle.flexrow,MyStyle.alignItemCenter, {justifyContent: 'space-between',marginTop:20}]}>
+      <View style={[MyStyle.flexrow,MyStyle.alignItemCenter]}>
         <Image
           source={require('../assets/icons/location.png')}
           style={{
@@ -14,7 +19,7 @@ const Header = () => {
           }}
         />
         <View>
-          <Text style={[{fontSize:responsiveFonts(10),},Style.fontWeight400]}>Delivering to</Text>
+          <Text style={[{fontSize:responsiveFonts(10),},MyStyle.fontWeight400]}>Delivering to</Text>
           <Text style={{color:'rgba(238, 152, 70, 1)',fontSize:15}}>Raipur</Text>
         </View>
       </View>

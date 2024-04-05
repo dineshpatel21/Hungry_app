@@ -7,10 +7,11 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
+  responsiveFonts
 } from '../style';
 const Categories = () => {
   const items = [
@@ -49,17 +50,17 @@ const Categories = () => {
     <View>
       <View
         style={[
-          Style.flexrow,
-          Style.alignItemCenter,
-          Style.marginHorizontal20,
-          Style.justifyContentSpaceBetween,Style.marginTop18,
+          MyStyle.flexrow,
+          MyStyle.alignItemCenter,
+          MyStyle.marginHorizontal20,
+          MyStyle.justifyContentSpaceBetween,MyStyle.marginTop18,
          
         ]}>
         <View>
           <Text
             style={[
               {fontSize: responsiveFonts(17), color: 'rgba(0, 0, 0, 0.52)'},
-              Style.fontWeight700,
+              MyStyle.fontWeight700,
             ]}>
             Category
           </Text>
@@ -68,7 +69,7 @@ const Categories = () => {
           <Text
             style={[
               {fontSize: responsiveFonts(12), color: 'rgba(238, 152, 70, 1)'},
-              Style.fontWeight700,
+              MyStyle.fontWeight700,
             ]}>
             See All
           </Text>

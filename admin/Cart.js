@@ -9,12 +9,10 @@ import {
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import MenuManagement from '../components/MenuManagement';
-import MyStyle from '../style';
-import Colors from '../style';
-import Style, {
+import {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
   vw,
   vh,
 } from '../style';
@@ -45,7 +43,7 @@ const Cart = () => {
           style={[
             MyStyle.marginBottom15,
             MyStyle.marginTop8,
-            //   Colors.backgroundColorD9D9D9,
+            //   MyStyle.backgroundColorD9D9D9,
             MyStyle.height2,
           ]}
         />

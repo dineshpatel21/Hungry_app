@@ -1,5 +1,11 @@
-import * as Colors from './Colors';
-import * as Fonts from './Fonts';
-import * as MyStyle from './MyStyle';
-
-export {Colors, Fonts, MyStyle};
+import MyStyle from './MyStyle';
+import {responsiveHorizontal, responsiveVertical, vw, vh} from './Responsive';
+import {responsiveFonts} from './Fonts';
+export {
+  MyStyle,
+  responsiveHorizontal,
+  responsiveVertical,
+  responsiveFonts,
+  vw,
+  vh,
+};

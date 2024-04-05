@@ -1,26 +1,22 @@
+import { View, Text,Image } from 'react-native'
+import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from '../pages/bottomtab/Home';
-import Liked from '../pages/bottomtab/Liked';
-import Cart from '../pages/bottomtab/Cart';
-import Profile from '../pages/bottomtab/Profile';
-import {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-  vw,
-  vh,
-} from '../style';
-import {Text, View, Image} from 'react-native';
-
+import Home from '../admin/Home'
+import MyDishes from '../admin/MyDishes'
+import NewCategory from '../admin/NewCategory'
+import Cart from '../admin/Cart'
+import Profile from '../admin/Profile'
+import {MyStyle,responsiveHorizontal,responsiveVertical} from '../style';
 const Tab = createBottomTabNavigator();
-const BottomTab = () => {
+
+const AdminBottomTab = () => {
   return (
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: [
           {
             // borderTopWidth: 0,
-            height: responsiveVertical(85),
+            height: 85,
           },
           MyStyle.paddingHorizontal20,
           MyStyle.paddingVertical10,
@@ -63,38 +59,7 @@ const BottomTab = () => {
           headerShown: false,
         }}
       />
-      <Tab.Screen
-        name="Liked"
-        component={Liked}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <Image
-              style={[
-                MyStyle.bottomIconStyle,
-                {
-                  tintColor: focused ? '#EE9846' : '#000000',
-                  width: responsiveHorizontal(32),
-                  height: responsiveVertical(32),
-                },
-              ]}
-              source={require('../assets/icons/heart.png')}
-            />
-          ),
-          tabBarLabel: ({focused}) => {
-            return (
-              <Text
-                style={[
-                  focused ? MyStyle.colorEE9846 : MyStyle.color000000,
-                  MyStyle.fontSize10,
-                  MyStyle.fontWeight600,
-                  MyStyle.marginBottom15,
-                  MyStyle.marginTop4,
-                ]}></Text>
-            );
-          },
-          headerShown: false,
-        }}
-      />
+      
       <Tab.Screen
         name="Cart"
         component={Cart}
@@ -127,6 +92,7 @@ const BottomTab = () => {
           headerShown: false,
         }}
       />
+
       <Tab.Screen
         name="Profile"
         component={Profile}
@@ -156,7 +122,7 @@ const BottomTab = () => {
         }}
       />
     </Tab.Navigator>
-  );
-};
+  )
+}
 
-export default BottomTab;
+export default AdminBottomTab

@@ -1,27 +1,11 @@
-import {StyleSheet, Dimensions, PixelRatio} from 'react-native';
-import Colors from './Colors'
+import {StyleSheet, Dimensions} from 'react-native';
+import {responsiveHorizontal, responsiveVertical,vw, vh} from './Responsive';
+import Colors from './Colors';
+import FontsStyle, {responsiveFonts} from './Fonts';
 
-let vw = Dimensions.get('window').width;
-let vh = Dimensions.get('window').height;
-let scaledRatio = PixelRatio.getFontScale();
-
-export const responsiveFonts = value => {
-  return value * scaledRatio;
-};
-
-export const responsiveVertical = value => {
-  const res = vw / (375 / value);
-  return res;
-};
-
-export const responsiveHorizontal = value => {
-  const res = (value / 375) * vw;
-  return res;
-};
-
-const styles = StyleSheet.create({
+const MyStyle = StyleSheet.create({
   flex1: {flex: 1},
-  height2:{height:responsiveVertical(2)},
+  height2: {height: responsiveVertical(2)},
   alignItemCenter: {alignItems: 'center'},
   justifyContentCenter: {justifyContent: 'center'},
   positionRelative: {position: 'relative'},
@@ -83,7 +67,6 @@ const styles = StyleSheet.create({
     fontSize: responsiveFonts(22),
     fontWeight: '700',
   },
- 
 
   marginTop18: {marginTop: responsiveVertical(18)},
   alignItems: {
@@ -96,17 +79,18 @@ const styles = StyleSheet.create({
   backD9D9D9: {backgroundColor: '#D9D9D9'},
   paddingVertical10: {paddingVertical: responsiveVertical(10)},
   marginRight18: {marginRight: responsiveHorizontal(18)},
-  fontSize20: {fontSize: responsiveFonts(20)},
-  fontSize26: {fontSize: responsiveFonts(26)},
-  fontSize15: {fontSize: responsiveFonts(15)},
-  fontSize30: {fontSize: responsiveFonts(30)},
-  fontSize28: {fontSize: responsiveFonts(28)},
-  fontSize17: {fontSize: responsiveFonts(17)},
-  fontSize13: {fontSize: responsiveFonts(13)},
-  fontSize12: {fontSize: responsiveFonts(12)},
-  fontSize25: {fontSize: responsiveFonts(25)},
-  fontSize35: {fontSize: responsiveFonts(35)},
-  fontSize9: {fontSize: responsiveFonts(9)},
+  fontSize20: {fontSize: FontsStyle.fontSize20},
+  fontSize26: {fontSize: FontsStyle.fontSize26},
+  fontSize15: {fontSize: FontsStyle.fontSize15},
+  fontSize30: {fontSize: FontsStyle.fontSize30},
+  fontSize28: {fontSize: FontsStyle.fontSize28},
+  fontSize17: {fontSize: FontsStyle.fontSize17},
+  fontSize13: {fontSize: FontsStyle.fontSize13},
+  fontSize12: {fontSize: FontsStyle.fontSize12},
+  fontSize25: {fontSize: FontsStyle.fontSize25},
+  fontSize35: {fontSize: FontsStyle.fontSize35},
+  fontSize9: {fontSize:FontsStyle.fontSize9},
+
   fontWeight400: {fontWeight: '400'},
   fontWeight500: {fontWeight: '500'},
   fontWeight700: {fontWeight: '700'},
@@ -158,9 +142,9 @@ const styles = StyleSheet.create({
   marginTop16: {marginTop: responsiveHorizontal(16)},
   marginTop4: {marginTop: responsiveHorizontal(4)},
   marginHorizontal20: {marginHorizontal: responsiveHorizontal(20)},
-  marginVertical9:{marginVertical:responsiveVertical(9)},
+  marginVertical9: {marginVertical: responsiveVertical(9)},
   padding8: {padding: 8},
-  padding6:{padding:responsiveHorizontal(6)},
+  padding6: {padding: responsiveHorizontal(6)},
   otp: {
     width: responsiveHorizontal(53),
     height: responsiveVertical(60),
@@ -171,20 +155,21 @@ const styles = StyleSheet.create({
     width: responsiveHorizontal(30),
     height: responsiveVertical(30),
   },
- 
+
   languageSelect: {
-    width: responsiveWidth(70) * width,
-    borderRadius: 0.0666 * width,
-    padding: 0.01111 * width,
-    backgroundColor: "#4D4DFF",
+    width: responsiveHorizontal(70),
+    borderRadius: 0.0666 * vw,
+    padding: 0.01111 * vw,
+    backgroundColor: '#4D4DFF',
   },
   languageSelectItem: {
     width: 30,
     height: 30,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: '#FFFFFF',
     borderRadius: 45,
   },
+  dividerStyle: {borderWidth: 0.5, height: '100%', borderColor: Colors.EEA967}
 });
 
-export default styles;
-export {vw, vh};
+export default MyStyle;
+

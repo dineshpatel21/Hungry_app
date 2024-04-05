@@ -3,8 +3,12 @@ import {View, Text, Image, Pressable, TouchableOpacity} from 'react-native';
 import explorer from '../assets/icons/HUNGRY_EXPLORER.png';
 import shops from '../assets/icons/HUNGRY_SHOP.png';
 import delivery from '../assets/icons/DELIVERY_BOYS.png';
-import styles from '../style';
-import {responsiveVertical, responsiveHorizontal} from '../style';
+
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
+} from '../style';
 
 const InitialPage = ({navigation}) => {
   useEffect(() => {
@@ -51,11 +55,11 @@ const InitialPage = ({navigation}) => {
   return (
     <View
       style={[
-        styles.positionRelative,
-        styles.justifyContentCenter,
-        styles.alignItemCenter,
-        styles.flex1,
-        styles.backgroundColorFFFFFF,
+        MyStyle.positionRelative,
+        MyStyle.justifyContentCenter,
+        MyStyle.alignItemCenter,
+        MyStyle.flex1,
+        MyStyle.backgroundColorFFFFFF,
       ]}
       onTouchStart={e => (this.touchX = e.nativeEvent.pageX)}
       onTouchEnd={e => {
@@ -68,16 +72,16 @@ const InitialPage = ({navigation}) => {
       }}>
       <View style={{opacity: 0}}></View>
 
-      <View style={styles.width100}>
+      <View style={MyStyle.width100}>
         <View
           style={[
             {width: responsiveHorizontal(284)},
-            styles.alignItemCenter,
-            styles.alignSelfCenter,
+            MyStyle.alignItemCenter,
+            MyStyle.alignSelfCenter,
           ]}>
           <Image
             style={[
-              styles.welcomeimg,
+              MyStyle.welcomeimg,
               pagedata.page === 1
                 ? {
                     width: responsiveHorizontal(329),
@@ -101,25 +105,25 @@ const InitialPage = ({navigation}) => {
                 : delivery
             }
           />
-          <Text style={[{...styles.welcomehead}]}>{pagedata.headline}</Text>
-          <Text style={{...styles.welcomepera}}>{pagedata.lines}</Text>
+          <Text style={[{...MyStyle.welcomehead}]}>{pagedata.headline}</Text>
+          <Text style={{...MyStyle.welcomepera}}>{pagedata.lines}</Text>
         </View>
       </View>
 
-      <TouchableOpacity style={styles.welcomebtn} onPress={nextscreen}>
-        {/* <Text style={styles.welcomebtntext}>
+      <TouchableOpacity style={MyStyle.welcomebtn} onPress={nextscreen}>
+        {/* <Text style={MyStyle.welcomebtntext}>
             {pagedata.page === 3 ? "Get started" : "Next"}
           </Text> */}
-        <Text style={styles.welcomebtntext}>Next</Text>
+        <Text style={MyStyle.welcomebtntext}>Next</Text>
       </TouchableOpacity>
 
       <Text
         style={[
-          styles.skip,
-          styles.fontWeight700,
-          styles.fontSize19,
-          styles.colorEE9846,
-          styles.marginTop13,
+          MyStyle.skip,
+          MyStyle.fontWeight700,
+          MyStyle.fontSize19,
+          MyStyle.colorEE9846,
+          MyStyle.marginTop13,
         ]}
         onPress={async () => {
           navigation.navigate('welcome');
@@ -127,14 +131,14 @@ const InitialPage = ({navigation}) => {
         Skip
       </Text>
 
-      <View style={[styles.width100,styles.alignItemCenter,styles.marginTop18]}>
-        <View style={styles.welcomedots}>
+      <View style={[MyStyle.width100,MyStyle.alignItemCenter,MyStyle.marginTop18]}>
+        <View style={MyStyle.welcomedots}>
           <View
-            style={pagedata.page === 1 ? styles.dotactive : styles.dot}></View>
+            style={pagedata.page === 1 ? MyStyle.dotactive : MyStyle.dot}></View>
           <View
-            style={pagedata.page === 2 ? styles.dotactive : styles.dot}></View>
+            style={pagedata.page === 2 ? MyStyle.dotactive : MyStyle.dot}></View>
           <View
-            style={pagedata.page === 3 ? styles.dotactive : styles.dot}></View>
+            style={pagedata.page === 3 ? MyStyle.dotactive : MyStyle.dot}></View>
         </View>
       </View>
     </View>

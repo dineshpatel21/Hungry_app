@@ -9,20 +9,24 @@ import {
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import Style, {responsiveVertical, responsiveHorizontal} from '../../style';
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
+} from '../../style';
 import SumbitButton from '../../components/SumbitButton';
 const Signup = ({navigation}) => {
   return (
-    <View style={[Style.flex1]}>
+    <View style={[MyStyle.flex1]}>
       <LinearGradient
-        style={[Style.flex1]}
+        style={[MyStyle.flex1]}
         colors={[
           'rgba(255, 255, 255, 0)',
           'rgba(240, 184, 131, 0.52)',
           'rgba(238, 175, 115, 0.59)',
           'rgba(234, 156, 81, 0.73)',
         ]}>
-        <ScrollView style={[Style.flex1, Style.paddingHorizontal20]}>
+        <ScrollView style={[MyStyle.flex1, MyStyle.paddingHorizontal20]}>
           <View
             style={{
               marginTop: responsiveVertical(74),
@@ -30,10 +34,10 @@ const Signup = ({navigation}) => {
             }}>
             <Text
               style={[
-                Style.fontSize28,
-                Style.color000000,
-                Style.colorD18741,
-                Style.fontWeight700,
+                MyStyle.fontSize28,
+                MyStyle.color000000,
+                MyStyle.colorD18741,
+                MyStyle.fontWeight700,
               ]}>
               CREATE YOUR NEW ACCOUNT
             </Text>
@@ -47,10 +51,10 @@ const Signup = ({navigation}) => {
             ]}>
             <Text
               style={[
-                Style.fontSize15,
-                Style.fontWeight700,
+                MyStyle.fontSize15,
+                MyStyle.fontWeight700,
 
-                Style.lineHeight,
+                MyStyle.lineHeight,
                 {
                   color: 'rgba(0, 0, 0, 0.44)',
                   marginTop: responsiveVertical(5),
@@ -62,8 +66,8 @@ const Signup = ({navigation}) => {
           <View style={[{marginBottom: responsiveVertical(12)}]}>
             <Text
               style={[
-                Style.fontSize17,
-                Style.fontWeight400,
+                MyStyle.fontSize17,
+                MyStyle.fontWeight400,
                 {color: 'rgba(0, 0, 0, 1)'},
               ]}>
               Enter Your Phone Number
@@ -71,16 +75,16 @@ const Signup = ({navigation}) => {
           </View>
           <TextInput
             style={[
-              Style.width100,
-              Style.borderRadius10,
-              Style.borderWidth1,
-              Style.paddingVertical7,
-              Style.paddingHorizontal10,
+              MyStyle.width100,
+              MyStyle.borderRadius10,
+              MyStyle.borderWidth1,
+              MyStyle.paddingVertical7,
+              MyStyle.paddingHorizontal10,
             ]}
           />
 
           <View
-            style={[Style.flexrow, Style.alignItemCenter, Style.marginTop13]}>
+            style={[MyStyle.flexrow, MyStyle.alignItemCenter, MyStyle.marginTop13]}>
             <TouchableOpacity>
               <Image
                 source={require('../../assets/icons/CHECK.png')}
@@ -94,10 +98,10 @@ const Signup = ({navigation}) => {
             <View style={{width: responsiveHorizontal(239)}}>
               <Text
                 style={[
-                  Style.fontStyleItalic,
-                  Style.color000000,
-                  Style.fontWeight300,
-                  Style.fontSize13,
+                  MyStyle.fontStyleItalic,
+                  MyStyle.color000000,
+                  MyStyle.fontWeight300,
+                  MyStyle.fontSize13,
                 ]}>
                 I have read and agreed to terms and conditions of Hungry.
               </Text>
@@ -112,10 +116,10 @@ const Signup = ({navigation}) => {
             ]}>
             <Text
               style={[
-                Style.color101FA2,
-                Style.fontSize12,
-                Style.fontWeight500,
-                Style.alignSelfFlexEnd,
+                MyStyle.color101FA2,
+                MyStyle.fontSize12,
+                MyStyle.fontWeight500,
+                MyStyle.alignSelfFlexEnd,
               ]}>
               READ MORE
             </Text>
@@ -128,9 +132,9 @@ const Signup = ({navigation}) => {
           />
           <View
             style={[
-              Style.flexrow,
-              Style.justifyContentCenter,
-              Style.marginTop8,
+              MyStyle.flexrow,
+              MyStyle.justifyContentCenter,
+              MyStyle.marginTop8,
             ]}>
             <Text
               style={[
@@ -138,8 +142,8 @@ const Signup = ({navigation}) => {
                   color: 'rgba(0, 0, 0, 0.44)',
                   marginRight: responsiveHorizontal(5),
                 },
-                Style.fontSize15,
-                Style.fontWeight700,
+                MyStyle.fontSize15,
+                MyStyle.fontWeight700,
               ]}>
               If you have a already account ?
             </Text>
@@ -150,8 +154,8 @@ const Signup = ({navigation}) => {
               <Text
                 style={[
                   {color: 'rgba(172, 23, 18, 1)'},
-                  Style.fontSize15,
-                  Style.fontWeight700,
+                  MyStyle.fontSize15,
+                  MyStyle.fontWeight700,
                 ]}>
                 Login
               </Text>

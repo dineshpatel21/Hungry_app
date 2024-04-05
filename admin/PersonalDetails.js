@@ -7,15 +7,8 @@ import {
   Keyboard,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
-import MenuManagement from '../components/MenuManagement';
-import MyStyle from '../style';
-import Colors from '../style';
-import Style, {
-  responsiveVertical,
-  responsiveHorizontal,
-  responsiveFonts,
-} from '../style';
-import {Divider} from 'react-native-paper'
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
+import {Divider} from 'react-native-paper';
 
 const PersonalDetails = () => {
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
@@ -36,12 +29,11 @@ const PersonalDetails = () => {
   }, [isKeyboardVisible]);
   return (
     <View style={[MyStyle.flex1]}>
-      <MenuManagement />
       <View
         style={[
           MyStyle.marginBottom15,
           MyStyle.marginTop8,
-          //   Colors.backgroundColorD9D9D9,
+          //   MyStyle.backgroundColorD9D9D9,
           MyStyle.height2,
         ]}
       />
@@ -119,8 +111,8 @@ const PersonalDetails = () => {
             ]}
           />
         </View>
-        <Divider/>
-        <View style={[MyStyle.marginHorizontal20,MyStyle.marginTop8]}>
+        <Divider />
+        <View style={[MyStyle.marginHorizontal20, MyStyle.marginTop8]}>
           <Text
             style={[
               MyStyle.welcomebtntext,

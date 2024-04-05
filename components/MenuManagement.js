@@ -1,13 +1,15 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import MyStyle from '../style';
-import Colors from '../style';
-
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
+} from '../style';
 const MenuManagement = () => {
   return (
     <View>
       <Text
-        style={[MyStyle.fontSize28, MyStyle.fontWeight600, Colors.colorEE9846]}>
+        style={[MyStyle.fontSize28, MyStyle.fontWeight600, MyStyle.colorEE9846]}>
         Menu
       </Text>
       <Text style={[MyStyle.fontSize15, MyStyle.fontWeight500]}>

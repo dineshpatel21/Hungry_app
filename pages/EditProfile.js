@@ -8,10 +8,10 @@ import {
   FlatList,
   Keyboard,
 } from 'react-native';
-import Style, {
+import  {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,
+  MyStyle,
 } from '../style';
 import {TextInput, Button} from 'react-native-paper';
 const EditProfile = () => {
@@ -61,8 +61,8 @@ const EditProfile = () => {
     //   };
   };
   return (
-    <View style={[Style.flex1, Style.backgroundColorFFFFFF]}>
-      <ScrollView style={[Style.flex1, Style.paddingHorizontal20]}>
+    <View style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
+      <ScrollView style={[MyStyle.flex1, MyStyle.paddingHorizontal20]}>
         <View
           style={{
             alignSelf: 'center',
@@ -108,21 +108,21 @@ const EditProfile = () => {
         <TextInput
           label="Name"
           mode="outlined"
-          style={[Style.backgroundColorFFFFFF, Style.marginTop30]}
+          style={[MyStyle.backgroundColorFFFFFF, MyStyle.marginTop30]}
           // value={text}
           // onChangeText={text => setText(text)}
         />
         <TextInput
           label="Email"
           mode="outlined"
-          style={[Style.backgroundColorFFFFFF, Style.marginTop30]}
+          style={[MyStyle.backgroundColorFFFFFF, MyStyle.marginTop30]}
           // value={text}
           // onChangeText={text => setText(text)}
         />
         <TextInput
           label="Mobile"
           mode="outlined"
-          style={[Style.backgroundColorFFFFFF, Style.marginTop30]}
+          style={[MyStyle.backgroundColorFFFFFF, MyStyle.marginTop30]}
           // value={text}
           // onChangeText={text => setText(text)}
         />
@@ -130,9 +130,9 @@ const EditProfile = () => {
           placeholder="dd/mm/yyyy"
           mode="outlined"
           style={[
-            Style.backgroundColorFFFFFF,
-            Style.marginTop30,
-            Style.borderRadius10,
+            MyStyle.backgroundColorFFFFFF,
+            MyStyle.marginTop30,
+            MyStyle.borderRadius10,
           ]}
           // value={text}
           // onChangeText={text => setText(text)}
@@ -140,9 +140,9 @@ const EditProfile = () => {
         {isDropDownOpen && (
           <View
             style={[
-              Style.borderWidth1,
-              Style.positionAbsolute,
-              Style.backgroundColorFFFFFF,
+              MyStyle.borderWidth1,
+              MyStyle.positionAbsolute,
+              MyStyle.backgroundColorFFFFFF,
               {
                 width: responsiveHorizontal(245),
                 height: responsiveVertical(116),
@@ -152,7 +152,7 @@ const EditProfile = () => {
                 zIndex: 100,
               },
             ]}>
-            <View style={[Style.paddingVertical17, Style.paddingHorizontal14]}>
+            <View style={[MyStyle.paddingVertical17, MyStyle.paddingHorizontal14]}>
               {genderOptions.map((item, index) => {
                 return (
                   <TouchableOpacity
@@ -163,9 +163,9 @@ const EditProfile = () => {
                     }}>
                     <Text
                       style={[
-                        Style.fontSize17,
-                        Style.color000000,
-                        Style.marginBottom8,
+                        MyStyle.fontSize17,
+                        MyStyle.color000000,
+                        MyStyle.marginBottom8,
                       ]}>
                       {item.gender}
                     </Text>
@@ -178,15 +178,15 @@ const EditProfile = () => {
 
         <View
           style={[
-            Style.flexrow,
-            Style.borderRadius10,
-            Style.justifyContentSpaceBetween,
-            Style.borderWidth1,
-            Style.marginTop30,
-            Style.paddingVertical17,
-            Style.paddingHorizontal18,
+            MyStyle.flexrow,
+            MyStyle.borderRadius10,
+            MyStyle.justifyContentSpaceBetween,
+            MyStyle.borderWidth1,
+            MyStyle.marginTop30,
+            MyStyle.paddingVertical17,
+            MyStyle.paddingHorizontal18,
           ]}>
-          <Text style={[Style.fontSize17, Style.fontWeight500]}>{gender}</Text>
+          <Text style={[MyStyle.fontSize17, MyStyle.fontWeight500]}>{gender}</Text>
           <TouchableOpacity
             onPress={() => {
               setIsDropDownOpen(!isDropDownOpen);

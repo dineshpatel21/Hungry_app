@@ -1,7 +1,11 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Style, {responsiveVertical, responsiveHorizontal} from '../style';
+import  {
+  responsiveVertical,
+  responsiveHorizontal,
+  MyStyle,
+} from '../style';
 
 const Welcome = ({navigation}) => {
   return (
@@ -34,11 +38,11 @@ const Welcome = ({navigation}) => {
           }}>
           <Text
             style={[
-              Style.fontSize30,
-              Style.color000000,
+              MyStyle.fontSize30,
+              MyStyle.color000000,
               {lineHeight: 35.65, fontWeight: 'bold'},
             ]}>
-            WELCOME TO <Text style={[Style.colorffebeb]}>HUNGRY</Text>
+            WELCOME TO <Text style={[MyStyle.colorffebeb]}>HUNGRY</Text>
           </Text>
         </View>
         <View
@@ -51,10 +55,10 @@ const Welcome = ({navigation}) => {
           }}>
           <Text
             style={[
-              Style.fontSize15,
-              Style.fontWeight400,
-              Style.color000000,
-              Style.lineHeight,
+              MyStyle.fontSize15,
+              MyStyle.fontWeight400,
+              MyStyle.color000000,
+              MyStyle.lineHeight,
             ]}>
             Whether you're a customer eager to savor delicious dishes, a staller
             looking to showcase culinary masterpieces, or aim to bring joy as a
@@ -81,10 +85,10 @@ const Welcome = ({navigation}) => {
             navigation.navigate('Signup');
           }}
           style={[
-            Style.flexrow,
-            Style.positionAbsolute,
-            Style.bgWhite,
-            Style.paddingVertical10,
+            MyStyle.flexrow,
+            MyStyle.positionAbsolute,
+            MyStyle.bgWhite,
+            MyStyle.paddingVertical10,
 
             {
               bottom: responsiveVertical(64),
@@ -98,8 +102,8 @@ const Welcome = ({navigation}) => {
           ]}>
           <View
             style={[
-              Style.flexrow,
-              Style.alignItemCenter,
+              MyStyle.flexrow,
+              MyStyle.alignItemCenter,
 
               {
                 marginLeft: responsiveHorizontal(30),
@@ -108,10 +112,10 @@ const Welcome = ({navigation}) => {
             ]}>
             <Text
               style={[
-                Style.fontSize20,
-                Style.marginRight18,
-                Style.fontWeightBold,
-                Style.color000000,
+                MyStyle.fontSize20,
+                MyStyle.marginRight18,
+                MyStyle.fontWeightBold,
+                MyStyle.color000000,
               ]}>
               START
             </Text>
