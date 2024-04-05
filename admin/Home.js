@@ -18,64 +18,97 @@ import Style, {
 } from '../style';
 import {Divider} from 'react-native-paper';
 import Category from '../components/Category';
+import SwitchComponent from '../components/Switch';
 
 const Home = ({navigation}) => {
   const [isOnline, setIsOnline] = useState(false);
   return (
     <View style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
+      {/* <LanguageSelect/> */}
       <View
         style={[
-          {width: responsiveHorizontal(321), height: responsiveVertical(205)},
-          MyStyle.borderWidth1,
-          MyStyle.alignSelfCenter,
-          MyStyle.marginTop30,
-          MyStyle.borderRadius10,
-          MyStyle.borderColorA61A1,
-          MyStyle.alignItemCenter,
-          MyStyle.justifyContentCenter,
-          {backgroundColor: '#D9D9D9'},
+          MyStyle.marginTop13,
+          MyStyle.flexrow,
+          MyStyle.justifyContentSpaceBetween,
+          MyStyle.marginHorizontal20,
+          {flex: 0.1},
         ]}>
-        <Text style={[Fonts.fontSize20, Fonts.fontWeight700]}>
-          shop photo or logo
+        <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
+          <Image
+            source={require('../assets/icons/user.png')}
+            style={[
+              {
+                width: responsiveHorizontal(35),
+                height: responsiveVertical(35),
+                marginRight: responsiveHorizontal(3),
+              },
+            ]}
+          />
+          <View>
+            <Text style={[Fonts.fontSize20, Fonts.fontWeight700]}>
+              Shop name
+            </Text>
+            <Text style={[Fonts.fontSize15, Fonts.fontWeight400]}>Address</Text>
+          </View>
+        </View>
+        <SwitchComponent />
+      </View>
+
+      <View style={{flex: 0.8}}>
+        <View
+          style={[
+            {width: responsiveHorizontal(344), height: responsiveVertical(156)},
+            MyStyle.borderWidth1,
+            MyStyle.alignSelfCenter,
+            MyStyle.marginTop8,
+            MyStyle.borderRadius10,
+            MyStyle.borderColorA61A1,
+            MyStyle.alignItemCenter,
+            MyStyle.justifyContentCenter,
+            {backgroundColor: '#D9D9D9'},
+          ]}>
+          <Text style={[Fonts.fontSize20, Fonts.fontWeight700]}>
+            shop photo or logo
+          </Text>
+        </View>
+        <View
+          style={{
+            marginBottom: responsiveVertical(22),
+            marginHorizontal: responsiveHorizontal(10),
+            marginTop: responsiveVertical(10),
+          }}>
+          <Category />
+        </View>
+
+        <Image
+          source={require('../assets/icons/HomePage.png')}
+          style={[
+            {
+              width: responsiveHorizontal(280),
+              height: responsiveVertical(200),
+            },
+            MyStyle.alignSelfCenter,
+          ]}
+        />
+
+        <Text
+          style={[
+            MyStyle.alignSelfCenter,
+            Fonts.fontSize15,
+            Fonts.fontWeight700,
+            {color: '#1F1F1F'},
+          ]}>
+          You are {isOnline ? 'online' : 'offline'}.
+        </Text>
+        <Text
+          style={[
+            MyStyle.alignSelfCenter,
+            Fonts.fontSize13,
+            Fonts.fontWeight500,
+          ]}>
+          Waiting for new orders.
         </Text>
       </View>
-      <View
-        style={{
-          marginBottom: responsiveVertical(22),
-          marginHorizontal: responsiveHorizontal(10),
-          marginTop: responsiveVertical(31),
-        }}>
-        <Category />
-      </View>
-
-      <Image
-        source={require('../assets/icons/HomePage.png')}
-        style={[
-          {
-            width: responsiveHorizontal(280),
-            height: responsiveVertical(200),
-          },
-          MyStyle.alignSelfCenter,
-        ]}
-      />
-
-      <Text
-        style={[
-          MyStyle.alignSelfCenter,
-          Fonts.fontSize15,
-          Fonts.fontWeight700,
-          {color:"#1F1F1F"}
-        ]}>
-        You are { isOnline?"online":"offline"}.
-      </Text>
-      <Text
-        style={[
-          MyStyle.alignSelfCenter,
-          Fonts.fontSize13,
-          Fonts.fontWeight500,
-        ]}>
-        Waiting for new orders.
-      </Text>
 
       <View
         style={[
@@ -88,7 +121,7 @@ const Home = ({navigation}) => {
           MyStyle.paddingVertical7,
           MyStyle.borderRadius10,
           {
-            bottom: responsiveVertical(100),
+            bottom: responsiveVertical(80),
             backgroundColor: '#32B43F',
             width: responsiveHorizontal(298),
           },
@@ -124,14 +157,13 @@ const Home = ({navigation}) => {
 
       <View
         style={[
-          MyStyle.positionAbsolute,
+          //   MyStyle.positionAbsolute,
           MyStyle.flexrow,
           MyStyle.width100,
           MyStyle.borderRadius10,
           MyStyle.alignItemCenter,
           MyStyle.justifyContentSpaceBetween,
-          {bottom: 0, height: responsiveVertical(90)},
-          {backgroundColor: '#E69343'},
+          {flex: 0.1, backgroundColor: '#E69343'},
         ]}>
         <TouchableOpacity style={{marginLeft: responsiveHorizontal(67)}}>
           <Image
@@ -156,7 +188,7 @@ const Home = ({navigation}) => {
           ]}
         />
         <TouchableOpacity
-          style={[MyStyle.flexrow, {marginRight: responsiveHorizontal(40)}]}>
+          style={[MyStyle.flexrow, {marginRight: responsiveHorizontal(25)}]}>
           <Image
             source={require('../assets/icons/analyzing.png')}
             style={[

@@ -20,12 +20,13 @@ import AddNewDish from '../admin/AddNewDish';
 import MyDishes from '../admin/MyDishes';
 import AdHome from '../admin/Home';
 import NewOrder from '../admin/NewOrder';
+import adCart from '../admin/Cart';
 import PersonalDetails from '../admin/PersonalDetails';
 import BottomTab from './BottomTab';
-import {Image, Text} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import Style, {responsiveHorizontal, responsiveVertical} from '../style';
 import React, {useState} from 'react';
-
+import SwitchComponent from '../components/Switch';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
@@ -33,10 +34,25 @@ const StackNavigator = () => {
   return isAdmin ? (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+          name="adCart"
+          component={adCart}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="Home"
           component={AdHome}
           options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MyDishes"
+          component={MyDishes}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="NewCategory"
+          component={NewCategory}
+          options={{headerTitle: '', headerShown: false}}
         />
         <Stack.Screen
           name="NewOrder"
@@ -49,18 +65,8 @@ const StackNavigator = () => {
           options={{headerTitleAlign: 'center', headerTintColor: '#000000'}}
         />
         <Stack.Screen
-          name="MyDishes"
-          component={MyDishes}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
           name="AddNewDish"
           component={AddNewDish}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="NewCategory"
-          component={NewCategory}
           options={{headerShown: false}}
         />
         <Stack.Screen

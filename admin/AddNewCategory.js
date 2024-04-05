@@ -8,11 +8,21 @@ import Style, {
   responsiveHorizontal,
   responsiveFonts,
 } from '../style';
+import SwitchComponent from '../components/Switch';
 
 const AddNewCategory = () => {
   return (
     <View style={[MyStyle.flex1]}>
-      <MenuManagement />
+      <View
+          style={[
+            MyStyle.marginHorizontal20,
+            MyStyle.marginTop13,
+            MyStyle.flexrow,
+            MyStyle.justifyContentSpaceBetween,
+          ]}>
+              <MenuManagement />
+          <SwitchComponent />
+        </View>
       <View
         style={[
           MyStyle.marginBottom15,

@@ -17,6 +17,7 @@ import MyStyle, {
 import Colors from '../style';
 import Fonts from '../style';
 import MenuManagement from '../components/MenuManagement';
+import SwitchComponent from '../components/Switch';
 import {CategorySearch} from './NewCategory';
 import {Divider} from 'react-native-paper';
 
@@ -228,8 +229,17 @@ const MyDishes = ({navigation}) => {
 
   return (
     <View style={[MyStyle.flex1]}>
-      <View style={[{flex: 0.2}]}>
-        <MenuManagement />
+      <View style={[{flex: 0.25}]}>
+      <View
+          style={[
+            MyStyle.marginHorizontal20,
+            MyStyle.marginTop13,
+            MyStyle.flexrow,
+            MyStyle.justifyContentSpaceBetween,
+          ]}>
+          <MenuManagement />
+          <SwitchComponent />
+        </View>
         <View
           style={[
             MyStyle.marginBottom15,
@@ -242,7 +252,7 @@ const MyDishes = ({navigation}) => {
         <CategorySearch />
       </View>
 
-      <View style={[{flex: 0.7}]}>
+      <View style={[{flex: 0.65}]}>
         <FlatList
           data={dishesOptions}
           keyExtractor={(item, index) => index.toString()}

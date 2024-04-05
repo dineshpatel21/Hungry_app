@@ -20,9 +20,11 @@ const FontsSize = StyleSheet.create({
     fontSize18: {fontsize:responsiveFonts(18)};
     fontSize13: {fontsize:responsiveFonts(13)};
     fontSize12: {fontsize:responsiveFonts(12)};
+    fontSize11: {fontsize:responsiveFonts(11)};
     fontSize25: {fontsize:responsiveFonts(25)};
     fontSize35: {fontsize:responsiveFonts(35)};
     fontSize9: {fontsize:responsiveFonts(9);}
+    
     fontWeight400: {fontWeight:'400'};
     fontWeight500: {fontWeight:'500'};
     fontWeight700: {fontWeight:'700'};

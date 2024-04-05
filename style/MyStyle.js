@@ -172,7 +172,18 @@ const styles = StyleSheet.create({
     height: responsiveVertical(30),
   },
  
- 
+  languageSelect: {
+    width: responsiveWidth(70) * width,
+    borderRadius: 0.0666 * width,
+    padding: 0.01111 * width,
+    backgroundColor: "#4D4DFF",
+  },
+  languageSelectItem: {
+    width: 30,
+    height: 30,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 45,
+  },
 });
 
 export default styles;

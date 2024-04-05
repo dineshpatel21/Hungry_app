@@ -17,6 +17,7 @@ import Style, {
   responsiveFonts,
 } from '../style';
 import {RadioButton} from 'react-native-paper';
+import SwitchComponent from '../components/Switch';
 const AddNewDish = () => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [category, setCategory] = useState('');
@@ -49,7 +50,16 @@ const AddNewDish = () => {
 
   return (
    <><ScrollView style={[MyStyle.flex1]} keyboardShouldPersistTaps='always'>
-      <MenuManagement />
+     <View
+          style={[
+            MyStyle.marginHorizontal20,
+            MyStyle.marginTop13,
+            MyStyle.flexrow,
+            MyStyle.justifyContentSpaceBetween,
+          ]}>
+          <MenuManagement />
+          <SwitchComponent />
+        </View>
       <View
         style={[
           MyStyle.marginBottom15,
@@ -190,8 +200,8 @@ const AddNewDish = () => {
                 width: responsiveHorizontal(245),
                 height: responsiveVertical(120),
                 borderRadius: 10,
-                right: 18,
-                bottom: responsiveVertical(80),
+                right: responsiveHorizontal(18),
+                bottom: responsiveVertical(32),
                 zIndex: 100,
               },
             ]}>

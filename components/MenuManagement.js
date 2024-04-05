@@ -5,7 +5,7 @@ import Colors from '../style';
 
 const MenuManagement = () => {
   return (
-    <View style={[MyStyle.marginHorizontal20]}>
+    <View>
       <Text
         style={[MyStyle.fontSize28, MyStyle.fontWeight600, Colors.colorEE9846]}>
         Menu

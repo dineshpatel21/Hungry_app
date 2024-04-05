@@ -7,15 +7,17 @@ import {
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
-import MyStyle from '../style';
-import Colors from '../style';
-import Style, {
+import MyStyle, {
   responsiveVertical,
   responsiveHorizontal,
   responsiveFonts,
 } from '../style';
+import Colors from '../style';
+import Fonts from '../style';
 
 import MenuManagement from '../components/MenuManagement';
+import SwitchComponent from '../components/Switch';
+import {Divider} from 'react-native-paper';
 
 export const CategorySearch = () => {
   return (
@@ -28,7 +30,9 @@ export const CategorySearch = () => {
         MyStyle.marginBottom8,
       ]}>
       <View>
-        <Text style={[MyStyle.fontSize20, MyStyle.fontWeight700]}>Categroy</Text>
+        <Text style={[MyStyle.fontSize20, MyStyle.fontWeight700]}>
+          Categroy
+        </Text>
         <Text style={[MyStyle.fontSize15, MyStyle.fontWeight500]}>
           (Select the Category)
         </Text>
@@ -46,7 +50,7 @@ export const CategorySearch = () => {
   );
 };
 
-const CategoryList = ({categoryName}) => {
+const CategoryList = ({categoryName, data, setData, item, index}) => {
   return (
     <View
       style={[
@@ -77,7 +81,10 @@ const CategoryList = ({categoryName}) => {
           {categoryName}
         </Text>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          onClickDot(item, index, data, setData);
+        }}>
         <Image
           source={require('../assets/icons/dots.png')}
           style={[
@@ -88,6 +95,38 @@ const CategoryList = ({categoryName}) => {
           ]}
         />
       </TouchableOpacity>
+      {item.opened && (
+        <View style={[MyStyle.positionAbsolute]}>
+          <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
+            <Image
+              source={require('../assets/icons/unavailable.png')}
+              style={{
+                width: responsiveHorizontal(20),
+                height: responsiveVertical(20),
+                marginRight: responsiveHorizontal(4),
+              }}
+            />
+            <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+              Category unavailable
+            </Text>
+          </View>
+
+          <Divider style={{marginVertical: responsiveVertical(5)}} />
+          <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
+            <Image
+              source={require('../assets/icons/trash.png')}
+              style={{
+                width: responsiveHorizontal(20),
+                height: responsiveVertical(20),
+                marginRight: responsiveHorizontal(4),
+              }}
+            />
+            <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+              Delete category
+            </Text>
+          </View>
+        </View>
+      )}
     </View>
   );
 };
@@ -109,15 +148,37 @@ const _headerComponent = () => {
 };
 
 const NewCategory = ({navigation}) => {
-  const [data, setData] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}]);
+  
+  const [data, setData] = useState([{opened: false}, {opened: false},{opened: false}]);
 
+  const onClickDot = (item, index, data, setData) => {
+    let newData = data.map((it, idx) => {
+      if (index == idx) {
+        it.opened = it.opened ? false : true;
+      } else {
+        it.opened = false;
+      }
+      return it;
+    });
+    setData(newData);
+  };
   return (
     <View style={[MyStyle.flex1]}>
       <View style={[MyStyle.backgroundColorFFFFFF, {flex: 0.2}]}>
-        <MenuManagement />
         <View
           style={[
-            MyStyle.marginBottom15,
+            MyStyle.marginHorizontal20,
+            MyStyle.marginTop13,
+            MyStyle.flexrow,
+            MyStyle.justifyContentSpaceBetween,
+          ]}>
+          <MenuManagement />
+          <SwitchComponent />
+        </View>
+
+        <View
+          style={[
+            // MyStyle.marginBottom15,
             MyStyle.marginTop8,
             Colors.backgroundColorD9D9D9,
             MyStyle.height2,
@@ -131,7 +192,102 @@ const NewCategory = ({navigation}) => {
           data={data}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({item, index}) => {
-            return <CategoryList categoryName="Category Name" />;
+            return (
+              <View
+                style={[
+                  MyStyle.alignItemCenter,
+                  MyStyle.flexrow,
+                  MyStyle.justifyContentSpaceBetween,
+                  MyStyle.marginBottom29,
+                  MyStyle.borderRadius10,
+                  MyStyle.borderWidth1,
+                  {
+                    paddingVertical: responsiveVertical(7),
+                    paddingHorizontal: responsiveHorizontal(16),
+                    marginHorizontal: responsiveHorizontal(10),
+                  },
+                ]}>
+                <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
+                  <Image
+                    source={require('../assets/icons/categoryImage.png')}
+                    style={[
+                      {
+                        width: responsiveHorizontal(60),
+                        height: responsiveHorizontal(61),
+                      },
+                      MyStyle.marginRight18,
+                    ]}
+                  />
+                  <Text
+                    style={[MyStyle.fontWeight700, MyStyle.fontSize20]}></Text>
+                </View>
+                <TouchableOpacity
+                  onPress={() => {
+                    onClickDot(item, index, data, setData);
+                  }}>
+                  <Image
+                    source={require('../assets/icons/dots.png')}
+                    style={[
+                      {
+                        width: responsiveHorizontal(28),
+                        height: responsiveHorizontal(28),
+                      },
+                    ]}
+                  />
+                </TouchableOpacity>
+                {item.opened && (
+                  <View
+                    style={[
+                      MyStyle.positionAbsolute,
+                      MyStyle.backgroundColorFFFFFF,
+                      MyStyle.padding8,
+                      MyStyle.borderRadius10,
+                      {
+                        right: responsiveHorizontal(35),
+                        bottom: responsiveVertical(-25),
+                        zIndex: 101,
+                      },
+                    ]}>
+                    <TouchableOpacity
+                      style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
+                      onPress={() => {
+                        onClickDot(item, index, data, setData);
+                      }}>
+                      <Image
+                        source={require('../assets/icons/unavailable.png')}
+                        style={{
+                          width: responsiveHorizontal(20),
+                          height: responsiveVertical(20),
+                          marginRight: responsiveHorizontal(4),
+                        }}
+                      />
+                      <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+                        Category unavailable
+                      </Text>
+                    </TouchableOpacity>
+
+                    <Divider style={{marginVertical: responsiveVertical(5)}} />
+                    <TouchableOpacity
+                      style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
+                      onPress={() => {
+                        onClickDot(item, index, data, setData);
+                      }}>
+                      <Image
+                        source={require('../assets/icons/trash.png')}
+                        style={{
+                          width: responsiveHorizontal(20),
+                          height: responsiveVertical(20),
+                          marginRight: responsiveHorizontal(4),
+                        }}
+                      />
+                      <Text style={[Fonts.fontSize11, Fonts.fontWeight400]}>
+                        Delete category
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
+              </View>
+            );
           }}
         />
       </View>
@@ -157,7 +313,7 @@ const NewCategory = ({navigation}) => {
           <Text
             style={[
               MyStyle.welcomebtntext,
-             Colors.colorWhite,
+              Colors.colorWhite,
               MyStyle.fontWeight400,
               MyStyle.fontSize25,
             ]}>
