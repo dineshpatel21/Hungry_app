@@ -6,6 +6,7 @@ import FontsStyle, {responsiveFonts} from './Fonts';
 const MyStyle = StyleSheet.create({
   flex1: {flex: 1},
   flex01: {flex: 0.1},
+  flex09: {flex: 0.9},
   height2: {height: responsiveVertical(2)},
   alignItemCenter: {alignItems: 'center'},
   justifyContentCenter: {justifyContent: 'center'},
@@ -175,6 +176,7 @@ const MyStyle = StyleSheet.create({
   marginLeft18: {marginLeft: responsiveHorizontal(18)},
   marginLeft45: {marginLeft: responsiveHorizontal(45)},
   marginLeft30: {marginLeft: responsiveHorizontal(30)},
+  marginLeft50: {marginLeft: responsiveHorizontal(50)},
 
   borderColorA61A1: {borderColor: Colors.colorA6A1A1},
   marginRight20: {marginRight: responsiveHorizontal(20)},
@@ -197,6 +199,8 @@ const MyStyle = StyleSheet.create({
 
   marginVertical9: {marginVertical: responsiveVertical(9)},
   marginVertical5: {marginVertical: responsiveVertical(5)},
+  marginVertical15: {marginVertical: responsiveVertical(15)},
+
   padding8: {padding: 8},
   padding6: {padding: responsiveHorizontal(6)},
   padding5: {padding: responsiveHorizontal(5)},
@@ -261,6 +265,10 @@ const MyStyle = StyleSheet.create({
   width344: {width: responsiveHorizontal(344)},
   width298: {width: responsiveHorizontal(298)},
   width155: {width: responsiveHorizontal(155)},
+  width27: {width: responsiveHorizontal(27)},
+  width125: {width: responsiveHorizontal(125)},
+  width232: {width: responsiveHorizontal(232)},
+  width321: {width: responsiveHorizontal(321)},
 
   marginBottom20: {marginBottom: responsiveVertical(20)},
   marginBottom22: {marginBottom: responsiveVertical(22)},
@@ -277,7 +285,7 @@ const MyStyle = StyleSheet.create({
   color0A0808: {color: Colors.color0A0808},
   color1F1F1F: {color: Colors.color1F1F1F},
   colorA90303: {color: Colors.colorA90303},
-
+  colorFF0000: {color: Colors.colorFF0000},
 
   backcolor238152: {backgroundColor: Colors.color238152},
   backcolor3C8B44: {backgroundColor: Colors.color3C8B44},
@@ -285,13 +293,16 @@ const MyStyle = StyleSheet.create({
   backgroundColor243233: {backgroundColor: Colors.color243233},
   backgroundColor255255: {backgroundColor: Colors.color255215},
   backgroundColorD9D9D9: {backgroundColor: Colors.backgroundColorD9D9D9},
-  backgroundColorFF37374D: {backgroundColor: Colors. colorFF37374D},
-  backgroundColorD2FFD7: {backgroundColor: Colors. colorD2FFD7},
+  backgroundColorFF37374D: {backgroundColor: Colors.colorFF37374D},
+  backgroundColorD2FFD7: {backgroundColor: Colors.colorD2FFD7},
+  backgroundColor4BABCA: {backgroundColor: Colors.color4BABCA},
+  color0093FE: {color: Colors.color0093FE},
 
   borderColor00025: {borderColor: Colors.color00025},
   borderColor000022: {borderColor: Colors.color000022},
   borderColorEEA967: {borderColor: Colors.colorEEA967},
   borderColorA6A1A1: {borderColor: Colors.colorA6A1A1},
+  borderColorFF0000: {borderColor: Colors.colorFF0000},
   borderColord9d9d9: {borderColor: Colors.backgroundColorD9D9D9},
   backgroundColor217217: {backgroundColor: Colors.color217217},
 
@@ -302,6 +313,7 @@ const MyStyle = StyleSheet.create({
   marginRight9: {marginRight: responsiveHorizontal(9)},
   marginRight4: {marginRight: responsiveHorizontal(4)},
   marginRight16: {marginRight: responsiveHorizontal(16)},
+  marginRight50: {marginRight: responsiveHorizontal(50)},
 
   icon27: {width: responsiveHorizontal(27), height: responsiveHorizontal(27)},
   icon14: {width: responsiveHorizontal(14), height: responsiveHorizontal(14)},
@@ -317,6 +329,7 @@ const MyStyle = StyleSheet.create({
   icon30: {width: responsiveHorizontal(32), height: responsiveHorizontal(30)},
   icon8: {width: responsiveHorizontal(8), height: responsiveHorizontal(8)},
   icon54: {width: responsiveHorizontal(54), height: responsiveHorizontal(54)},
+  icon60: {width: responsiveHorizontal(60), height: responsiveHorizontal(60)},
   icon284: {
     width: responsiveHorizontal(284),
     height: responsiveHorizontal(284),
@@ -355,6 +368,7 @@ const MyStyle = StyleSheet.create({
   bottom16: {bottom: responsiveVertical(16)},
   bottom15: {bottom: responsiveVertical(15)},
   bottomM10: {bottom: responsiveVertical(-10)},
+  bottomM25: {bottom: responsiveVertical(-25)},
   bottom13: {bottom: responsiveVertical(13)},
   bottom64: {bottom: responsiveVertical(64)},
   bottom80: {bottom: responsiveVertical(80)},
@@ -376,6 +390,12 @@ const MyStyle = StyleSheet.create({
   height178: {height: responsiveVertical(178)},
   height156: {height: responsiveVertical(156)},
   height120: {height: responsiveVertical(120)},
+  height30: {height: responsiveVertical(30)},
+  height108: {height: responsiveVertical(108)},
+  height216: {height: responsiveVertical(216)},
+  height205: {height: responsiveVertical(205)},
+  height90: {height: responsiveVertical(90)},
+  height40: {height: responsiveVertical(40)},
 
   zIndex100: {zIndex: 100},
 
@@ -394,10 +414,10 @@ const MyStyle = StyleSheet.create({
     width: responsiveHorizontal(321),
     height: responsiveVertical(423),
   },
-  search:{
+  search: {
     width: responsiveHorizontal(216),
     height: responsiveVertical(232),
-  }
+  },
 });
 
 export default MyStyle;

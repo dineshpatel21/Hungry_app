@@ -16,30 +16,23 @@ const Profile = ({navigation}) => {
             MyStyle.justifyContentSpaceBetween,
             MyStyle.marginTop13,
             MyStyle.marginBottom10,
-            {width: responsiveHorizontal(250)},
+            MyStyle.width250,
           ]}>
           <View
             style={[
-              {
-                width: responsiveHorizontal(111),
-                height: responsiveHorizontal(111),
-                borderRadius: responsiveHorizontal(111),
-                backgroundColor: 'rgba(243, 233, 222, 1)',
-                borderColor: 'rgba(0, 0, 0, 0.25)',
-              },
               MyStyle.alignSelfCenter,
               MyStyle.justifyContentCenter,
               MyStyle.alignItemCenter,
               MyStyle.borderWidth1,
               MyStyle.positionRelative,
+              MyStyle.borderColor00025,
+              MyStyle.backgroundColor243233,
+              MyStyle.icon111,
+              MyStyle.borderRadius111,
             ]}>
             <Image
               source={require('../assets/icons/user.png')}
-              style={{
-                width: responsiveHorizontal(58),
-                height: responsiveHorizontal(58),
-                marginLeft: 6,
-              }}
+              style={[MyStyle.icon58, MyStyle.marginRight5]}
             />
           </View>
           <Divider

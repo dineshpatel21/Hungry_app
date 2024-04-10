@@ -40,7 +40,7 @@ const AddNewCategory = () => {
 
       <View
         style={[
-         MyStyle.cat_name,
+          MyStyle.cat_name,
           MyStyle.borderWidth1,
           MyStyle.alignSelfCenter,
           MyStyle.marginTop30,
@@ -78,7 +78,7 @@ const AddNewCategory = () => {
             MyStyle.alignItemCenter,
             MyStyle.borderRadius10,
             MyStyle.backgroundColorD9D9D9,
-            MyStyle.select_img
+            MyStyle.select_img,
           ]}>
           <Image
             source={require('../assets/icons/selectimage.png')}
@@ -99,7 +99,8 @@ const AddNewCategory = () => {
             MyStyle.welcomebtn,
             MyStyle.alignItemCenter,
             MyStyle.justifyContentCenter,
-            MyStyle.alignSelfCenter,MyStyle.width155
+            MyStyle.alignSelfCenter,
+            MyStyle.width155,
           ]}
           onPress={() => {}}>
           <Text

@@ -45,7 +45,7 @@ const MyDishes = ({navigation}) => {
  
   return (
     <View style={[MyStyle.flex1]}>
-      <View style={[{flex: 0.9}, MyStyle.backgroundColorFFFFFF]}>
+      <View style={[MyStyle.flex09, MyStyle.backgroundColorFFFFFF]}>
         <View>
           <View
             style={[
@@ -98,7 +98,7 @@ const MyDishes = ({navigation}) => {
                     MyStyle.paddingHorizontal6,
                     MyStyle.marginHorizontal20,
                     MyStyle.borderRadius10,
-                    MyStyle.borderColorEE9846,
+                    MyStyle.borderColorEEA967,
                   ]}>
                   <TouchableOpacity
                     style={[
@@ -116,7 +116,7 @@ const MyDishes = ({navigation}) => {
                     <Image
                       source={require('../assets/icons/categoryImage.png')}
                       style={[
-                       
+                       MyStyle.width125,MyStyle.height108,
                         MyStyle.marginRight18,
                       ]}
                     />

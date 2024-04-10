@@ -12,14 +12,15 @@ const NewOrder = () => {
           MyStyle.flexrow,
           MyStyle.width100,
           MyStyle.alignItemCenter,
-          {height: responsiveVertical(90), backgroundColor: '#E69343'},
+          MyStyle.backgroundColorEE9846,
+          MyStyle.height90,
         ]}>
         <Text
           style={[
             MyStyle.fontSize28,
             MyStyle.fontWeight500,
             MyStyle.marginHorizontal20,
-            {color: '#FFFFFF'},
+            MyStyle.colorWhite,
           ]}>
           New Order Detail
         </Text>
@@ -38,13 +39,13 @@ const NewOrder = () => {
             MyStyle.flexrow,
             MyStyle.justifyContentSpaceBetween,
             MyStyle.alignItemCenter,
-            {marginHorizontal: responsiveHorizontal(14)},
+            MyStyle.marginHorizontal14,
           ]}>
           <Text
             style={[
               MyStyle.fontSize15,
               MyStyle.fontWeight700,
-              {color: '#0093FE'},
+              MyStyle.color0093FE,
             ]}>
             10th order by Vishal Chauhan
           </Text>
@@ -52,7 +53,7 @@ const NewOrder = () => {
             1:00 PM
           </Text>
         </View>
-        <Divider style={{marginVertical: 15, borderWidth: 1}} />
+        <Divider style={[MyStyle.borderWidth1, MyStyle.marginVertical15]} />
 
         <View
           style={[
@@ -61,25 +62,13 @@ const NewOrder = () => {
             MyStyle.marginBottom8,
             MyStyle.marginLeft18,
             MyStyle.justifyContentSpaceBetween,
-            {marginHorizontal: responsiveHorizontal(14)},
+            MyStyle.marginHorizontal14,
           ]}>
           <View style={[MyStyle.flexrow]}>
-            <TouchableOpacity
-              style={[
-                {
-                  width: responsiveHorizontal(20),
-                  height: responsiveVertical(20),
-                },
-                MyStyle.marginRight18,
-              ]}>
+            <TouchableOpacity style={[MyStyle.icon20, MyStyle.marginRight18]}>
               <Image
                 source={require('../assets/icons/green.png')}
-                style={[
-                  {
-                    width: responsiveHorizontal(20),
-                    height: responsiveVertical(20),
-                  },
-                ]}
+                style={[MyStyle.icon20]}
               />
             </TouchableOpacity>
             <Text
@@ -89,8 +78,7 @@ const NewOrder = () => {
                 MyStyle.color000000,
                 MyStyle.marginRight9,
               ]}>
-              <Text style={[{color: 'rgba(255, 0, 0, 1)'}]}>Quantity</Text> X
-              Dish
+              <Text style={[MyStyle.color255]}>Quantity</Text> X Dish
             </Text>
           </View>
           <Text>Rs100</Text>
@@ -103,25 +91,13 @@ const NewOrder = () => {
             MyStyle.marginBottom8,
             MyStyle.marginLeft18,
             MyStyle.justifyContentSpaceBetween,
-            {marginHorizontal: responsiveHorizontal(14)},
+            MyStyle.marginHorizontal14,
           ]}>
           <View style={[MyStyle.flexrow]}>
-            <TouchableOpacity
-              style={[
-                {
-                  width: responsiveHorizontal(20),
-                  height: responsiveVertical(20),
-                },
-                MyStyle.marginRight18,
-              ]}>
+            <TouchableOpacity style={[MyStyle.marginRight18, MyStyle.icon20]}>
               <Image
                 source={require('../assets/icons/green.png')}
-                style={[
-                  {
-                    width: responsiveHorizontal(20),
-                    height: responsiveVertical(20),
-                  },
-                ]}
+                style={[MyStyle.icon20]}
               />
             </TouchableOpacity>
             <Text
@@ -131,22 +107,18 @@ const NewOrder = () => {
                 MyStyle.color000000,
                 MyStyle.marginRight9,
               ]}>
-              <Text style={[{color: 'rgba(255, 0, 0, 1)'}]}>Quantity</Text> X
-              Dish
+              <Text style={[MyStyle.color255]}>Quantity</Text> X Dish
             </Text>
           </View>
           <Text>Rs100</Text>
         </View>
 
         <Divider
-          style={{borderWidth: 1}}
           style={[
-            {
-              borderStyle: 'dotted',
-              marginVertical: responsiveVertical(9),
-              marginHorizontal: responsiveHorizontal(14),
-            },
             MyStyle.borderWidth1,
+            MyStyle.borderStyleDotted,
+            MyStyle.marginVertical9,
+            MyStyle.marginHorizontal14,
           ]}
         />
         <View
@@ -154,7 +126,7 @@ const NewOrder = () => {
             MyStyle.flexrow,
             MyStyle.alignItemCenter,
             MyStyle.justifyContentSpaceBetween,
-            {marginHorizontal: responsiveHorizontal(14)},
+            MyStyle.marginHorizontal14,
           ]}>
           <Text style={[MyStyle.fontSize12, MyStyle.fontWeight400]}>
             Total Bill
@@ -164,24 +136,22 @@ const NewOrder = () => {
 
         <View
           style={[
-            {
-              backgroundColor: '#4BABCA',
-              padding: 5,
-              width: 50,
-              marginHorizontal: responsiveHorizontal(14),
-            },
             MyStyle.borderRadius10,
             MyStyle.marginRight18,
             MyStyle.alignItemCenter,
             MyStyle.justifyContentCenter,
             MyStyle.marginTop4,
             MyStyle.marginBottom10,
+            MyStyle.width50,
+            MyStyle.padding5,
+            MyStyle.marginHorizontal14,
+            MyStyle.backgroundColor4BABCA,
           ]}>
           <Text
             style={[
               MyStyle.fontSize15,
               MyStyle.fontWeight400,
-              {color: '#FF0000'},
+              MyStyle.colorFF0000,
             ]}>
             Paid
           </Text>
@@ -191,7 +161,7 @@ const NewOrder = () => {
           style={[
             MyStyle.fontSize14,
             MyStyle.fontWeight500,
-            {marginHorizontal: responsiveHorizontal(14)},
+            MyStyle.marginHorizontal14,
           ]}>
           Set food preparation time
         </Text>
@@ -204,21 +174,16 @@ const NewOrder = () => {
             MyStyle.borderRadius10,
             MyStyle.justifyContentSpaceBetween,
             MyStyle.marginTop16,
-            {height: responsiveVertical(40)},
+            MyStyle.height40,
           ]}>
           <TouchableOpacity>
-            <Text
-              style={[
-                {marginLeft: responsiveHorizontal(50)},
-                MyStyle.fontSize17,
-              ]}>
-              -
-            </Text>
+            <Text style={[MyStyle.fontSize17, MyStyle.marginLeft50]}>-</Text>
           </TouchableOpacity>
           <Divider
             horizontalInset={true}
             style={[
-              {borderWidth: 0.5, height: '100%'},
+              MyStyle.height100,
+              MyStyle.bw12,
               MyStyle.marginHorizontal20,
             ]}
           />
@@ -226,18 +191,13 @@ const NewOrder = () => {
           <Divider
             horizontalInset={true}
             style={[
-              {borderWidth: 0.5, height: '100%'},
               MyStyle.marginHorizontal20,
+              MyStyle.height100,
+              MyStyle.bw12,
             ]}
           />
           <TouchableOpacity>
-            <Text
-              style={[
-                {marginRight: responsiveHorizontal(50)},
-                MyStyle.fontSize17,
-              ]}>
-              +
-            </Text>
+            <Text style={[MyStyle.fontSize17, MyStyle.marginRight50]}>+</Text>
           </TouchableOpacity>
         </View>
 
@@ -247,7 +207,7 @@ const NewOrder = () => {
             MyStyle.alignItemCenter,
             MyStyle.justifyContentCenter,
             MyStyle.marginTop28,
-            {marginHorizontal: responsiveHorizontal(14)},
+            MyStyle.marginHorizontal14,
           ]}>
           <TouchableOpacity
             style={[
@@ -256,13 +216,13 @@ const NewOrder = () => {
               MyStyle.paddingHorizontal14,
               MyStyle.borderRadius10,
               MyStyle.marginRight24,
-              {borderColor: '#FF0000'},
+              MyStyle.borderColorFF0000,
             ]}>
             <Text
               style={[
                 MyStyle.fontSize20,
                 MyStyle.fontWeight500,
-                {color: '#FF0000'},
+                MyStyle.colorFF0000,
               ]}>
               Reject
             </Text>
@@ -274,7 +234,7 @@ const NewOrder = () => {
               MyStyle.paddingVertical10,
               MyStyle.paddingHorizontal14,
               MyStyle.borderRadius10,
-              {backgroundColor: '#E69343'},
+              MyStyle.backgroundColorE69343,
             ]}>
             <Text
               style={[

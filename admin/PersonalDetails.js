@@ -30,12 +30,7 @@ const PersonalDetails = () => {
   return (
     <View style={[MyStyle.flex1]}>
       <View
-        style={[
-          MyStyle.marginBottom15,
-          MyStyle.marginTop8,
-          //   MyStyle.backgroundColorD9D9D9,
-          MyStyle.height2,
-        ]}
+        style={[MyStyle.marginBottom15, MyStyle.marginTop8, MyStyle.height2]}
       />
       <View style={[MyStyle.marginHorizontal20]}>
         <Text
@@ -92,12 +87,13 @@ const PersonalDetails = () => {
 
       <View
         style={[
-          {width: responsiveHorizontal(321), height: responsiveVertical(205)},
           MyStyle.borderWidth1,
           MyStyle.alignSelfCenter,
           MyStyle.marginTop30,
           MyStyle.borderRadius10,
           MyStyle.borderColorA61A1,
+          MyStyle.width321,
+          MyStyle.height205,
         ]}>
         <View style={[MyStyle.marginHorizontal20, MyStyle.marginTop18]}>
           <TextInput
@@ -131,20 +127,12 @@ const PersonalDetails = () => {
             MyStyle.justifyContentCenter,
             MyStyle.alignItemCenter,
             MyStyle.borderRadius10,
-            {
-              width: responsiveHorizontal(81),
-              height: responsiveVertical(71),
-              backgroundColor: '#d9d9d9',
-            },
+            MyStyle.backgroundColorD9D9D9,
+            MyStyle.select_img,
           ]}>
           <Image
             source={require('../assets/icons/selectimage.png')}
-            style={[
-              {
-                width: responsiveHorizontal(31),
-                height: responsiveVertical(31),
-              },
-            ]}
+            style={[MyStyle.icon30]}
           />
         </TouchableOpacity>
       </View>
@@ -154,7 +142,8 @@ const PersonalDetails = () => {
             MyStyle.positionAbsolute,
             MyStyle.width100,
             MyStyle.justifyContentCenter,
-            {bottom: responsiveVertical(34), flex: 0.1},
+            MyStyle.bottom34,
+            MyStyle.flex01,
           ]}>
           <TouchableOpacity
             style={[
@@ -162,7 +151,7 @@ const PersonalDetails = () => {
               MyStyle.alignItemCenter,
               MyStyle.justifyContentCenter,
               MyStyle.alignSelfCenter,
-              {width: responsiveHorizontal(155)},
+              MyStyle.width155,
             ]}
             onPress={() => {}}>
             <Text

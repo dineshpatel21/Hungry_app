@@ -34,12 +34,7 @@ export const CategorySearch = () => {
       </View>
       <Image
         source={require('../assets/icons/search.png')}
-        style={[
-          {
-            width: responsiveHorizontal(27),
-            height: responsiveHorizontal(30),
-          },
-        ]}
+        style={[MyStyle.width27, MyStyle.height30]}
       />
     </View>
   );
@@ -64,13 +59,7 @@ const CategoryList = ({categoryName, data, setData, item, index}) => {
       <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
         <Image
           source={require('../assets/icons/categoryImage.png')}
-          style={[
-            {
-              width: responsiveHorizontal(60),
-              height: responsiveHorizontal(61),
-            },
-            MyStyle.marginRight18,
-          ]}
+          style={[MyStyle.marginRight18, MyStyle.icon60]}
         />
         <Text style={[MyStyle.fontWeight700, MyStyle.fontSize20]}>
           {categoryName}
@@ -82,12 +71,7 @@ const CategoryList = ({categoryName, data, setData, item, index}) => {
         }}>
         <Image
           source={require('../assets/icons/dots.png')}
-          style={[
-            {
-              width: responsiveHorizontal(28),
-              height: responsiveHorizontal(28),
-            },
-          ]}
+          style={[MyStyle.icon28]}
         />
       </TouchableOpacity>
       {item.opened && (
@@ -95,26 +79,18 @@ const CategoryList = ({categoryName, data, setData, item, index}) => {
           <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
             <Image
               source={require('../assets/icons/unavailable.png')}
-              style={{
-                width: responsiveHorizontal(20),
-                height: responsiveVertical(20),
-                marginRight: responsiveHorizontal(4),
-              }}
+              style={[MyStyle.icon20, MyStyle.marginRight4]}
             />
             <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
               Category unavailable
             </Text>
           </View>
 
-          <Divider style={{marginVertical: responsiveVertical(5)}} />
+          <Divider style={[MyStyle.marginVertical5]} />
           <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
             <Image
               source={require('../assets/icons/trash.png')}
-              style={{
-                width: responsiveHorizontal(20),
-                height: responsiveVertical(20),
-                marginRight: responsiveHorizontal(4),
-              }}
+              style={[MyStyle.icon20, MyStyle.marginRight4]}
             />
             <Text style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
               Delete category
@@ -132,9 +108,10 @@ const _headerComponent = () => {
       <MenuManagement />
       <View
         style={[
-          {backgroundColor: '#D9D9D9', height: 2},
           MyStyle.marginBottom15,
           MyStyle.marginTop8,
+          MyStyle.height2,
+          MyStyle.backgroundColorD9D9D9,
         ]}
       />
       <CategorySearch />
@@ -165,7 +142,7 @@ const NewCategory = ({navigation}) => {
   };
   return (
     <View style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
-      <View style={{flex: 0.9}}>
+      <View style={[MyStyle.flex09]}>
         <View style={[MyStyle.backgroundColorFFFFFF]}>
           <View
             style={[
@@ -182,29 +159,23 @@ const NewCategory = ({navigation}) => {
               MyStyle.marginBottom15,
               MyStyle.marginTop8,
               MyStyle.borderWidth1,
-              //   MyStyle.backgroundColorD9D9D9,
+
               MyStyle.height2,
             ]}
           />
           <Searchbar
             placeholder="Search The Category"
             style={[
-              {
-                borderColor: 'rgba(0, 0, 0, 0.22)',
-              },
               MyStyle.marginBottom10,
               MyStyle.alignItemCenter,
               MyStyle.marginTop13,
               MyStyle.marginHorizontal20,
+              MyStyle.borderColor000022,
             ]}
             icon={({color, size}) => (
               <Image
                 source={require('../assets/icons/search.png')}
-                style={{
-                  width: responsiveHorizontal(20),
-                  height: responsiveHorizontal(20),
-                  marginRight: responsiveHorizontal(3),
-                }}
+                style={[MyStyle.icon20, MyStyle.marginRight3]}
               />
             )}
             // onChangeText={}
@@ -224,28 +195,18 @@ const NewCategory = ({navigation}) => {
                     MyStyle.marginBottom10,
                     MyStyle.borderRadius10,
                     MyStyle.borderWidth1,
-                    {
-                      paddingVertical: responsiveVertical(7),
-                      paddingHorizontal: responsiveHorizontal(16),
-                      marginHorizontal: responsiveHorizontal(10),
-                    },
+                    MyStyle.marginHorizontal10,
+                    MyStyle.paddingVertical7,
+                    MyStyle.paddingHorizontal16,
                   ]}>
                   <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
                     <Image
                       source={require('../assets/icons/categoryImage.png')}
-                      style={[
-                        {
-                          width: responsiveHorizontal(60),
-                          height: responsiveHorizontal(61),
-                        },
-                        MyStyle.marginRight18,
-                      ]}
+                      style={[MyStyle.icon60, MyStyle.marginRight18]}
                     />
-                    <Text
-                      style={[
-                        MyStyle.fontWeight700,
-                        MyStyle.fontSize20,
-                      ]}>Category Name</Text>
+                    <Text style={[MyStyle.fontWeight700, MyStyle.fontSize20]}>
+                      Category Name
+                    </Text>
                   </View>
                   <TouchableOpacity
                     onPress={() => {
@@ -253,12 +214,7 @@ const NewCategory = ({navigation}) => {
                     }}>
                     <Image
                       source={require('../assets/icons/dots.png')}
-                      style={[
-                        {
-                          width: responsiveHorizontal(28),
-                          height: responsiveHorizontal(28),
-                        },
-                      ]}
+                      style={[MyStyle.icon28]}
                     />
                   </TouchableOpacity>
                   {item.opened && (
@@ -268,12 +224,10 @@ const NewCategory = ({navigation}) => {
                         MyStyle.backgroundColorFFFFFF,
                         MyStyle.padding8,
                         MyStyle.borderRadius10,
-                        {
-                          right: responsiveHorizontal(35),
-                          bottom: responsiveVertical(-25),
-                          zIndex: 101,
-                          elevation: 10,
-                        },
+                        MyStyle.elevation10,
+                        MyStyle.zIndex100,
+                        MyStyle.right35,
+                        MyStyle.bottomM25,
                       ]}>
                       <TouchableOpacity
                         style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
@@ -282,11 +236,7 @@ const NewCategory = ({navigation}) => {
                         }}>
                         <Image
                           source={require('../assets/icons/unavailable.png')}
-                          style={{
-                            width: responsiveHorizontal(20),
-                            height: responsiveVertical(20),
-                            marginRight: responsiveHorizontal(4),
-                          }}
+                          style={[MyStyle.icon20, MyStyle.marginRight4]}
                         />
                         <Text
                           style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
@@ -294,9 +244,7 @@ const NewCategory = ({navigation}) => {
                         </Text>
                       </TouchableOpacity>
 
-                      <Divider
-                        style={{marginVertical: responsiveVertical(5)}}
-                      />
+                      <Divider style={[MyStyle.marginVertical5]} />
                       <TouchableOpacity
                         style={[MyStyle.flexrow, MyStyle.alignItemCenter]}
                         onPress={() => {
@@ -304,11 +252,7 @@ const NewCategory = ({navigation}) => {
                         }}>
                         <Image
                           source={require('../assets/icons/trash.png')}
-                          style={{
-                            width: responsiveHorizontal(20),
-                            height: responsiveVertical(20),
-                            marginRight: responsiveHorizontal(4),
-                          }}
+                          style={[MyStyle.icon20, MyStyle.marginRight4]}
                         />
                         <Text
                           style={[MyStyle.fontSize11, MyStyle.fontWeight400]}>
@@ -325,10 +269,7 @@ const NewCategory = ({navigation}) => {
               style={[MyStyle.alignItemCenter, MyStyle.justifyContentCenter]}>
               <Image
                 source={require('../assets/icons/search2.png')}
-                style={{
-                  width: responsiveHorizontal(216),
-                  height: responsiveVertical(232),
-                }}
+                style={[MyStyle.width216, MyStyle.height232]}
               />
             </View>
           )}
@@ -340,7 +281,8 @@ const NewCategory = ({navigation}) => {
           MyStyle.positionAbsolute,
           MyStyle.width100,
           MyStyle.justifyContentCenter,
-          {bottom: 0, flex: 0.1},
+          MyStyle.bottom0,
+          MyStyle.flex01,
         ]}>
         <TouchableOpacity
           style={[
