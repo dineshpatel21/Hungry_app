@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, FlatList, TouchableOpacity, Image} from 'react-native';
-import  {
+import {
   responsiveVertical,
   responsiveHorizontal,
   responsiveFonts,
-  MyStyle,vw,vh
+  MyStyle,
+  vw,
+  vh,
 } from '../../style';
 const Liked = ({navigation}) => {
   const items = [
@@ -48,7 +50,6 @@ const Liked = ({navigation}) => {
             <View
               style={[
                 MyStyle.flexrow,
-
                 MyStyle.alignItemCenter,
                 MyStyle.marginTop17,
                 MyStyle.justifyContentSpaceBetween,
@@ -62,38 +63,28 @@ const Liked = ({navigation}) => {
                   MyStyle.borderRadius10,
                   MyStyle.paddingHorizontal10,
                   MyStyle.paddingVertical7,
-                  {
-                    backgroundColor: 'rgba(238, 152, 70, 0.3)',
-                  },
+                  MyStyle.backcolor238152,
                 ]}>
                 <Text
                   style={[
-                    {
-                      color: 'rgba(0, 0, 0, 0.52)',
-                      marginRight: 2,
-                    },
                     MyStyle.fontSize17,
                     MyStyle.fontWeight700,
+                    MyStyle.marginRight2,
+                    MyStyle.color000052,
                   ]}>
                   {item.loc}
                 </Text>
                 <Image
                   source={require('../../assets/icons/map.png')}
-                  style={{
-                    width: responsiveHorizontal(18),
-                    height: responsiveHorizontal(18),
-                    marginRight: responsiveHorizontal(3),
-                  }}
+                  style={[MyStyle.icon18, MyStyle.marginRight3]}
                 />
               </View>
               <TouchableOpacity>
                 <Text
                   style={[
-                    {
-                      fontSize: responsiveFonts(12),
-                      color: 'rgba(238, 152, 70, 1)',
-                    },
                     MyStyle.fontWeight700,
+                    MyStyle.fontSize12,
+                    MyStyle.color238152,
                   ]}>
                   See All
                 </Text>
@@ -102,26 +93,22 @@ const Liked = ({navigation}) => {
 
             <Image
               source={item.src}
-              style={{
-                width: vw,
-                height: responsiveHorizontal(182),
-                alignSelf: 'center',
-                // marginRight: responsiveHorizontal(3),
-                resizeMode: 'contain',
-              }}
+              style={[
+                MyStyle.alignSelfCenter,
+                MyStyle.height182,
+                MyStyle.resizeModeContain,
+                MyStyle.width100,
+              ]}
             />
 
             <Image
               source={require('../../assets/icons/heart_liked.png')}
               style={[
-                {
-                  width: responsiveHorizontal(28),
-                  height: responsiveHorizontal(28),
-                  right: responsiveHorizontal(35),
-                  top: responsiveVertical(80),
-                  tintColor: 'red',
-                },
                 MyStyle.positionAbsolute,
+                MyStyle.icon28,
+                MyStyle.right35,
+                MyStyle.top80,
+                MyStyle.tintColorRed,
               ]}
             />
             <View
@@ -142,37 +129,6 @@ const Liked = ({navigation}) => {
                   {item.name}
                 </Text>
               </View>
-              {/* <View
-                  style={[
-                    MyStyle.flexrow,
-                    MyStyle.alignItemCenter,
-                    MyStyle.marginRight18,
-                    MyStyle.borderRadius6,
-                    MyStyle.paddingHorizontal6,
-                    MyStyle.paddingVertical2,
-                    {
-                      backgroundColor: 'rgba(60, 139, 68, 1)',
-                    },
-                  ]}>
-                  <Text
-                    style={[
-                      {
-                        fontSize: responsiveFonts(12),
-                        color: 'white',
-                        marginRight: 3,
-                      },
-                      MyStyle.fontWeight700,
-                    ]}>
-                    {item.ratting}
-                  </Text>
-                  <Image
-                    source={require('../../assets/icons/star.png')}
-                    style={{
-                      width: responsiveHorizontal(7),
-                      height: responsiveHorizontal(7),
-                    }}
-                  />
-                </View> */}
             </View>
             <View
               style={[
@@ -180,15 +136,11 @@ const Liked = ({navigation}) => {
                 MyStyle.alignItemCenter,
                 MyStyle.borderWidth,
                 MyStyle.marginHorizontal20,
-                {marginTop: 9},
+                MyStyle.marginTop9,
               ]}>
               <Image
                 source={require('../../assets/icons/stopwatch.png')}
-                style={{
-                  width: responsiveHorizontal(17),
-                  height: responsiveHorizontal(18),
-                  marginRight: responsiveHorizontal(5),
-                }}
+                style={[MyStyle.marginRight5, MyStyle.icon18]}
               />
               <Text
                 style={[
@@ -202,7 +154,10 @@ const Liked = ({navigation}) => {
           </TouchableOpacity>
         )}
         ItemSeparatorComponent={() => {
-          return <View style={{backgroundColor: '#D9D9D9', height: 5}}></View>;
+          return (
+            <View
+              style={[MyStyle.backgroundColorD9D9D9, MyStyle.height5]}></View>
+          );
         }}
       />
     </View>

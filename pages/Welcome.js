@@ -1,11 +1,7 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 
 const Welcome = ({navigation}) => {
   return (
@@ -18,24 +14,18 @@ const Welcome = ({navigation}) => {
           'rgba(240, 184, 131, 0.52)',
           'rgba(238, 175, 115, 0.59)',
           'rgba(234, 156, 81, 0.73)',
-        ]}
-        >
+        ]}>
         <Image
           source={require('.././assets/icons/HUNGRY_LOGO.png')}
-          style={{
-            width: responsiveHorizontal(179),
-            height: responsiveVertical(178),
-            marginTop: responsiveHorizontal(90),
-            marginBottom: responsiveHorizontal(56),
-            alignSelf: 'center',
-          }}
+          style={[
+            MyStyle.alignSelfCenter,
+            MyStyle.marginBottom56,
+            MyStyle.marginTop90,
+            MyStyle.width179,
+            MyStyle.height178,
+          ]}
         />
-        <View
-          style={{
-            width: responsiveHorizontal(180),
-            // height: responsiveVertical(88),
-            marginLeft: responsiveHorizontal(20),
-          }}>
+        <View style={[MyStyle.width180, MyStyle.marginLeft18]}>
           <Text
             style={[
               MyStyle.fontSize30,
@@ -46,13 +36,7 @@ const Welcome = ({navigation}) => {
           </Text>
         </View>
         <View
-          style={{
-            width: responsiveHorizontal(266),
-            height: responsiveVertical(84),
-            marginLeft: responsiveHorizontal(20),
-
-            marginTop: responsiveVertical(10),
-          }}>
+          style={[MyStyle.wel_des, MyStyle.marginTop10, MyStyle.marginLeft18]}>
           <Text
             style={[
               MyStyle.fontSize15,
@@ -65,18 +49,10 @@ const Welcome = ({navigation}) => {
             delivery partner – Hungry is your all-in-one destination.
           </Text>
         </View>
-        <View
-          style={{
-            position: 'absolute',
-            bottom: responsiveVertical(-70),
-            left: responsiveHorizontal(-70),
-          }}>
+        <View style={[MyStyle.positionAbsolute, MyStyle.food_wel]}>
           <Image
             source={require('.././assets/icons/FOOD_WELCOME.png')}
-            style={{
-              width: responsiveHorizontal(306.24),
-              height: responsiveVertical(246.05),
-            }}
+            style={[MyStyle.welcom]}
           />
         </View>
 
@@ -89,26 +65,17 @@ const Welcome = ({navigation}) => {
             MyStyle.positionAbsolute,
             MyStyle.bgWhite,
             MyStyle.paddingVertical10,
-
-            {
-              bottom: responsiveVertical(64),
-              right: responsiveHorizontal(0),
-              borderTopLeftRadius: responsiveVertical(30),
-              borderBottomLeftRadius: responsiveVertical(30),
-              width: responsiveHorizontal(151),
-              height: responsiveVertical(46),
-              justifyContent: 'flex-end',
-            },
+            MyStyle.bbjc,
+            MyStyle.bottom64,
+            MyStyle.width151,
+            MyStyle.height46,MyStyle.right0
           ]}>
           <View
             style={[
               MyStyle.flexrow,
               MyStyle.alignItemCenter,
-
-              {
-                marginLeft: responsiveHorizontal(30),
-                marginRight: responsiveHorizontal(16),
-              },
+              MyStyle.marginLeft30,
+              MyStyle.marginRight16,
             ]}>
             <Text
               style={[
@@ -121,11 +88,7 @@ const Welcome = ({navigation}) => {
             </Text>
             <Image
               source={require('.././assets/icons/Arrow_right.png')}
-              style={{
-                width: responsiveHorizontal(15),
-                height: responsiveHorizontal(15),
-                tintColor: '#000000',
-              }}
+              style={[MyStyle.icon14, MyStyle.tintColorBlack]}
             />
           </View>
         </TouchableOpacity>

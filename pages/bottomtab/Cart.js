@@ -2,11 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, Image, Pressable, TouchableOpacity} from 'react-native';
 
 import delivery from '../../assets/icons/cartempty.png';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../../style';
 
 const InitialPage = ({navigation}) => {
   return (
@@ -23,18 +19,12 @@ const InitialPage = ({navigation}) => {
       <View style={MyStyle.width100}>
         <View
           style={[
-            {width: responsiveHorizontal(284)},
             MyStyle.alignItemCenter,
             MyStyle.alignSelfCenter,
+            MyStyle.width284,
           ]}>
           <Image
-            style={[
-              MyStyle.welcomeimg,
-              {
-                width: responsiveHorizontal(329),
-                height: responsiveVertical(346),
-              },
-            ]}
+            style={[MyStyle.welcomeimg, MyStyle.height346, MyStyle.width329]}
             source={delivery}
           />
           <Text style={[{...MyStyle.welcomehead}]}>Ouch! Hungry</Text>
@@ -45,13 +35,13 @@ const InitialPage = ({navigation}) => {
       </View>
 
       <TouchableOpacity
-        style={[MyStyle.welcomebtn,MyStyle.alignItemCenter,MyStyle.justifyContentCenter, {width: responsiveHorizontal(160)}]}>
-        <Text
-          style={[
-            MyStyle.welcomebtntext,
-            MyStyle.colorWhite,
-           
-          ]}>
+        style={[
+          MyStyle.welcomebtn,
+          MyStyle.alignItemCenter,
+          MyStyle.justifyContentCenter,
+          {width: responsiveHorizontal(160)},
+        ]}>
+        <Text style={[MyStyle.welcomebtntext, MyStyle.colorWhite]}>
           Find Foods
         </Text>
       </TouchableOpacity>

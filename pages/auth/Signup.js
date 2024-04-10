@@ -9,11 +9,7 @@ import {
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../../style';
 import SumbitButton from '../../components/SumbitButton';
 const Signup = ({navigation}) => {
   return (
@@ -27,11 +23,7 @@ const Signup = ({navigation}) => {
           'rgba(234, 156, 81, 0.73)',
         ]}>
         <ScrollView style={[MyStyle.flex1, MyStyle.paddingHorizontal20]}>
-          <View
-            style={{
-              marginTop: responsiveVertical(74),
-              width: responsiveHorizontal(284),
-            }}>
+          <View style={[MyStyle.width284, MyStyle.marginTop74]}>
             <Text
               style={[
                 MyStyle.fontSize28,
@@ -42,33 +34,24 @@ const Signup = ({navigation}) => {
               CREATE YOUR NEW ACCOUNT
             </Text>
           </View>
-          <View
-            style={[
-              {
-                width: responsiveHorizontal(246),
-                marginBottom: responsiveVertical(20),
-              },
-            ]}>
+          <View style={[MyStyle.marginBottom12, MyStyle.width246]}>
             <Text
               style={[
                 MyStyle.fontSize15,
                 MyStyle.fontWeight700,
-
+                MyStyle.marginTop5,
                 MyStyle.lineHeight,
-                {
-                  color: 'rgba(0, 0, 0, 0.44)',
-                  marginTop: responsiveVertical(5),
-                },
+                MyStyle.color000044,
               ]}>
               Create an account to start looking for the food you like
             </Text>
           </View>
-          <View style={[{marginBottom: responsiveVertical(12)}]}>
+          <View style={[MyStyle.marginBottom12]}>
             <Text
               style={[
                 MyStyle.fontSize17,
                 MyStyle.fontWeight400,
-                {color: 'rgba(0, 0, 0, 1)'},
+                MyStyle.color00001,
               ]}>
               Enter Your Phone Number
             </Text>
@@ -84,18 +67,18 @@ const Signup = ({navigation}) => {
           />
 
           <View
-            style={[MyStyle.flexrow, MyStyle.alignItemCenter, MyStyle.marginTop13]}>
+            style={[
+              MyStyle.flexrow,
+              MyStyle.alignItemCenter,
+              MyStyle.marginTop13,
+            ]}>
             <TouchableOpacity>
               <Image
                 source={require('../../assets/icons/CHECK.png')}
-                style={{
-                  width: responsiveHorizontal(27),
-                  height: responsiveHorizontal(27),
-                  marginRight: responsiveHorizontal(3),
-                }}
+                style={[MyStyle.icon27, MyStyle.marginRight3]}
               />
             </TouchableOpacity>
-            <View style={{width: responsiveHorizontal(239)}}>
+            <View style={[MyStyle.width239]}>
               <Text
                 style={[
                   MyStyle.fontStyleItalic,
@@ -107,13 +90,7 @@ const Signup = ({navigation}) => {
               </Text>
             </View>
           </View>
-          <TouchableOpacity
-            style={[
-              {
-                marginBottom: responsiveVertical(29),
-                width: responsiveHorizontal(269),
-              },
-            ]}>
+          <TouchableOpacity style={[MyStyle.width269, MyStyle.marginBottom29]}>
             <Text
               style={[
                 MyStyle.color101FA2,
@@ -138,12 +115,10 @@ const Signup = ({navigation}) => {
             ]}>
             <Text
               style={[
-                {
-                  color: 'rgba(0, 0, 0, 0.44)',
-                  marginRight: responsiveHorizontal(5),
-                },
                 MyStyle.fontSize15,
                 MyStyle.fontWeight700,
+                MyStyle.marginRight5,
+                MyStyle.color000044,
               ]}>
               If you have a already account ?
             </Text>
@@ -153,9 +128,9 @@ const Signup = ({navigation}) => {
               }}>
               <Text
                 style={[
-                  {color: 'rgba(172, 23, 18, 1)'},
                   MyStyle.fontSize15,
                   MyStyle.fontWeight700,
+                  MyStyle.color17223,
                 ]}>
                 Login
               </Text>

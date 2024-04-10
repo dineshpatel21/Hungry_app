@@ -1,10 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../../style';
 import ProfileContent from '../../components/ProfileContent';
 import Divide from '../../components/Divide';
 import {Divider} from 'react-native-paper';
@@ -20,38 +16,32 @@ const Profile = ({navigation}) => {
             MyStyle.justifyContentSpaceBetween,
             MyStyle.marginTop13,
             MyStyle.marginBottom10,
-
-            {width: responsiveHorizontal(250)},
+            MyStyle.width250,
           ]}>
           <View
             style={[
-              {
-                width: responsiveHorizontal(111),
-                height: responsiveHorizontal(111),
-                borderRadius: responsiveHorizontal(111),
-                backgroundColor: 'rgba(243, 233, 222, 1)',
-                borderColor: 'rgba(0, 0, 0, 0.25)',
-              },
               MyStyle.alignSelfCenter,
               MyStyle.justifyContentCenter,
               MyStyle.alignItemCenter,
               MyStyle.borderWidth1,
               MyStyle.positionRelative,
+              MyStyle.backcolor243233,
+              MyStyle.borderColor00025,
+              MyStyle.icon111,
+              MyStyle.borderRadius111,
             ]}>
             <Image
               source={require('../../assets/icons/user.png')}
-              style={{
-                width: responsiveHorizontal(58),
-                height: responsiveHorizontal(58),
-                marginLeft: 6,
-              }}
+              style={[MyStyle.marginLeft6, MyStyle.icon58]}
             />
           </View>
           <Divider
             horizontalInset={true}
             style={[
-              {borderWidth: 0.5, height: '100%', borderColor: '#EEA967'},
               MyStyle.marginHorizontal20,
+              MyStyle.height100,
+              MyStyle.bw12,
+              MyStyle.borderColorEEA967,
             ]}
           />
           <View>
@@ -68,7 +58,7 @@ const Profile = ({navigation}) => {
                 MyStyle.fontSize12,
                 MyStyle.fontWeight400,
                 MyStyle.colorEE9846,
-                MyStyle.marginTop4
+                MyStyle.marginTop4,
               ]}>
               address
             </Text>

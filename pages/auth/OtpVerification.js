@@ -9,10 +9,11 @@ import {
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import  {
+import {
   responsiveVertical,
   responsiveHorizontal,
   MyStyle,
+  Colors,
 } from '../../style';
 import SumbitButton from '../../components/SumbitButton';
 
@@ -34,7 +35,6 @@ const OtpVerification = ({navigation}) => {
     <View style={[MyStyle.flex1]}>
       <LinearGradient
         style={[MyStyle.flex1]}
-        // colors={['rgba(255, 255, 255, 0)', 'rgba(234, 156, 81, 1)']}
         colors={[
           'rgba(255, 255, 255, 0)',
           'rgba(240, 184, 131, 0.52)',
@@ -42,12 +42,7 @@ const OtpVerification = ({navigation}) => {
           'rgba(234, 156, 81, 0.73)',
         ]}>
         <ScrollView style={[MyStyle.flex1, MyStyle.paddingHorizontal20]}>
-          <View
-            style={{
-              marginTop: responsiveVertical(74),
-              width: responsiveHorizontal(120),
-              // height: responsiveVertical(40),
-            }}>
+          <View style={[MyStyle.width120, MyStyle.marginTop74]}>
             <Text
               style={[
                 MyStyle.fontSize28,
@@ -58,12 +53,7 @@ const OtpVerification = ({navigation}) => {
               OTP
             </Text>
           </View>
-          <View
-            style={{
-              //   marginTop: responsiveVertical(74),
-              width: responsiveHorizontal(260),
-              // height: responsiveVertical(40),
-            }}>
+          <View style={[MyStyle.width260]}>
             <Text
               style={[
                 MyStyle.fontSize28,
@@ -74,36 +64,24 @@ const OtpVerification = ({navigation}) => {
               VERIFICATION
             </Text>
           </View>
-          <View
-            style={[
-              {
-                // width: responsiveHorizontal(266),
-                // height: responsiveVertical(84),
-                // marginLeft: responsiveHorizontal(20),
-
-                marginBottom: responsiveVertical(20),
-              },
-            ]}>
+          <View style={[MyStyle.marginBottom20]}>
             <Text
               style={[
                 MyStyle.fontSize15,
                 MyStyle.fontWeight700,
-
+                MyStyle.color000044,
                 MyStyle.lineHeight,
-                {
-                  color: 'rgba(0, 0, 0, 0.44)',
-                  marginTop: responsiveVertical(5),
-                },
+                MyStyle.marginTop5,
               ]}>
               ENTER THE VERIFICATION CODE WE SEND YOU
             </Text>
           </View>
-          <View style={[{marginBottom: responsiveVertical(12)}]}>
+          <View style={[MyStyle.marginBottom12]}>
             <Text
               style={[
                 MyStyle.fontSize17,
                 MyStyle.fontWeight400,
-                {color: 'rgba(0, 0, 0, 1)'},
+                MyStyle.color00001,
               ]}>
               Enter Your Phone Number
             </Text>
@@ -124,7 +102,7 @@ const OtpVerification = ({navigation}) => {
                 MyStyle.alignItemCenter,
                 MyStyle.justifyContentCenter,
                 MyStyle.marginRight9,
-                {borderColor: otp1.length >= 1 ? '#4D4DFF' : '#000000'},
+                {borderColor: otp1.length >= 1 ? Colors.color4d4dff : '#000000'},
                 otp1Validation && {
                   borderColor: errorColor.color,
                   borderWidth: 1,
@@ -154,7 +132,10 @@ const OtpVerification = ({navigation}) => {
                 MyStyle.alignItemCenter,
                 MyStyle.justifyContentCenter,
                 MyStyle.marginRight9,
-                {borderColor: otp2.length >= 1 ? '#4D4DFF' : '#000000'},
+                {
+                  borderColor:
+                    otp2.length >= 1 ? Colors.color4d4dff : '#000000',
+                },
                 otp2Validation && {
                   borderColor: errorColor.color,
                   borderWidth: 1,
@@ -186,7 +167,7 @@ const OtpVerification = ({navigation}) => {
                 MyStyle.alignItemCenter,
                 MyStyle.justifyContentCenter,
                 MyStyle.marginRight9,
-                {borderColor: otp3.length >= 1 ? '#4D4DFF' : '#000000'},
+                {borderColor: otp3.length >= 1 ? Colors.color4d4dff : '#000000'},
                 otp3Validation && {
                   borderColor: errorColor.color,
                   borderWidth: 1,
@@ -218,7 +199,7 @@ const OtpVerification = ({navigation}) => {
                 MyStyle.alignItemCenter,
                 MyStyle.justifyContentCenter,
                 MyStyle.marginRight9,
-                {borderColor: otp4.length >= 1 ? '#4D4DFF' : '#000000'},
+                {borderColor: otp4.length >= 1 ? Colors.color4d4dff : '#000000'},
                 otp4Validation && {
                   borderColor: errorColor.color,
                   borderWidth: 1,
@@ -243,21 +224,19 @@ const OtpVerification = ({navigation}) => {
           <View style={[MyStyle.flexrow, MyStyle.justifyContentCenter]}>
             <Text
               style={[
-                {
-                  color: 'rgba(0, 0, 0, 0.44)',
-                  marginRight: responsiveHorizontal(5),
-                },
                 MyStyle.fontSize15,
                 MyStyle.fontWeight700,
+                MyStyle.marginRight5,
+                MyStyle.color000044,
               ]}>
               Didn’t receive code?
             </Text>
             <TouchableOpacity>
               <Text
                 style={[
-                  {color: 'rgba(172, 23, 18, 1)'},
                   MyStyle.fontSize15,
                   MyStyle.fontWeight700,
+                  MyStyle.color17223,
                 ]}>
                 Resend
               </Text>
@@ -273,20 +252,14 @@ const OtpVerification = ({navigation}) => {
             ]}>
             <Image
               source={require('../../assets/icons/clock.png')}
-              style={[
-                {
-                  width: 14,
-                  height: 14,
-                  marginRight: responsiveHorizontal(7),
-                },
-              ]}
+              style={[MyStyle.icon14, MyStyle.marginRight7]}
             />
             <View>
               <Text
                 style={[
                   MyStyle.fontSize15,
                   MyStyle.fontWeight400,
-                  {color: 'rgba(138, 132, 126, 1)'},
+                  MyStyle.color138132,
                 ]}>
                 09:00
               </Text>

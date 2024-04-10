@@ -1,6 +1,11 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import {responsiveVertical, responsiveHorizontal,responsiveFonts, MyStyle} from '../style';
+import {
+  responsiveVertical,
+  responsiveHorizontal,
+  responsiveFonts,
+  MyStyle,
+} from '../style';
 import Carousel from '../components/Carousel';
 import Category from '../components/Category';
 import MenuItem from '../components/MenuItem';
@@ -20,26 +25,22 @@ const FoodPlace = ({navigation}) => {
         ]}>
         <Image
           source={require('../assets/icons/map.png')}
-          style={{
-            width: responsiveHorizontal(32),
-            height: responsiveHorizontal(32),
-            marginRight: responsiveHorizontal(9),
-          }}
+          style={[MyStyle.icon32, MyStyle.marginRight9]}
         />
         <View>
           <Text
             style={[
-              {fontSize: responsiveFonts(18)},
               MyStyle.fontWeight400,
               MyStyle.color000000,
               MyStyle.fontWeight700,
+              MyStyle.fontSize18,
             ]}>
             Happy sweets
           </Text>
           <Text style={[MyStyle.fontSize12, MyStyle.color000000]}>Raipur</Text>
         </View>
       </View>
-      <View style={{marginBottom: 22, marginHorizontal: 10}}>
+      <View style={[MyStyle.marginBottom22, MyStyle.marginHorizontal10]}>
         <Category />
       </View>
 

@@ -35,7 +35,7 @@ import SwitchComponent from '../components/Switch';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
   return isAdmin ? (
     <NavigationContainer>
       <Stack.Navigator>

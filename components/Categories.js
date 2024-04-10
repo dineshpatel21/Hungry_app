@@ -7,11 +7,11 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import  {
+import {
   responsiveVertical,
   responsiveHorizontal,
   MyStyle,
-  responsiveFonts
+  responsiveFonts,
 } from '../style';
 const Categories = () => {
   const items = [
@@ -53,23 +53,25 @@ const Categories = () => {
           MyStyle.flexrow,
           MyStyle.alignItemCenter,
           MyStyle.marginHorizontal20,
-          MyStyle.justifyContentSpaceBetween,MyStyle.marginTop18,
-         
+          MyStyle.justifyContentSpaceBetween,
+          MyStyle.marginTop18,
         ]}>
         <View>
           <Text
             style={[
-              {fontSize: responsiveFonts(17), color: 'rgba(0, 0, 0, 0.52)'},
               MyStyle.fontWeight700,
+              MyStyle.fontSize17,
+              MyStyle.color000052,
             ]}>
             Category
           </Text>
         </View>
-        <TouchableOpacity >
+        <TouchableOpacity>
           <Text
             style={[
-              {fontSize: responsiveFonts(12), color: 'rgba(238, 152, 70, 1)'},
               MyStyle.fontWeight700,
+              MyStyle.fontSize12,
+              MyStyle.color238152,
             ]}>
             See All
           </Text>
@@ -79,27 +81,27 @@ const Categories = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={items}
-        style={{marginTop: 10}}
+        style={[MyStyle.marginTop10]}
         renderItem={({item}) => (
-          <TouchableOpacity style={{marginTop: 5}}>
+          <TouchableOpacity style={[MyStyle.marginTop5]}>
             <View
-              style={{
-                marginHorizontal: 10,
-                marginVertical: 5,
-                padding: 5,
-                borderRadius: 4,
-                alignItems: 'center',
-              }}>
+              style={[
+               
+                MyStyle.alignItemCenter,
+                MyStyle.padding5,
+                MyStyle.marginVertical5,
+                MyStyle.marginHorizontal10,MyStyle.borderRadius4
+              ]}>
               <Image
                 source={item.src}
-                style={{
-                  width: responsiveHorizontal(60),
-                  height: responsiveHorizontal(60),
-                  marginRight: responsiveHorizontal(3),
-                }}
+                style={[MyStyle.marginRight3, MyStyle.icon58]}
               />
               <Text
-                style={{paddingHorizontal: 5, fontWeight: '400', fontSize: 13}}>
+                style={[
+                  MyStyle.fontSize13,
+                  MyStyle.fontWeight400,
+                  MyStyle.paddingVertical7,
+                ]}>
                 {item.name}
               </Text>
             </View>

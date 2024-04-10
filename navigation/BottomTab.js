@@ -149,7 +149,7 @@ const BottomTab = () => {
                   MyStyle.fontWeight600,
                   MyStyle.marginBottom15,
                   MyStyle.marginTop4,
-                ]}></Text>
+                ]}>Profile</Text>
             );
           },
           headerShown: false,

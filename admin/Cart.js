@@ -40,12 +40,7 @@ const Cart = () => {
     <ScrollView style={[MyStyle.flex1]}>
       <View style={[{flex: 0.4}, MyStyle.marginBottom10]}>
         <View
-          style={[
-            MyStyle.marginBottom15,
-            MyStyle.marginTop8,
-            //   MyStyle.backgroundColorD9D9D9,
-            MyStyle.height2,
-          ]}
+          style={[MyStyle.marginBottom15, MyStyle.marginTop8, MyStyle.height2]}
         />
         <View style={[MyStyle.marginHorizontal20]}>
           <Text
@@ -104,30 +99,20 @@ const Cart = () => {
                 MyStyle.marginHorizontal20,
                 MyStyle.marginBottom15,
                 MyStyle.borderRadius10,
-                {
-                  paddingVertical: responsiveVertical(25),
-                  borderColor: '#EE9846',
-                },
+                MyStyle.borderColorEE9846,
+                MyStyle.paddingVertical25,
               ]}
               key={index}>
               <TouchableOpacity
                 style={[
-                  {
-                    width: responsiveHorizontal(20),
-                    height: responsiveVertical(20),
-                    bottom: responsiveVertical(13),
-                    right: 10,
-                  },
                   MyStyle.positionAbsolute,
+                  MyStyle.right10,
+                  MyStyle.icon20,
+                  MyStyle.bottom13,
                 ]}>
                 <Image
                   source={require('../assets/icons/trash.png')}
-                  style={[
-                    {
-                      width: responsiveHorizontal(20),
-                      height: responsiveVertical(20),
-                    },
-                  ]}
+                  style={[MyStyle.icon20]}
                 />
               </TouchableOpacity>
               <View
@@ -138,12 +123,7 @@ const Cart = () => {
                 ]}>
                 <Image
                   source={require('../assets/icons/check-mark.png')}
-                  style={[
-                    {
-                      width: responsiveHorizontal(20),
-                      height: responsiveVertical(20),
-                    },
-                  ]}
+                  style={[MyStyle.icon20]}
                 />
               </View>
               <View
@@ -153,19 +133,12 @@ const Cart = () => {
                   MyStyle.marginRight20,
                   MyStyle.borderRadius10,
                   MyStyle.borderColorA61A1,
-                  {
-                    marginLeft: 18,
-                    width: responsiveHorizontal(122),
-                    height: responsiveVertical(121),
-                    marginLeft: responsiveHorizontal(45),
-                  },
+                  MyStyle.marginLeft45,
+                  MyStyle.icon121,
                 ]}>
                 <Image
                   source={require('../assets/icons/food.png')}
-                  style={{
-                    width: responsiveHorizontal(122),
-                    height: responsiveVertical(121),
-                  }}
+                  style={[MyStyle.icon121]}
                 />
               </View>
 
@@ -180,25 +153,14 @@ const Cart = () => {
                     ]}>
                     Name
                   </Text>
-                  <TouchableOpacity
-                    style={[
-                      {
-                        width: responsiveHorizontal(20),
-                        height: responsiveVertical(20),
-                      },
-                    ]}>
+                  <TouchableOpacity style={[MyStyle.icon20]}>
                     <Image
                       source={
                         item.isSelected
                           ? require('../assets/icons/green.png')
                           : require('../assets/icons/ungreen.png')
                       }
-                      style={[
-                        {
-                          width: responsiveHorizontal(20),
-                          height: responsiveVertical(20),
-                        },
-                      ]}
+                      style={[MyStyle.icon20]}
                     />
                   </TouchableOpacity>
                 </View>
@@ -217,9 +179,9 @@ const Cart = () => {
                 style={[
                   MyStyle.flexrow,
                   MyStyle.alignSelfCenter,
-                  MyStyle.positionAbsolute,
-
-                  {bottom: 15, left: vw / 2 - 10},
+                  MyStyle.positionAbsolute,MyStyle.alignItemCenter,
+                  MyStyle.bottom15,
+                  {left: vw / 2 - 10},
                 ]}>
                 <TouchableOpacity
                   onPress={() => {
@@ -228,18 +190,15 @@ const Cart = () => {
                     }
                   }}
                   style={[
-                    {padding: 3},
                     MyStyle.borderWidth1,
                     MyStyle.borderColorA61A1,
                     MyStyle.marginRight20,
                     MyStyle.borderRadius50,
+                    MyStyle.padding3,
                   ]}>
                   <Image
                     source={require('../assets/icons/-.png')}
-                    style={{
-                      width: responsiveHorizontal(17),
-                      height: responsiveHorizontal(17),
-                    }}
+                    style={[MyStyle.icon17]}
                   />
                 </TouchableOpacity>
                 <Text
@@ -260,14 +219,11 @@ const Cart = () => {
                     MyStyle.borderColorA61A1,
                     MyStyle.marginRight20,
                     MyStyle.borderRadius50,
-                    {padding: 3},
+                    MyStyle.padding3,
                   ]}>
                   <Image
                     source={require('../assets/icons/additem.png')}
-                    style={{
-                      width: responsiveHorizontal(17),
-                      height: responsiveHorizontal(17),
-                    }}
+                    style={[MyStyle.icon17]}
                   />
                 </TouchableOpacity>
               </View>
@@ -276,12 +232,12 @@ const Cart = () => {
         })}
         <View
           style={[
-            {width: responsiveHorizontal(325)},
             MyStyle.borderWidth1,
             MyStyle.alignSelfCenter,
             MyStyle.paddingVertical10,
             MyStyle.borderRadius10,
             MyStyle.padding8,
+            MyStyle.width325,
           ]}>
           <View
             style={[
@@ -360,12 +316,9 @@ const Cart = () => {
           <Divider
             style={{borderWidth: 1}}
             style={[
-              {
-                borderStyle: 'dotted',
-                marginVertical: responsiveVertical(9),
-                //marginHorizontal: responsiveHorizontal(14),
-              },
               MyStyle.borderWidth1,
+              MyStyle.borderStyleDotted,
+              MyStyle.marginVertical9,
             ]}
           />
           <View
@@ -379,14 +332,19 @@ const Cart = () => {
           </View>
         </View>
         {!isKeyboardVisible && (
-          <View style={[MyStyle.width100, MyStyle.justifyContentCenter,MyStyle.marginBottom8]}>
+          <View
+            style={[
+              MyStyle.width100,
+              MyStyle.justifyContentCenter,
+              MyStyle.marginBottom8,
+            ]}>
             <TouchableOpacity
               style={[
                 MyStyle.welcomebtn,
                 MyStyle.alignItemCenter,
                 MyStyle.justifyContentCenter,
                 MyStyle.alignSelfCenter,
-                {width: responsiveHorizontal(155)},
+                MyStyle.width155,
               ]}
               onPress={() => {}}>
               <Text

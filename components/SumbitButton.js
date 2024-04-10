@@ -9,7 +9,7 @@ import  {
  const SumbitButton = ({navigation, btnText, nextScreen}) => {
   return (
     <TouchableOpacity
-      style={[MyStyle.welcomebtn, {width: '100%'}]}
+      style={[MyStyle.welcomebtn, MyStyle.width100]}
       onPress={() => {
         nextScreen != '' ? navigation.navigate(nextScreen) : null;
       }}>

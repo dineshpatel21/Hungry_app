@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import  {
+import {
   responsiveVertical,
   responsiveHorizontal,
   responsiveFonts,
@@ -8,28 +8,32 @@ import  {
 } from '../style';
 const Header = () => {
   return (
-    <View style={[MyStyle.flexrow,MyStyle.alignItemCenter, {justifyContent: 'space-between',marginTop:20}]}>
-      <View style={[MyStyle.flexrow,MyStyle.alignItemCenter]}>
+    <View
+      style={[
+        MyStyle.flexrow,
+        MyStyle.alignItemCenter,
+        MyStyle.justifyContentSpaceBetween,
+        MyStyle.marginTop18,
+      ]}>
+      <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
         <Image
           source={require('../assets/icons/location.png')}
-          style={{
-            width: responsiveHorizontal(32),
-            height: responsiveHorizontal(32),
-            marginRight:responsiveHorizontal(9)
-          }}
+          style={[MyStyle.icon32, MyStyle.marginRight18]}
         />
         <View>
-          <Text style={[{fontSize:responsiveFonts(10),},MyStyle.fontWeight400]}>Delivering to</Text>
-          <Text style={{color:'rgba(238, 152, 70, 1)',fontSize:15}}>Raipur</Text>
+          <Text
+            style={[MyStyle.fontSize15, MyStyle.fontWeight400]}>
+            Delivering to
+          </Text>
+          <Text style={[,MyStyle.color238152,MyStyle.fontSize15]}>
+            Raipur
+          </Text>
         </View>
       </View>
       <View>
         <Image
           source={require('../assets/icons/Noti.png')}
-          style={{
-            width: responsiveHorizontal(26),
-            height: responsiveHorizontal(26),
-          }}
+          style={[MyStyle.icon27]}
         />
       </View>
     </View>

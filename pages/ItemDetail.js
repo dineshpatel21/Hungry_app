@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Carousel from '../components/Carousel';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 const ItemDetail = ({navigation}) => {
   const [item, setItem] = useState(0);
   return (
@@ -13,10 +9,8 @@ const ItemDetail = ({navigation}) => {
       <Carousel />
       <View
         style={[
-          {
-            width: responsiveHorizontal(317),
-            height: responsiveVertical(190),
-          },
+          MyStyle.width317,
+          MyStyle.height190,
           MyStyle.alignSelfCenter,
           MyStyle.borderWidth1,
           MyStyle.borderColorA61A1,
@@ -27,10 +21,7 @@ const ItemDetail = ({navigation}) => {
         ]}>
         <Image
           source={require('../assets/icons/food.png')}
-          style={{
-            width: responsiveHorizontal(317),
-            height: responsiveVertical(190),
-          }}
+          style={[MyStyle.width317, MyStyle.height190]}
         />
       </View>
 
@@ -41,21 +32,21 @@ const ItemDetail = ({navigation}) => {
           MyStyle.marginHorizontal20,
         ]}>
         <Text
-          style={[MyStyle.fontSize25, MyStyle.fontWeight700, MyStyle.color000000]}>
+          style={[
+            MyStyle.fontSize25,
+            MyStyle.fontWeight700,
+            MyStyle.color000000,
+          ]}>
           Name
         </Text>
-        {/* <View style={[MyStyle.flexrow]}>
-          <Image
-            source={require('../assets/icons/stars.png')}
-            style={{
-              width: responsiveHorizontal(93),
-              height: responsiveVertical(21),
-              marginLeft: -12,
-            }}
-          />
-        </View> */}
+
         <Text
-          style={[MyStyle.fontSize10, MyStyle.fontWeight400, MyStyle.colorEE9846,MyStyle.marginTop13]}>
+          style={[
+            MyStyle.fontSize10,
+            MyStyle.fontWeight400,
+            MyStyle.colorEE9846,
+            MyStyle.marginTop13,
+          ]}>
           Delicious meals are tasty, appetizing, scrumptious, yummy, luscious,
           delectable, mouth-watering, fit for a king, delightful, lovely,
           wonderful, pleasant, enjoyable, appealing, enchanting, charming and
@@ -64,13 +55,10 @@ const ItemDetail = ({navigation}) => {
         <Image
           source={require('../assets/icons/green.png')}
           style={[
-            {
-              width: responsiveHorizontal(20),
-              height: responsiveVertical(20),
-              top: responsiveVertical(8),
-              right: responsiveHorizontal(10),
-            },
             MyStyle.positionAbsolute,
+            MyStyle.icon20,
+            MyStyle.right10,
+            MyStyle.top8,
           ]}
         />
       </View>
@@ -80,7 +68,8 @@ const ItemDetail = ({navigation}) => {
           MyStyle.flexrow,
           MyStyle.alignSelfCenter,
           MyStyle.positionAbsolute,
-          {bottom: 16},
+          MyStyle.alignItemCenter,
+          MyStyle.bottom16,
         ]}>
         <TouchableOpacity
           onPress={() => {
@@ -99,14 +88,15 @@ const ItemDetail = ({navigation}) => {
           ]}>
           <Image
             source={require('../assets/icons/-.png')}
-            style={{
-              width: responsiveHorizontal(33),
-              height: responsiveHorizontal(33),
-            }}
+            style={[MyStyle.icon32]}
           />
         </TouchableOpacity>
         <Text
-          style={[MyStyle.fontSize35, MyStyle.fontWeight700, MyStyle.marginRight20]}>
+          style={[
+            MyStyle.fontSize35,
+            MyStyle.fontWeight700,
+            MyStyle.marginRight20,
+          ]}>
           {item}
         </Text>
         <TouchableOpacity
@@ -125,10 +115,7 @@ const ItemDetail = ({navigation}) => {
           ]}>
           <Image
             source={require('../assets/icons/additem.png')}
-            style={{
-              width: responsiveHorizontal(33),
-              height: responsiveHorizontal(33),
-            }}
+            style={[MyStyle.icon32]}
           />
         </TouchableOpacity>
 
@@ -140,22 +127,21 @@ const ItemDetail = ({navigation}) => {
             MyStyle.flexrow,
             MyStyle.paddingVertical10,
             MyStyle.paddingHorizontal6,
-
             MyStyle.backgroundColorEE9846,
             MyStyle.borderRadius10,
             MyStyle.alignItemCenter,
-            {width: responsiveHorizontal(127)},
+            MyStyle.width127,
           ]}>
           <Image
             source={require('../assets/icons/shopping.png')}
-            style={{
-              width: responsiveHorizontal(36),
-              height: responsiveHorizontal(33),
-              marginRight: 8,
-            }}
+            style={[MyStyle.marginRight7, MyStyle.width36, MyStyle.height33]}
           />
           <Text
-            style={[MyStyle.fontSize12, MyStyle.fontWeight500, MyStyle.colorWhite]}>
+            style={[
+              MyStyle.fontSize12,
+              MyStyle.fontWeight500,
+              MyStyle.colorWhite,
+            ]}>
             Add to Cart
           </Text>
         </TouchableOpacity>

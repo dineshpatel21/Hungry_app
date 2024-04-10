@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 const MenuItem = ({navigation}) => {
   const [DATA, SETDATA] = useState([
     {isSelected: false},
@@ -16,7 +12,9 @@ const MenuItem = ({navigation}) => {
       data={DATA}
       keyExtractor={(item, index) => index.toString()}
       ItemSeparatorComponent={() => {
-        return <View style={{backgroundColor: '#D9D9D9', height: 4}}></View>;
+        return (
+          <View style={[MyStyle.backgroundColorD9D9D9, MyStyle.height5]}></View>
+        );
       }}
       renderItem={({item, index}) => {
         return (
@@ -29,7 +27,7 @@ const MenuItem = ({navigation}) => {
               MyStyle.alignItemCenter,
               MyStyle.positionRelative,
               MyStyle.backgroundColorFFFFFF,
-              {paddingVertical: responsiveVertical(25)},
+              MyStyle.paddingVertical25,
             ]}>
             <Image
               source={
@@ -38,31 +36,24 @@ const MenuItem = ({navigation}) => {
                   : require('../assets/icons/ungreen.png')
               }
               style={[
-                {
-                  width: responsiveHorizontal(20),
-                  height: responsiveVertical(20),
-                  top: 25,
-                  right: 10,
-                },
                 MyStyle.positionAbsolute,
+                MyStyle.icon20,
+                MyStyle.right10,
+                MyStyle.top25,
               ]}
             />
             <View
-              style={{
-                marginLeft: 18,
-                width: responsiveHorizontal(122),
-               // height: responsiveVertical(121),
-                borderWidth: 1,
-                borderRadius: 15,
-                borderColor: '#A6A1A1',
-                marginRight: 20,
-              }}>
+              style={[
+                MyStyle.marginRight20,
+                MyTabs.borderWidth1,
+                MyStyle.marginLeft18,
+                MyStyle.borderColorA6A1A1,
+                MyStyle.borderRadius15,
+                MyStyle.width121,
+              ]}>
               <Image
                 source={require('../assets/icons/food.png')}
-                style={{
-                  width: responsiveHorizontal(122),
-                  height: responsiveVertical(121),
-                }}
+                style={[MyStyle.icon121]}
               />
               <TouchableOpacity
                 style={[
@@ -72,13 +63,11 @@ const MenuItem = ({navigation}) => {
                   MyStyle.justifyContentCenter,
                   MyStyle.alignSelfCenter,
                   MyStyle.backgroundColorEE9846,
-                  {
-                    width: responsiveHorizontal(58),
-                    height: responsiveVertical(27),
-                    borderRadius: 7,
-                    bottom: -10,
-                    borderColor: '#A6A1A1',
-                  },
+                  MyStyle.width58,
+                  MyStyle.height27,
+                  MyStyle.borderRadius7,
+                  MyStyle.borderColorA6A1A1,
+                  MyStyle.bottomM10,
                 ]}>
                 <Text
                   style={[
@@ -91,13 +80,10 @@ const MenuItem = ({navigation}) => {
                 <Image
                   source={require('../assets/icons/+.png')}
                   style={[
-                    {
-                      width: responsiveHorizontal(9),
-                      height: responsiveVertical(8),
-                      top: 4,
-                      right: 4,
-                    },
                     MyStyle.positionAbsolute,
+                    MyStyle.icon8,
+                    MyStyle.top4,
+                    MyStyle.right4,
                   ]}
                 />
               </TouchableOpacity>
@@ -112,24 +98,7 @@ const MenuItem = ({navigation}) => {
                 ]}>
                 Name
               </Text>
-              {/* <View style={[MyStyle.flexrow]}>
-                <Image
-                  source={require('../assets/icons/stars.png')}
-                  style={{
-                    width: responsiveHorizontal(93),
-                    height: responsiveVertical(21),
-                    marginLeft: -12,
-                  }}
-                />
-                <Text
-                  style={[
-                    MyStyle.fontSize15,
-                    MyStyle.fontWeight400,
-                    MyStyle.color000000,
-                  ]}>
-                  5 rating
-                </Text>
-              </View> */}
+
               <Text
                 style={[
                   MyStyle.fontSize15,

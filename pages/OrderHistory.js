@@ -11,11 +11,7 @@ import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import {Searchbar} from 'react-native-paper';
 import Categories from '../components/Categories';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 import {Divider} from 'react-native-paper';
 const OrderHistory = () => {
   return (
@@ -23,23 +19,17 @@ const OrderHistory = () => {
       <Searchbar
         placeholder="Search your orders"
         style={[
-          {
-            borderColor: 'rgba(0, 0, 0, 0.22)',
-          },
           MyStyle.marginBottom10,
           MyStyle.alignItemCenter,
           MyStyle.marginTop18,
           MyStyle.marginHorizontal20,
-          MyStyle.marginBottom26
+          MyStyle.marginBottom26,
+          MyStyle.borderColor000022,
         ]}
         icon={({color, size}) => (
           <Image
             source={require('../assets/icons/search.png')}
-            style={{
-              width: responsiveHorizontal(20),
-              height: responsiveHorizontal(20),
-              marginRight: responsiveHorizontal(3),
-            }}
+            style={(MyStyle.icon20, MyStyle.marginRight5)}
           />
         )}
         // onChangeText={}
@@ -48,7 +38,7 @@ const OrderHistory = () => {
 
       <View
         style={[
-          {width: responsiveHorizontal(325)},
+          MyStyle.width325,
           MyStyle.borderWidth1,
           MyStyle.alignSelfCenter,
           MyStyle.paddingVertical10,
@@ -62,11 +52,15 @@ const OrderHistory = () => {
             MyStyle.marginBottom8,
           ]}>
           <View
-            style={[MyStyle.flexrow, MyStyle.marginLeft24, MyStyle.alignItemCenter]}>
+            style={[
+              MyStyle.flexrow,
+              MyStyle.marginLeft24,
+              MyStyle.alignItemCenter,
+            ]}>
             <View>
               <Image
                 style={[
-                  {width: 54, height: 54},
+                  MyStyle.icon54,
                   MyStyle.marginRight18,
                   MyStyle.borderRadius10,
                 ]}
@@ -84,13 +78,12 @@ const OrderHistory = () => {
           </View>
           <View
             style={[
-              {
-                width: responsiveHorizontal(50),
-                height: responsiveVertical(16),
-                backgroundColor: 'rgba(217, 217, 217, 0.64)',
-              },
               MyStyle.marginRight24,
               MyStyle.alignItemCenter,
+              MyStyle.backgroundColor217217,
+              MyStyle.width50,
+              MyStyle,
+              height16,
             ]}>
             <Text style={[MyStyle.fontSize10, MyStyle.fontWeight400]}>
               Delivered
@@ -106,22 +99,10 @@ const OrderHistory = () => {
             MyStyle.marginBottom8,
             MyStyle.marginLeft18,
           ]}>
-          <TouchableOpacity
-            style={[
-              {
-                width: responsiveHorizontal(20),
-                height: responsiveVertical(20),
-              },
-              MyStyle.marginRight18,
-            ]}>
+          <TouchableOpacity style={[MyStyle.marginRight18, MyStyle.icon20]}>
             <Image
               source={require('../assets/icons/green.png')}
-              style={[
-                {
-                  width: responsiveHorizontal(20),
-                  height: responsiveVertical(20),
-                },
-              ]}
+              style={[MyStyle.icon20]}
             />
           </TouchableOpacity>
           <Text
@@ -131,28 +112,20 @@ const OrderHistory = () => {
               MyStyle.color000000,
               MyStyle.marginRight9,
             ]}>
-            <Text style={[{color: 'rgba(255, 0, 0, 1)'}]}>Quantity</Text> X Dish
+            <Text style={[MyStyle.color255]}>Quantity</Text> X Dish
           </Text>
         </View>
 
         <View
-          style={[MyStyle.flexrow, MyStyle.alignItemCenter, MyStyle.marginLeft18]}>
-          <TouchableOpacity
-            style={[
-              {
-                width: responsiveHorizontal(20),
-                height: responsiveVertical(20),
-              },
-              MyStyle.marginRight18,
-            ]}>
+          style={[
+            MyStyle.flexrow,
+            MyStyle.alignItemCenter,
+            MyStyle.marginLeft18,
+          ]}>
+          <TouchableOpacity style={[MyStyle.icon20, MyStyle.marginRight18]}>
             <Image
               source={require('../assets/icons/green.png')}
-              style={[
-                {
-                  width: responsiveHorizontal(20),
-                  height: responsiveVertical(20),
-                },
-              ]}
+              style={[MyStyle.icon20]}
             />
           </TouchableOpacity>
           <Text
@@ -162,19 +135,16 @@ const OrderHistory = () => {
               MyStyle.color000000,
               MyStyle.marginRight9,
             ]}>
-            <Text style={[{color: 'rgba(255, 0, 0, 1)'}]}>Quantity</Text> X Dish
+            <Text style={[MyStyle.color255]}>Quantity</Text> X Dish
           </Text>
         </View>
 
         <Divider
-          style={{borderWidth: 1}}
           style={[
-            {
-              borderStyle: 'dotted',
-              marginVertical: responsiveVertical(9),
-              marginHorizontal: responsiveHorizontal(14),
-            },
             MyStyle.borderWidth1,
+            MyStyle.borderStyleDotted,
+            MyStyle.marginVertical9,
+            MyStyle.marginHorizontal14,
           ]}
         />
         <View

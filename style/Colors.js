@@ -1,4 +1,3 @@
-
 const Colors = {
   color000000: '#000000',
   colorFFFFFF: '#FFFFFF',
@@ -13,5 +12,29 @@ const Colors = {
   backgroundColorD9D9D9: '#D9D9D9',
   borderColorEE9846: '#EE9846',
   backgroundColorE69343: '#E69343',
+  color000044: 'rgba(0, 0, 0, 0.44)',
+  color0001: 'rgba(0, 0, 0, 1)',
+  color17223: 'rgba(172, 23, 18, 1)',
+  color138132: 'rgba(138, 132, 126, 1)',
+  color000022: 'rgba(0, 0, 0, 0.22)',
+  color4d4dff: '#4D4DFF',
+  color238152: 'rgba(238, 152, 70, 1)',
+  color000052: 'rgba(0, 0, 0, 0.52)',
+  colorRed: 'red',
+  colorEEA967: '#EEA967',
+  color00025: 'rgba(0, 0, 0, 0.25)',
+  color243233: 'rgba(243, 233, 222, 1)',
+  colorA6A1A1: '#A6A1A1',
+  color0A0808: '#0A0808',
+  color255215: 'rgba(255, 215, 215, 1)',
+  color217217: 'rgba(217, 217, 217, 0.64)',
+  color255: 'rgba(255, 0, 0, 1)',
+  color3C8B44: '#3C8B44',
+  color32B43F: '#32B43F',
+  color1F1F1F: '#1F1F1F',
+ colorA90303: '#A90303',
+ colorFF37374D:'#FF37374D',
+ colorD2FFD7:'#D2FFD7',
+ color42833D:'#42833D'
 };
 export default Colors;

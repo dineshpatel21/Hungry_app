@@ -8,7 +8,13 @@ import {
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import MenuManagement from '../components/MenuManagement';
-import {MyStyle,responsiveHorizontal,responsiveVertical,vw,vh} from '../style';
+import {
+  MyStyle,
+  responsiveHorizontal,
+  responsiveVertical,
+  vw,
+  vh,
+} from '../style';
 import {Divider} from 'react-native-paper';
 import Category from '../components/Category';
 import SwitchComponent from '../components/Switch';
@@ -24,24 +30,20 @@ const Home = ({navigation}) => {
           MyStyle.flexrow,
           MyStyle.justifyContentSpaceBetween,
           MyStyle.marginHorizontal20,
-          {flex: 0.1},
+          MyStyle.flex01,
         ]}>
         <View style={[MyStyle.flexrow, MyStyle.alignItemCenter]}>
           <Image
             source={require('../assets/icons/user.png')}
-            style={[
-              {
-                width: responsiveHorizontal(35),
-                height: responsiveVertical(35),
-                marginRight: responsiveHorizontal(3),
-              },
-            ]}
+            style={[MyStyle.icon35, MyStyle.marginRight3]}
           />
           <View>
             <Text style={[MyStyle.fontSize20, MyStyle.fontWeight700]}>
               Shop name
             </Text>
-            <Text style={[MyStyle.fontSize15, MyStyle.fontWeight400]}>Address</Text>
+            <Text style={[MyStyle.fontSize15, MyStyle.fontWeight400]}>
+              Address
+            </Text>
           </View>
         </View>
         <SwitchComponent />
@@ -50,7 +52,6 @@ const Home = ({navigation}) => {
       <View style={{flex: 0.8}}>
         <View
           style={[
-            {width: responsiveHorizontal(344), height: responsiveVertical(156)},
             MyStyle.borderWidth1,
             MyStyle.alignSelfCenter,
             MyStyle.marginTop8,
@@ -58,30 +59,26 @@ const Home = ({navigation}) => {
             MyStyle.borderColorA61A1,
             MyStyle.alignItemCenter,
             MyStyle.justifyContentCenter,
-            {backgroundColor: '#D9D9D9'},
+            MyStyle.backgroundColorD9D9D9,
+            MyStyle.width344,
+            MyStyle.height156,
           ]}>
           <Text style={[MyStyle.fontSize20, MyStyle.fontWeight700]}>
             shop photo or logo
           </Text>
         </View>
         <View
-          style={{
-            marginBottom: responsiveVertical(22),
-            marginHorizontal: responsiveHorizontal(10),
-            marginTop: responsiveVertical(10),
-          }}>
+          style={[
+            MyStyle.marginBottom22,
+            MyStyle.marginTop10,
+            MyStyle.marginHorizontal10,
+          ]}>
           <Category />
         </View>
 
         <Image
           source={require('../assets/icons/HomePage.png')}
-          style={[
-            {
-              width: responsiveHorizontal(280),
-              height: responsiveVertical(200),
-            },
-            MyStyle.alignSelfCenter,
-          ]}
+          style={[MyStyle.icon284, MyStyle.alignSelfCenter]}
         />
 
         <Text
@@ -89,7 +86,7 @@ const Home = ({navigation}) => {
             MyStyle.alignSelfCenter,
             MyStyle.fontSize15,
             MyStyle.fontWeight700,
-            {color: '#1F1F1F'},
+            MyStyle.color1F1F1F,
           ]}>
           You are {isOnline ? 'online' : 'offline'}.
         </Text>
@@ -113,14 +110,16 @@ const Home = ({navigation}) => {
           MyStyle.paddingHorizontal20,
           MyStyle.paddingVertical7,
           MyStyle.borderRadius10,
-          {
-            bottom: responsiveVertical(80),
-            backgroundColor: '#32B43F',
-            width: responsiveHorizontal(298),
-          },
+          MyStyle.backcolor32B43F,
+          MyStyle.bottom80,
+          MyStyle.width298,
         ]}>
         <Text
-          style={[MyStyle.fontSize17, MyStyle.colorWhite, MyStyle.marginRight9]}>
+          style={[
+            MyStyle.fontSize17,
+            MyStyle.colorWhite,
+            MyStyle.marginRight9,
+          ]}>
           1 New order alert
         </Text>
         <TouchableOpacity
@@ -128,23 +127,23 @@ const Home = ({navigation}) => {
             navigation.navigate('NewOrder');
           }}
           style={[
-            {backgroundColor: '#3C8B44', padding: 5},
             MyStyle.borderRadius10,
             MyStyle.marginRight18,
+            MyStyle.backcolor3C8B44,
+            MyStyle.padding5,
           ]}>
           <Text
-            style={[MyStyle.fontSize17, MyStyle.fontWeight400, MyStyle.colorWhite]}>
+            style={[
+              MyStyle.fontSize17,
+              MyStyle.fontWeight400,
+              MyStyle.colorWhite,
+            ]}>
             View
           </Text>
         </TouchableOpacity>
         <Image
           source={require('../assets/icons/ghanta.png')}
-          style={[
-            {
-              width: responsiveHorizontal(35),
-              height: responsiveVertical(35),
-            },
-          ]}
+          style={[MyStyle.icon35]}
         />
       </View>
 
@@ -156,21 +155,12 @@ const Home = ({navigation}) => {
           MyStyle.justifyContentCenter,
           MyStyle.marginHorizontal20,
           MyStyle.backgroundColorEE9846,
-          {flex: 0.1},
+          MyStyle.flex01,
         ]}>
-       
-       
-        <TouchableOpacity
-          style={[MyStyle.flexrow]}>
+        <TouchableOpacity style={[MyStyle.flexrow]}>
           <Image
             source={require('../assets/icons/analyzing.png')}
-            style={[
-              {
-                width: responsiveHorizontal(31),
-                height: responsiveVertical(31),
-                marginRight: responsiveHorizontal(3),
-              },
-            ]}
+            style={[MyStyle.icon32, MyStyle.marginRight3]}
           />
 
           <View style={[MyStyle.justifyContentCenter]}>
@@ -182,7 +172,7 @@ const Home = ({navigation}) => {
               ]}>
               Insight
             </Text>
-            <Text style={[{color: '#3C8B44'}, MyStyle.fontSize17]}>
+            <Text style={[MyStyle.fontSize17, MyStyle.color3C8B44]}>
               +1200 Orders
             </Text>
           </View>

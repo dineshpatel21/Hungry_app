@@ -8,11 +8,7 @@ import {
   FlatList,
   Keyboard,
 } from 'react-native';
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 import {TextInput, Button} from 'react-native-paper';
 const EditProfile = () => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -64,44 +60,35 @@ const EditProfile = () => {
     <View style={[MyStyle.flex1, MyStyle.backgroundColorFFFFFF]}>
       <ScrollView style={[MyStyle.flex1, MyStyle.paddingHorizontal20]}>
         <View
-          style={{
-            alignSelf: 'center',
-            width: responsiveHorizontal(111),
-            height: responsiveHorizontal(111),
-            borderWidth: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginTop: 28,
-            borderRadius: responsiveHorizontal(111),
-            position: 'relative',
-            backgroundColor: 'rgba(243, 233, 222, 1)',
-            borderColor: 'rgba(0, 0, 0, 0.25)',
-          }}>
+          style={[
+            MyStyle.icon111,
+            MyStyle.borderWidth1,
+            MyStyle.alignItemCenter,
+            MyStyle.alignSelfCenter,
+            MyStyle.borderColor00025,
+            MyStyle.backcolor243233,
+            MyStyle.positionRelative,
+            MyStyle.borderRadius111,
+            MyStyle.marginTop28,
+            MyStyle.justifyContentCenter,
+          ]}>
           <Image
             source={require('../assets/icons/user.png')}
-            style={{
-              width: responsiveHorizontal(58),
-              height: responsiveHorizontal(58),
-              marginLeft: 6,
-            }}
+            style={[MyStyle.icon58, MyStyle.marginLeft6]}
           />
           <TouchableOpacity
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              right: 10,
-              // borderWidth: 1,
-              padding: 5,
-              borderRadius: 12,
-              backgroundColor: 'white',
-              elevation: 10,
-            }}>
+            style={[
+              MyStyle.positionAbsolute,
+              MyStyle.backgroundColorFFFFFF,
+              MyStyle.right10,
+              MyStyle.borderRadius12,
+              MyStyle.padding5,
+              MyStyle.bottom0,
+              MyStyle.elevation10,
+            ]}>
             <Image
               source={require('../assets/icons/edit.png')}
-              style={{
-                width: responsiveHorizontal(12),
-                height: responsiveHorizontal(12),
-              }}
+              style={[MyStyle.icon12]}
             />
           </TouchableOpacity>
         </View>
@@ -143,16 +130,16 @@ const EditProfile = () => {
               MyStyle.borderWidth1,
               MyStyle.positionAbsolute,
               MyStyle.backgroundColorFFFFFF,
-              {
-                width: responsiveHorizontal(245),
-                height: responsiveVertical(116),
-                borderRadius: 10,
-                right: 18,
-                bottom: responsiveVertical(55),
-                zIndex: 100,
-              },
+              MyStyle.borderRadius10,
+              MyStyle.width245,
+              MyStyle.borderRadius10,
+              MyStyle.bottom55,
+              MyStyle.marginRight18,
+              MyStyle.height116,
+              MyStyle.zIndex100,
             ]}>
-            <View style={[MyStyle.paddingVertical17, MyStyle.paddingHorizontal14]}>
+            <View
+              style={[MyStyle.paddingVertical17, MyStyle.paddingHorizontal14]}>
               {genderOptions.map((item, index) => {
                 return (
                   <TouchableOpacity
@@ -186,7 +173,9 @@ const EditProfile = () => {
             MyStyle.paddingVertical17,
             MyStyle.paddingHorizontal18,
           ]}>
-          <Text style={[MyStyle.fontSize17, MyStyle.fontWeight500]}>{gender}</Text>
+          <Text style={[MyStyle.fontSize17, MyStyle.fontWeight500]}>
+            {gender}
+          </Text>
           <TouchableOpacity
             onPress={() => {
               setIsDropDownOpen(!isDropDownOpen);
@@ -197,10 +186,7 @@ const EditProfile = () => {
                   ? require('../assets/icons/bottom.png')
                   : require('../assets/icons/up.png')
               }
-              style={{
-                width: responsiveHorizontal(25),
-                height: responsiveHorizontal(18),
-              }}
+              style={[MyStyle.width2518]}
             />
           </TouchableOpacity>
         </View>
@@ -209,13 +195,12 @@ const EditProfile = () => {
       {!isKeyboardVisible && (
         <Button
           mode="outlined"
-          style={{
-            width: responsiveHorizontal(273),
-            position: 'absolute',
-            bottom: 30,
-            // height: responsiveVertical(55),
-            alignSelf: 'center',
-          }}
+          style={[
+            MyStyle.alignSelfCenter,
+            MyStyle.positionAbsolute,
+            MyStyle.width273,
+            MyStyle.bottom30,
+          ]}
           onPress={() => console.log('Pressed')}>
           Done
         </Button>

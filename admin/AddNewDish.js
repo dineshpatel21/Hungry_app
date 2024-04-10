@@ -61,12 +61,7 @@ const AddNewDish = () => {
           <SwitchComponent />
         </View>
         <View
-          style={[
-            MyStyle.marginBottom15,
-            MyStyle.marginTop8,
-            //   MyStyle.backgroundColorD9D9D9,
-            MyStyle.height2,
-          ]}
+          style={[MyStyle.marginBottom15, MyStyle.marginTop8, MyStyle.height2]}
         />
         <View style={[MyStyle.marginHorizontal20]}>
           <Text
@@ -82,7 +77,7 @@ const AddNewDish = () => {
 
         <View
           style={[
-            {width: responsiveHorizontal(321), height: responsiveVertical(423)},
+            MyStyle.dish_name,
             MyStyle.borderWidth1,
             MyStyle.alignSelfCenter,
             MyStyle.marginTop30,
@@ -181,10 +176,7 @@ const AddNewDish = () => {
                     ? require('../assets/icons/bottom_arrow.png')
                     : require('../assets/icons/arrowhead-up.png')
                 }
-                style={{
-                  width: responsiveHorizontal(24),
-                  height: responsiveHorizontal(24),
-                }}
+                style={[MyStyle.icon24]}
               />
             </TouchableOpacity>
           </View>
@@ -196,14 +188,12 @@ const AddNewDish = () => {
                 MyStyle.positionAbsolute,
                 MyStyle.backgroundColorFFFFFF,
                 MyStyle.marginHorizontal20,
-                {
-                  width: responsiveHorizontal(245),
-                  height: responsiveVertical(120),
-                  borderRadius: 10,
-                  right: responsiveHorizontal(18),
-                  bottom: responsiveVertical(32),
-                  zIndex: 100,
-                },
+                MyStyle.alignSelfCenter,
+                MyStyle.zIndex100,
+                MyStyle.borderRadius10,
+                MyStyle.width250,
+                MyStyle.height120,
+                MyStyle.bottom34,
               ]}>
               <ScrollView
                 nestedScrollEnabled
@@ -244,20 +234,12 @@ const AddNewDish = () => {
               MyStyle.justifyContentCenter,
               MyStyle.alignItemCenter,
               MyStyle.borderRadius10,
-              {
-                width: responsiveHorizontal(81),
-                height: responsiveVertical(71),
-                backgroundColor: '#d9d9d9',
-              },
+              MyStyle.backD9D9D9,
+              MyStyle.select_img,
             ]}>
             <Image
               source={require('../assets/icons/selectimage.png')}
-              style={[
-                {
-                  width: responsiveHorizontal(31),
-                  height: responsiveVertical(31),
-                },
-              ]}
+              style={[MyStyle.icon30]}
             />
           </TouchableOpacity>
         </View>
@@ -269,7 +251,8 @@ const AddNewDish = () => {
             MyStyle.positionAbsolute,
             MyStyle.width100,
             MyStyle.justifyContentCenter,
-            {bottom: responsiveVertical(34), flex: 0.1},
+            MyStyle.bottom34,
+            MyStyle.flex01,
           ]}>
           <TouchableOpacity
             style={[
@@ -277,7 +260,7 @@ const AddNewDish = () => {
               MyStyle.alignItemCenter,
               MyStyle.justifyContentCenter,
               MyStyle.alignSelfCenter,
-              {width: responsiveHorizontal(155)},
+              MyStyle.width155,
             ]}
             onPress={() => {}}>
             <Text

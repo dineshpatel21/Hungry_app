@@ -53,7 +53,7 @@ const AdminBottomTab = () => {
                   MyStyle.fontWeight600,
                   MyStyle.marginBottom15,
                   MyStyle.marginTop4,
-                ]}></Text>
+                ]}>Home</Text>
             );
           },
           headerShown: false,
@@ -86,7 +86,7 @@ const AdminBottomTab = () => {
                   MyStyle.fontWeight600,
                   MyStyle.marginBottom15,
                   MyStyle.marginTop4,
-                ]}></Text>
+                ]}>Menu</Text>
             );
           },
           headerShown: false,
@@ -115,7 +115,7 @@ const AdminBottomTab = () => {
                   MyStyle.fontWeight600,
                   MyStyle.marginBottom15,
                   MyStyle.marginTop4,
-                ]}></Text>
+                ]}>Profile</Text>
             );
           },
           headerShown: false,

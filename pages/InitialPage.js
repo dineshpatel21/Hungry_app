@@ -4,11 +4,7 @@ import explorer from '../assets/icons/HUNGRY_EXPLORER.png';
 import shops from '../assets/icons/HUNGRY_SHOP.png';
 import delivery from '../assets/icons/DELIVERY_BOYS.png';
 
-import  {
-  responsiveVertical,
-  responsiveHorizontal,
-  MyStyle,
-} from '../style';
+import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 
 const InitialPage = ({navigation}) => {
   useEffect(() => {
@@ -75,27 +71,18 @@ const InitialPage = ({navigation}) => {
       <View style={MyStyle.width100}>
         <View
           style={[
-            {width: responsiveHorizontal(284)},
             MyStyle.alignItemCenter,
             MyStyle.alignSelfCenter,
+            MyStyle.width284,
           ]}>
           <Image
             style={[
               MyStyle.welcomeimg,
               pagedata.page === 1
-                ? {
-                    width: responsiveHorizontal(329),
-                    height: responsiveVertical(346),
-                  }
+                ? MyStyle.i1
                 : pagedata.page === 2
-                ? {
-                    width: responsiveHorizontal(401),
-                    height: responsiveVertical(409),
-                  }
-                : {
-                    width: responsiveHorizontal(412),
-                    height: responsiveVertical(351),
-                  },
+                ? MyStyle.i2
+                : MyStyle.i3,
             ]}
             source={
               pagedata.page === 1
@@ -111,9 +98,6 @@ const InitialPage = ({navigation}) => {
       </View>
 
       <TouchableOpacity style={MyStyle.welcomebtn} onPress={nextscreen}>
-        {/* <Text style={MyStyle.welcomebtntext}>
-            {pagedata.page === 3 ? "Get started" : "Next"}
-          </Text> */}
         <Text style={MyStyle.welcomebtntext}>Next</Text>
       </TouchableOpacity>
 
@@ -131,14 +115,25 @@ const InitialPage = ({navigation}) => {
         Skip
       </Text>
 
-      <View style={[MyStyle.width100,MyStyle.alignItemCenter,MyStyle.marginTop18]}>
+      <View
+        style={[
+          MyStyle.width100,
+          MyStyle.alignItemCenter,
+          MyStyle.marginTop18,
+        ]}>
         <View style={MyStyle.welcomedots}>
           <View
-            style={pagedata.page === 1 ? MyStyle.dotactive : MyStyle.dot}></View>
+            style={
+              pagedata.page === 1 ? MyStyle.dotactive : MyStyle.dot
+            }></View>
           <View
-            style={pagedata.page === 2 ? MyStyle.dotactive : MyStyle.dot}></View>
+            style={
+              pagedata.page === 2 ? MyStyle.dotactive : MyStyle.dot
+            }></View>
           <View
-            style={pagedata.page === 3 ? MyStyle.dotactive : MyStyle.dot}></View>
+            style={
+              pagedata.page === 3 ? MyStyle.dotactive : MyStyle.dot
+            }></View>
         </View>
       </View>
     </View>

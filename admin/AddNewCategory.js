@@ -2,10 +2,11 @@ import {View, Text, TouchableOpacity, TextInput, Image} from 'react-native';
 import React from 'react';
 import MenuManagement from '../components/MenuManagement';
 
-import  {
+import {
   responsiveVertical,
   responsiveHorizontal,
-  responsiveFonts,MyStyle
+  responsiveFonts,
+  MyStyle,
 } from '../style';
 import SwitchComponent from '../components/Switch';
 
@@ -13,28 +14,23 @@ const AddNewCategory = () => {
   return (
     <View style={[MyStyle.flex1]}>
       <View
-          style={[
-            MyStyle.marginHorizontal20,
-            MyStyle.marginTop13,
-            MyStyle.flexrow,
-            MyStyle.justifyContentSpaceBetween,
-          ]}>
-              <MenuManagement />
-          <SwitchComponent />
-        </View>
-      <View
         style={[
-          MyStyle.marginBottom15,
-          MyStyle.marginTop8,
-          //   MyStyle.backgroundColorD9D9D9,
-          MyStyle.height2,
-        ]}
+          MyStyle.marginHorizontal20,
+          MyStyle.marginTop13,
+          MyStyle.flexrow,
+          MyStyle.justifyContentSpaceBetween,
+        ]}>
+        <MenuManagement />
+        <SwitchComponent />
+      </View>
+      <View
+        style={[MyStyle.marginBottom15, MyStyle.marginTop8, MyStyle.height2]}
       />
       <View style={[MyStyle.marginHorizontal20]}>
         <Text
           style={[
             MyStyle.welcomebtntext,
-           MyStyle.color000000,
+            MyStyle.color000000,
             MyStyle.fontWeight700,
             MyStyle.fontSize20,
           ]}>
@@ -44,20 +40,20 @@ const AddNewCategory = () => {
 
       <View
         style={[
-          {width: responsiveHorizontal(321), height: responsiveVertical(205)},
+         MyStyle.cat_name,
           MyStyle.borderWidth1,
           MyStyle.alignSelfCenter,
           MyStyle.marginTop30,
           MyStyle.borderRadius10,
           MyStyle.borderColorA61A1,
         ]}>
-        <View style={[MyStyle.marginHorizontal20,MyStyle.marginTop18]}>
+        <View style={[MyStyle.marginHorizontal20, MyStyle.marginTop18]}>
           <TextInput
             placeholder="Category name *"
             textDecorationLine="Underline"
             style={[
               MyStyle.welcomebtntext,
-             MyStyle.color000000,
+              MyStyle.color000000,
               MyStyle.fontWeight400,
               MyStyle.fontSize15,
             ]}
@@ -67,7 +63,7 @@ const AddNewCategory = () => {
           <Text
             style={[
               MyStyle.welcomebtntext,
-             MyStyle.color000000,
+              MyStyle.color000000,
               MyStyle.fontWeight400,
               MyStyle.fontSize15,
             ]}>
@@ -81,20 +77,12 @@ const AddNewCategory = () => {
             MyStyle.justifyContentCenter,
             MyStyle.alignItemCenter,
             MyStyle.borderRadius10,
-            {
-              width: responsiveHorizontal(81),
-              height: responsiveVertical(71),
-              backgroundColor: '#d9d9d9',
-            },
+            MyStyle.backgroundColorD9D9D9,
+            MyStyle.select_img
           ]}>
           <Image
             source={require('../assets/icons/selectimage.png')}
-            style={[
-              {
-                width: responsiveHorizontal(31),
-                height: responsiveVertical(31),
-              },
-            ]}
+            style={[MyStyle.icon30]}
           />
         </TouchableOpacity>
       </View>
@@ -103,21 +91,21 @@ const AddNewCategory = () => {
           MyStyle.positionAbsolute,
           MyStyle.width100,
           MyStyle.justifyContentCenter,
-          {bottom: responsiveVertical(34), flex: 0.1},
+          MyStyle.bottom34,
+          MyStyle.flex01,
         ]}>
         <TouchableOpacity
           style={[
             MyStyle.welcomebtn,
             MyStyle.alignItemCenter,
             MyStyle.justifyContentCenter,
-            MyStyle.alignSelfCenter,
-            {width: responsiveHorizontal(155)},
+            MyStyle.alignSelfCenter,MyStyle.width155
           ]}
           onPress={() => {}}>
           <Text
             style={[
               MyStyle.welcomebtntext,
-             MyStyle.colorWhite,
+              MyStyle.colorWhite,
               MyStyle.fontWeight400,
               MyStyle.fontSize30,
             ]}>
