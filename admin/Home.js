@@ -78,7 +78,7 @@ const Home = ({navigation}) => {
 
         <Image
           source={require('../assets/icons/HomePage.png')}
-          style={[MyStyle.icon284, MyStyle.alignSelfCenter]}
+          style={[MyStyle.icon180, MyStyle.alignSelfCenter]}
         />
 
         <Text
@@ -111,7 +111,7 @@ const Home = ({navigation}) => {
           MyStyle.paddingVertical7,
           MyStyle.borderRadius10,
           MyStyle.backcolor32B43F,
-          MyStyle.bottom80,
+          MyStyle.bottom13,
           MyStyle.width298,
         ]}>
         <Text
@@ -147,37 +147,7 @@ const Home = ({navigation}) => {
         />
       </View>
 
-      <View
-        style={[
-          MyStyle.flexrow,
-          MyStyle.borderRadius10,
-          MyStyle.alignItemCenter,
-          MyStyle.justifyContentCenter,
-          MyStyle.marginHorizontal20,
-          MyStyle.backgroundColorEE9846,
-          MyStyle.flex01,
-        ]}>
-        <TouchableOpacity style={[MyStyle.flexrow]}>
-          <Image
-            source={require('../assets/icons/analyzing.png')}
-            style={[MyStyle.icon32, MyStyle.marginRight3]}
-          />
-
-          <View style={[MyStyle.justifyContentCenter]}>
-            <Text
-              style={[
-                MyStyle.fontSize15,
-                MyStyle.fontWeight500,
-                MyStyle.colorWhite,
-              ]}>
-              Insight
-            </Text>
-            <Text style={[MyStyle.fontSize17, MyStyle.color3C8B44]}>
-              +1200 Orders
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </View>
+    
     </View>
   );
 };

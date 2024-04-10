@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {responsiveVertical, responsiveHorizontal, MyStyle} from '../style';
 import ProfileContent from '../components/ProfileContent';
 import Divide from '../components/Divide';
@@ -84,6 +84,49 @@ const Profile = ({navigation}) => {
           navigation={navigation}
           nextScreen="NewCategory"
         />
+
+        <Divide wid={271} color="#EE9846" />
+        <View
+          style={[
+            MyStyle.flexrow,
+            MyStyle.borderRadius10,
+            MyStyle.alignItemCenter,
+            //MyStyle.justifyContentCenter,
+            // MyStyle.marginHorizontal20,
+            // MyStyle.backgroundColorEE9846,
+            // MyStyle.flex01,
+          ]}>
+          <TouchableOpacity style={[MyStyle.flexrow]}>
+            <Image
+              source={require('../assets/icons/analyzing.png')}
+              style={[
+                MyStyle.icon32,
+                MyStyle.marginRight18,
+                MyStyle.tintColorEE9846,
+              ]}
+            />
+
+            <View
+              style={[
+                MyStyle.justifyContentSpaceBetween,
+                MyStyle.flexrow,
+                MyStyle.width245,
+               MyStyle.alignItemCenter
+              ]}>
+              <Text
+                style={[
+                  MyStyle.fontSize15,
+                  MyStyle.fontWeight500,
+                  MyStyle.color3C8B44,
+                ]}>
+                Insight
+              </Text>
+              <Text style={[MyStyle.fontSize17, MyStyle.colorEE9846]}>
+                +1200 Orders
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
 
         <Divide wid={271} color="#EE9846" />
 

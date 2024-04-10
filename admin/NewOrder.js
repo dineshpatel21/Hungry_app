@@ -230,17 +230,17 @@ const NewOrder = () => {
 
           <TouchableOpacity
             style={[
-              MyStyle.borderWidth1,
+              // MyStyle.borderWidth1,
               MyStyle.paddingVertical10,
               MyStyle.paddingHorizontal14,
               MyStyle.borderRadius10,
-              MyStyle.backgroundColorE69343,
+              MyStyle.backgroundColorFFEA00,
             ]}>
             <Text
               style={[
                 MyStyle.fontSize20,
                 MyStyle.fontWeight500,
-                MyStyle.colorWhite,
+                MyStyle.color000000,
               ]}>
               Accept
             </Text>

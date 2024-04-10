@@ -296,6 +296,7 @@ const MyStyle = StyleSheet.create({
   backgroundColorFF37374D: {backgroundColor: Colors.colorFF37374D},
   backgroundColorD2FFD7: {backgroundColor: Colors.colorD2FFD7},
   backgroundColor4BABCA: {backgroundColor: Colors.color4BABCA},
+  backgroundColorFFEA00: {backgroundColor: Colors.colorFFEA00},
   color0093FE: {color: Colors.color0093FE},
 
   borderColor00025: {borderColor: Colors.color00025},
@@ -330,6 +331,7 @@ const MyStyle = StyleSheet.create({
   icon8: {width: responsiveHorizontal(8), height: responsiveHorizontal(8)},
   icon54: {width: responsiveHorizontal(54), height: responsiveHorizontal(54)},
   icon60: {width: responsiveHorizontal(60), height: responsiveHorizontal(60)},
+  icon180: {width: responsiveHorizontal(180), height: responsiveHorizontal(180)},
   icon284: {
     width: responsiveHorizontal(284),
     height: responsiveHorizontal(284),

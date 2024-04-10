@@ -38,6 +38,7 @@ const Colors = {
  color42833D:'#42833D',
  color0093FE: '#0093FE',
  colorFF0000:'#FF0000',
- color4BABCA:'#4BABCA'
+ color4BABCA:'#4BABCA',
+ colorFFEA00:'#FFEA00'
 };
 export default Colors;
